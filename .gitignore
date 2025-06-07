@@ -1,0 +1,9 @@
+# Ignore Bootstrap files
+bootstrap/
+**/bootstrap*
+*.bootstrap.*
+
+# Ignore FontAwesome files
+fontawesome/
+**/fontawesome*
+*.fontawesome.*

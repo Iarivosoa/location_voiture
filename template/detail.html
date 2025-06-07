@@ -1,0 +1,58 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+
+{% block 'contenu' %}
+
+<script>
+    var MainImg = document.getElementById("MainImg")
+    var smallImg = document.getElementsByClassName("small-img")
+    smallImg[0].onclick = function(){
+        MainImg.src = smallImg[0].src;
+    }
+    smallImg[1].onclick = function(){
+        MainImg.src = smallImg[1].src;
+    }
+    smallImg[2].onclick = function(){
+        MainImg.src = smallImg[2].src;
+    }
+    smallImg[3].onclick = function(){
+        MainImg.src = smallImg[3].src;
+    }
+    smallImg[4].onclick = function(){
+        MainImg.src = smallImg[4].src;
+    }
+</script>
+
+  <h3>Détail en détail</h3>
+
+
+  <div class="container details">
+    <div class="row">
+        <div class="col-lg-6">
+            <div class="images">
+                <img src="{{detail.photo.url}}" alt="" width="400px" id="MainImg">
+
+                <div class="img_fils">
+
+                    <div class="fils smallImg"> <img src="{{detail.photo2.url}}" alt="" width="100px" class="small-img"></div>
+                    <div class="fils smallImg"> <img src="{{detail.photo3.url}}" alt="" width="100px" class="small-img"></div>
+                    <div class="fils smallImg"> <img src="{{detail.photo4.url}}" alt="" width="100px" class="small-img"></div>
+
+            </div>
+
+        </div>
+        </div>
+        <div class="col-lg-6">
+                <div class="description">
+                <p> {{detail.nom}} </p>
+                <p> {{detail.types}} </p>
+                <p> {{detail.description}} </p>
+    </div>
+        </div>
+    </div>
+    <!--  -->
+
+    <!--  -->
+
+  </div>
+{% endblock 'contenu' %}

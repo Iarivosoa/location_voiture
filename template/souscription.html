@@ -1,0 +1,102 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+
+    <script>
+        function affiche_mdp() {
+            var mdpd = document.getElementById("input-conex")
+            var icones = document.getElementById("mdp-hide")
+            
+            if(mdpd.type ==="password"){
+                mdpd.type ==="text"
+
+                icones.classList.replace("fa-eye-slash","fa-eye")
+            }
+        }
+    </script>
+<!-- {% block 'contenu' %} -->
+<div class="page-connex">
+   <div class="container">
+     <div class="row">
+        <div class="col-md-4">
+            <h1 class="text-left">Page de Souscription</h1>
+            <p class="text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate temporibus corporis obcaecati tempore asperiores reiciendis, mollitia ullam dolorum ipsam debitis?</p>
+        </div>
+        <!-- formulaire -->
+        <div class="col-md-5" id="form-connexion">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-center">Souscription</h3>
+                </div>
+                <hr>
+                <!--  -->
+                <div class="row">
+        
+                    <div class="col-md-10">
+                        <input type="text" class="form-control input-conex" placeholder="Votre nom" id="">
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-10">
+                        <input type="text" class="form-control input-conex" placeholder="Votre prénom(s)" id="">
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="" class="label col-md-2 control-label">Né(e)le:</label> 
+                    <div class="col-md-10">
+                        <input type="date" class="form-control input-conex" placeholder="Confirmer" id="">
+                    </div>
+                </div>
+                <div class="row">
+                    
+                    <div class="col-md-10">
+                        <input type="email" class="form-control input-conex" placeholder="E-mail" id="">
+                    </div>
+                </div>
+
+                <div class="row">
+                    
+                    <div class="col-md-10 icone-mdp">
+                        <input type="password" class="form-control input-conex" placeholder="mot de passe" id="">
+                        <i class="far fa-eye-slash" id="mdphide" onclick="affiche_mdp()"></i>
+                    </div>
+                </div>
+                <div class="row">
+
+                    <div class="col-md-10 icone-mdp">
+                        <input type="password" class="form-control input-conex" placeholder="Confirmer" id="">
+                        <i class="far fa-eye-slash" id="mdphide" onclick="affiche_mdp()"></i>
+                    </div>
+                </div>
+                <div class="row">
+        
+                    <div class="col-md-10">
+                        <input type="phone" class="form-control input-conex" placeholder="Votre numéro whatsApp" id="">
+                    </div>
+                </div>
+
+
+                <div class="row">
+                    <label for="" class="label col-md-2 control-label">Country</label>
+                    <div class="col-md-10">
+                        <select name="" id="" class="form-control">
+                            <option value="">France</option>
+                            <option value="">Amérique</option>
+                            <option value="">Afrique</option>
+                            <option value="">Chine</option>
+                            <option value="">Autre</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn-primary" id="bouton-connexion">Souscrire</button>
+                </div>
+        
+            </div>
+        </div>
+    </div>
+   </div>
+</div>
+<br>
+<!-- {% endblock 'contenu' %} -->

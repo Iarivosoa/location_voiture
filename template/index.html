@@ -1,0 +1,423 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+
+{% block 'contenu' %}
+
+<!-- caroussel -->
+ <div class="carousel">
+      <div class="search-box"><input type="search" class="recherche" placeholder="Recherche"><button><i class="fas fa-search"></i></button></div>
+    <!-- list item -->
+     <div class="list">
+        <div class="item">
+
+            <img src="{% static 'image/slide.5.jpg.jpg' %}" alt="" >
+            <div class="content">
+                <div class="author">Dès votre arrivé à l'Aéroport de Madagascar</div>
+                <div class="title">RESERVATION de Votre Taxi</div>
+                <div class="topic">accompagnement et guide</div>
+                <div class="des">
+                    Faite votre réservation avant votre arrivé à Madagascar à tous moment
+                </div>
+                <div class="buttons">
+                    <button><a href="">Réservation</a></button>
+                    <button><a href="{% url 'page_souscription' %}">S'inscrire</a></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="item">
+
+            <img src="{% static 'image/slide.3.jpg.jpg' %}" alt="" >
+            <div class="content">
+                <div class="author">LUNDEV</div>
+                <div class="title">UNE VOITURE DE LUXE</div>
+                <div class="topic">Taxi Madagascar</div>
+                <div class="des">
+                    Faite votre réservation avant votre arrivé à Madagascar à tous moment
+                </div>
+                <div class="buttons">
+                    <button><a href="">Réservation</a></button>
+                    <button><a href="{% url 'page_souscription' %}">S'inscrire</a></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="item">
+
+            <img src="{% static 'image/slide.4.jpg.jpg' %}" alt="">
+            <div class="content">
+                <div class="author">Dès votre arrivé à l'Aéroport de Madagascar</div>
+                <div class="title">TRANSFERT ET LOCATION</div>
+                <div class="topic">A tous déstination et vos voyages à Madagascar</div>
+                <div class="des">
+                    Faite votre réservation avant votre arrivé à Madagascar à tous moment
+                </div>
+                 <div class="buttons">
+                    <button><a href="">Réservation</a></button>
+                    <button><a href="{% url 'page_souscription' %}">S'inscrire</a></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="item">
+
+            <img src="{% static 'image/slide.5.jpg.jpg' %}" alt="" >
+            <div class="content">
+                <div class="author">Dès votre arrivé à l'Aéroport de Madagascar</div>
+                <div class="title">TRANSFERT ET LOCATION</div>
+                <div class="topic">A tous déstination et vos voyages à Madagascar</div>
+                <div class="des">
+                    Le service de qualité et votre accompagnement jusqu'à votre Hôtel ou à votre domicile 
+                </div>
+                <div class="buttons">
+                    <button><a href="">Réservation</a></button>
+                    <button><a href="{% url 'page_souscription' %}">S'inscrire</a></button>
+                </div>
+            </div>
+
+        </div>
+
+        <div class="item">
+            <img src="{% static 'image/slide.2.0.jpg.jpg' %}" alt="" >
+            <div class="content">
+                <div class="author">Dès votre arrivé à l'Aéroport de Madagascar</div>
+                <div class="title">VOITURE DE LUXE</div>
+                <div class="topic">Pour votre déplacement à votre déstination et votre hôtel</div>
+                <div class="des">
+                     Le service de qualité et votre accompagnement jusqu'à votre Hôtel ou à votre domicile
+                </div>
+                 <div class="buttons">
+                    <button><a href="">Réservation</a></button>
+                    <button><a href="{% url 'page_souscription' %}">S'inscrire</a></button>
+                </div>
+            </div>
+        </div>
+
+
+     </div>
+     <!-- thumbnail -->
+
+     <div class="thumbnail">
+
+        <div class="item">
+            <img src="{% static 'image/slide.5.jpg.jpg' %}" alt="" >
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="des">
+                    Description
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="{% static 'image/slide.3.jpg.jpg' %}" alt="" >
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="des">
+                    Description
+                </div>
+            </div>
+        </div>
+
+        <div class="item">
+            <img src="{% static 'image/slide.4.jpg.jpg' %}" alt="">
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="des">
+                    Description
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="item">
+            <img src="{% static 'image/slide.5.jpg.jpg' %}" alt="" >
+            <div class="content">
+                <div class="title">
+                    Name Slider
+                </div>
+                <div class="des">
+                    Description
+                </div>
+            </div>
+        </div> -->
+     </div>
+     <!-- arrows -->
+      <div class="arrows">
+        <button id="prev"> < </button>
+        <button id="next"> > </button>
+      </div>
+
+      <div class="time"></div>
+
+ </div>
+
+ <script>
+
+    // début du carousel 
+    let nextDom = document.getElementById("next")
+    let prevDom = document.getElementById("prev")
+    let carouselDom = document.querySelector(".carousel")
+    let listItemDom = document.querySelector(".carousel .list")
+    let thumbnailDom = document.querySelector(".carousel .thumbnail")
+
+    // pour le next
+    nextDom.onclick = function(){
+        showSlider('next');
+    }
+    // pour le prev
+    prevDom.onclick = function(){
+        showSlider('prev');
+    }
+    // 
+    let timeRunning = 5000;
+    let runTimeOut;
+
+    let timeAutonext = 6000;
+    let runAutoRun;
+
+    function showSlider(type){
+            let itemSlider = document.querySelectorAll('.carousel .list .item')
+            let itemThumbnail = document.querySelectorAll('.carousel .thumbnail .item')
+
+            if (type === 'next') {
+                listItemDom.appendChild(itemSlider[0]);
+                thumbnailDom.appendChild(itemThumbnail[0]);
+                carouselDom.classList.add('next')
+            }else{
+                let positionLastItem = itemSlider.length - 1;
+                listItemDom.prepend(itemSlider[positionLastItem]);
+                thumbnailDom.prepend(itemThumbnail[positionLastItem]);
+                carouselDom.classList.add('prev');
+            }
+            clearTimeout(runTimeOut);
+            runTimeOut = setTimeout(()=>{
+                carouselDom.classList.remove('next');
+                carouselDom.classList.remove('prev');
+            },timeRunning)
+
+            clearTimeout(runAutoRun);
+            runAutoRun = setTimeout(()=>{
+                nextDom.click()
+            },timeAutonext)
+        }
+
+
+        let searhs = document.querySelector('.search-box')
+        // let icon_search = document.getElementById("loupe")
+        document.querySelector("#loupe").onclick = ()=>{
+            searhs.classList.toggle("active");
+        }
+
+
+
+
+ </script>
+ <!-- PRESENTATION DES SERVICES EN SLIDER -->
+<!-- BLOGS -->
+  <section class="service-slide">
+      <div class="container">
+          <div class="row mb-5">
+              <div class="col-md-8 mx-auto text-center">
+                  <h2>NOS OPTIONS</h2>
+                  <p>Inscrivez_vous et choisir votre option pour vos voyages et circulation en ville avec nous</p>
+              </div>
+          </div>
+          
+<div class="">
+    <div class="plan-arriere">
+        <div class="">
+            <div class="owl-carousel owl-theme p-1 slide_service">
+             
+            <div class="item">
+                   
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/inscription.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Souscription</h5>
+                        <p class="card-text">Inscrive-vous  ou connecté sur votre compte pour bien valider votre réservation</p>
+                        <a href="{% url 'page_souscription' %}" class="btn btn-primary" id="btn_scrolle">S'inscrire</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-12">
+                 
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/historique.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Ma réservation</h5>
+                <p class="card-text">Consulter mes historiques de réservation ou voir les détails des mes réserations en ligne</p>
+                <a href="#" class="btn btn-primary" id="btn_scrolle">MES RESERVATIONS</a>
+                </div>
+                </div>
+            </div>
+
+            <div class="item mx-12">
+                 
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/reservation.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">Réserver</h5>
+                <p class="card-text">Some quick example text to build on the card title and make up the bulk of the card's content.</p>
+                <a href="#" class="btn btn-primary" id="btn_scrolle">RESERVATION</a>
+                </div>
+                </div>
+            </div>
+               <div class="item">
+                   
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/conseillere.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">Contacte</h5>
+                        <p class="card-text">Pour plus d'information, veuillez nous contater en cliquant sur ce boutton</p>
+                        <a href="#" class="btn btn-primary" id="btn_scrolle">Avoir une conséillère</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item mx-12">
+                 
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/taxi2.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">OFFRES</h5>
+                <p class="card-text">Cliquez ici pour voir les offres disponibles ou faire une demande d'offre</p>
+                <a href="{% url 'offre' %}" class="btn btn-primary" id="btn_scrolle">Voir les offres</a>
+                </div>
+                </div>
+            </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+  </section><br><br><br>
+  <!-- BLOGS -->
+  <!-- section presenation servcie -->
+       <section class="row w-100 py-0 bg-light" id="features">
+        <div class="col-lg-6 col-img"></div>
+        <div class="col-lg-6 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <h6 class="text-primary">WHY TO CHOOES US</h6>
+                        <h1>Best solution for your business</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque
+                            fuga
+                            in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
+
+                        <div class="feature d-flex mt-5">
+                            <div class="iconbox me-3">
+                                <i class='bx bxs-comment-edit'></i>
+                            </div>
+                            <div>
+                                <h5>Feature</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                            </div>
+                        </div>
+                        <div class="feature d-flex">
+                            <div class="iconbox me-3">
+                                <i class='bx bxs-user-circle'></i>
+                            </div>
+                            <div>
+                                <h5>Feature</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                            </div>
+                        </div>
+                        <div class="feature d-flex">
+                            <div class="iconbox me-3">
+                                <i class='bx bxs-download'></i>
+                            </div>
+                            <div>
+                                <h5>Feature</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section><br><br>
+    <!-- section fi -->
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-8 mx-auto text-center">
+            <h1>TAXI</h1>
+            <p>Voici les taxis disponibles</p>
+        </div>
+    </div>
+</div>
+
+ <!-- SUITE DU CODE APRES LE CAROUSEL pour AFFICHER ET RESERVER LES TAXI-->
+
+   <section class="py-1">
+    <div class="container">
+      <div class="owl-carousel owl-theme card-carousel">
+        {% for voiture in tous_prod %}
+            {% if voiture.types|lower == "taxi" %}
+
+        <div class="card image_taxi">
+          <img src="{{voiture.photo.url}}" class="card-img-top" alt="Taxi Standard">
+          <div class="card-body">
+            <h5 class="card-title"> {{voiture.nom}} </h5>
+            <p class="card-text"> {{voiture.description}} </p>
+            <a href="" class="btn btn-warning">Réserver</a>
+          </div>
+        </div>
+          {% endif %}
+        {% endfor %}
+
+
+      
+      </div>
+    </div>
+  </section>
+
+<!-- PARTIE POUR AFFICHER LES NOUVEAU MODEL OU NOUVELLE ARRIVAGES -->
+
+<section id="portfolio">
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center">
+                    <h6 class="text-primary">Transfert</h6>
+                    <h1>LOUER ET VOYAGER A TOUS MOMENT</h1>
+                    <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque fuga
+                        in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
+                </div>
+            </div>
+            <div class="row g-3">
+                 {% for prod in produit %}
+                     <div class="col-lg-4 col-sm-6">
+                    <div class="project">
+                        <img src="{{prod.photo.url}}" alt="" width="350px" height="330px">
+                        <div class="overlay">
+                            <div>
+                                <h4>{{prod.nom}}</h4>
+                                 <h6> {{prod.types}} </h6>
+                                  <button><a href="{% url 'detail' prod.id %}">Voir détail</a></button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div> 
+    </section>
+<!-- PARTIE POUR SCROLLER LES TAXI DISPONIBLES -->
+ <!-- <section>
+   {% for voiture in tous_prod %}
+    {% if voiture.types|lower == "taxi" %}
+      <p> {{voiture.nom}} </p>
+    {% endif %}
+   {% endfor %}
+ </section> -->
+{% endblock 'contenu' %}

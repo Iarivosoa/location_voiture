@@ -1,0 +1,135 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+
+{% block 'contenu' %}
+
+<h1 class="text-center h1 py-3">OFFRES DISPONIBLE</h1>
+
+    <section class="row w-100 py-0 bg-light" id="features">
+        <div class="col-lg-6">
+            <img src="{% static 'image/taxi3.png' %}" alt="">
+        </div>
+        <div class="col-lg-6 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <h6 class="text-primary">Un taxi class vous attends à l'Aéroport</h6>
+                        <h1>Voiture de l'aéroport Internationnale Ivato</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque
+                            fuga
+                            in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
+
+                        <div class="feature d-flex mt-5">
+                            <div>
+                                <h5>Circulation en ville</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                            </div>
+                        </div>
+                        <div class="feature d-flex">
+                            <div>
+                                <h5>Accompagnement à votre hôtel</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                            </div>
+                        </div>
+                        <div class="feature d-flex">
+                            
+                            <div>
+                                <h5>Avec un chauffeur privé</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- fin du premiser section -->
+     <section class="row w-100 bg-light py-3">
+        <h1 class="text-center">Location des voitures à tous types pour votre visite de Magadascar</h1>
+        <div class="col-lg-4 rounded offres-dispo">
+            <img src="{% static 'image/starex2.png' %}" alt="" width="100%" height="400px">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid soluta id perferendis esse ex ipsum eius, molestiae corporis deleniti quaerat.</p>
+            <button>Reserver</button>
+        </div>
+
+        <div class="col-lg-4 rounded">
+            <img src="{% static 'image/bus.png' %}" alt="" width="100%" height="400px">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid soluta id perferendis esse ex ipsum eius, molestiae corporis deleniti quaerat.</p>
+            <button>Reserver</button>
+        </div>
+
+        <div class="col-lg-4 rounded">
+            <img src="{% static 'image/landRover (2).jpg' %}" alt="" width="100%" height="400px">
+            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid soluta id perferendis esse ex ipsum eius, molestiae corporis deleniti quaerat.</p>
+            <button>Reserver</button>
+        </div>
+            <button><a href="">Voir tous les voitures</a></button>
+     </section>
+     <!-- SUITE DE SECTION -->
+    <h1 class="text-center h1 py-3">Guide et accompagnement avec une vacances à Nosy be seulement 250£ le 5 jours</h1>
+
+    <section class="row w-100 py-2" id="features">
+  
+        <div class="col-lg-6 py-5">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1">
+                        <h6 class="text-primary">Vacances 5 jours pour une 250£</h6>
+                        <h1>Que vous soyez des touristes ou Vacancier</h1>
+                        <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque
+                            fuga
+                            in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
+
+                        <div class="feature d-flex mt-5">
+                            <div>
+                                <h5>Circulation en ville</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                            </div>
+                        </div>
+                        <div class="feature d-flex">
+                            <div>
+                                <h5>Accompagnement à votre hôtel</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                            </div>
+                        </div>
+                        <div class="feature d-flex">
+                            
+                            <div>
+                                <h5>Avec un chauffeur privé</h5>
+                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="col-lg-6">
+            <img src="{% static 'image/paysage1.png' %}" alt="" height="500px" width="100%">
+        </div>
+    </section>
+    <!-- 0 -->
+     <section class="container w-100 py-2">
+        <div class="row px-3 site">
+
+        <div class="col-lg-4">
+            <img src="{% static '/image/paysage2 (1).jpeg' %}" alt="">
+        </div>
+
+        <div class="col-lg-4">
+            <img src="{% static 'image/paysage2 (1).jpg' %}" alt="">
+        </div>
+
+        <div class="col-lg-4">
+            <img src="{% static 'image/paysage2 (2).jpg' %}" alt="">
+        </div>
+
+        </div>
+
+        <button type="button" class="btn-primary text-center p-2 rounded-4 my-3 ms-5" ><a href="{% url 'page_vacance' %}">Liste des site Touristiques disponibles</a></button>
+
+     </section>
+  
+{% endblock 'contenu' %}

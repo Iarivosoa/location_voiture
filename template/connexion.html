@@ -1,0 +1,68 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+{% block 'contenu' %} 
+
+<div class="page-connex">
+   <div class="container py-5">
+     <div class="row">
+        <div class="col-md-7">
+            <h1 class="text-left">Bienvenu sur taxiMadagascar</h1>
+            <p class="text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate temporibus corporis obcaecati tempore asperiores reiciendis, mollitia ullam dolorum ipsam debitis?</p>
+        </div>
+        <!-- formulaire -->
+        <div class="col-md-5" id="form-connexion">
+            <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-left">Connexion</h3>
+                </div>
+                <div class="col-md-6">
+                    <span></span>
+                </div>
+                <hr>
+                <!--  -->
+                <div class="row">
+                    <label for="" class="label col-md-2 control-label">E-mail : </label> 
+                    <div class="col-md-10">
+                        <input type="email" class="form-control input-conex" placeholder="E-mail" id="" autocomplete="off">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="" class="label col-md-2 control-label">Code : </label> 
+                    <div class="col-md-10 icone-mdp">
+                        <input type="password" class="form-control input-conex" placeholder="mot de passe" id="" autocomplete="off">
+                        <i class="far fa-eye-slash mdphide" onclick="affiche_mdp()"></i>
+                    </div>
+                </div>
+                <div class="row">
+                    <label for="" class="label col-md-2 control-label">Country</label>
+                    <div class="col-md-10">
+                        <select name="" id="" class="form-control">
+                            <option value="">France</option>
+                            <option value="">Amérique</option>
+                            <option value="">Afrique</option>
+                            <option value="">Chine</option>
+                            <option value="">Autre</option>
+
+                        </select>
+                    </div>
+                </div>
+                <div class="col-md-2">
+                    <button class="btn-primary" id="bouton-connexion">Connexion</button>
+                </div>
+                <div class="création">
+                    <a href="{% url 'page_souscription' %}">Créer un Compte</a>
+                    <a href="">Mot de passe oublié</a>
+                </div>
+            </div>
+        </div>
+    </div>
+   </div>
+</div>
+<br>
+
+    <script>
+          
+            
+    </script>
+<!-- {% endblock 'contenu' %} -->
