@@ -1,0 +1,49 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+
+{% block 'contenu' %}
+
+    <div class="container">
+              <h1 class="h2 text-center my-4">Page de contacte</h1>
+        <div class="row">
+            <div class="col-md-6">
+                <img src="{% static 'image/conseillere.png' %}" alt="">
+            </div>
+            <div class="col-md-6 my-3">
+                Lorem ipsum dolor sit, amet consectetur adipisicing elit. <a href=""> Sint, ratione inventore! Quidem </a> id officiis, voluptas modi illum repellendus quo, debitis praesentium corporis eos libero ut omnis harum accusantium nobis autem consequuntur itaque porro quasi. Voluptatibus, libero. Aliquid facilis dolores unde minima quo eos! Repellendus assumenda porro quod possimus, quo quasi. Modi enim debitis, nulla fugiat fuga alias, atque maxime, ipsa natus corporis quo unde expedita deleniti repellat culpa quod a consectetur id. Sit voluptatum saepe, quae eaque, quas voluptatibus ex mollitia, reiciendis maiores iste possimus quaerat iure aut nobis deserunt! Quaerat dolore eligendi necessitatibus! Voluptatibus tempore a nisi autem dicta soluta dolor, similique sint earum nesciunt nam. Maiores aspernatur quos nihil delectus ipsam non temporibus aut ea tenetur voluptatem natus iste quo sit porro fugiat, qui perferendis, corporis cumque quisquam! Eum 
+            </div>
+        </div>
+    </div>
+    <section class="page_de_contacte" style="color: black;">
+        <div class="ombre">
+        <div class="container">
+            <legend class="text-center my-3">Ecrivez_nous ici directement</legend>
+        <form action="">
+            <div class="row">
+     
+                <div class="col-lg-6">
+
+                    <label for="" class="form-label" style="color: black;">votre nom</label>
+                    <input type="text" class="form-control">
+
+                    <label for="" class="form-label" style="color: black;">votre email</label>
+                    <input type="email" class="form-control">
+
+                    <label for="" class="form-label" style="color: black;">votre WatsApp</label>
+                    <input type="number" class="form-control">
+
+                </div>
+                <div class="col-lg-6 my-5">
+                    <textarea name="" id="" class="form-control" placeholder="Ecrivez Votre message ici ..."></textarea>
+                    <button class="btn btn-primary my-4 mx-6" type="submit">Envoyer</button>
+                </div>
+                
+            </div>
+            </form>
+        </div>
+        </div>
+    </section>
+
+
+
+{% endblock 'contenu' %}

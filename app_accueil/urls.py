@@ -7,4 +7,5 @@ urlpatterns = [
     path("chargement",chargement,name="chargement"),
     path("service",service,name="service"),
     path("offre",offre,name="offre"),
+    path("contacte_admin",contacte_admin,name="contacte_admin"),
 ]

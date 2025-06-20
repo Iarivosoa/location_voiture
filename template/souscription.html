@@ -13,17 +13,25 @@
             }
         }
     </script>
-<!-- {% block 'contenu' %} -->
+{% block 'contenu' %} 
 <div class="page-connex">
    <div class="container">
      <div class="row">
         <div class="col-md-4">
+            {% if request.method == "POST" %}
+                {% if erreur %}
+                  <p> {{erreur}} </p>
+                {% endif %}
+              
+            {% endif %}
             <h1 class="text-left">Page de Souscription</h1>
             <p class="text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate temporibus corporis obcaecati tempore asperiores reiciendis, mollitia ullam dolorum ipsam debitis?</p>
         </div>
         <!-- formulaire -->
         <div class="col-md-5" id="form-connexion">
-            <div class="row">
+            <form action="{% url 'souscrire_membre' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                <div class="row">
                 <div class="col-md-6">
                     <h3 class="text-center">Souscription</h3>
                 </div>
@@ -32,46 +40,46 @@
                 <div class="row">
         
                     <div class="col-md-10">
-                        <input type="text" class="form-control input-conex" placeholder="Votre nom" id="">
+                        <input type="text" class="form-control input-conex" placeholder="Votre nom" id="" name="nom" autocomplete="off">
                     </div>
                 </div>
                 <div class="row">
 
                     <div class="col-md-10">
-                        <input type="text" class="form-control input-conex" placeholder="Votre prénom(s)" id="">
+                        <input type="text" class="form-control input-conex" placeholder="Votre prénom(s)" id="" name="prenom" autocomplete="off">
                     </div>
                 </div>
                 <div class="row">
                     <label for="" class="label col-md-2 control-label">Né(e)le:</label> 
                     <div class="col-md-10">
-                        <input type="date" class="form-control input-conex" placeholder="Confirmer" id="">
+                        <input type="date" class="form-control input-conex" placeholder="Confirmer" id="" name="date_naissance" autocomplete="off">
                     </div>
                 </div>
                 <div class="row">
                     
                     <div class="col-md-10">
-                        <input type="email" class="form-control input-conex" placeholder="E-mail" id="">
+                        <input type="email" class="form-control input-conex" placeholder="E-mail" id="" name="email" autocomplete="off">
                     </div>
                 </div>
 
                 <div class="row">
                     
                     <div class="col-md-10 icone-mdp">
-                        <input type="password" class="form-control input-conex" placeholder="mot de passe" id="">
+                        <input type="text" class="form-control input-conex" placeholder="mot de passe" id="" name="password" autocomplete="off">
                         <i class="far fa-eye-slash" id="mdphide" onclick="affiche_mdp()"></i>
                     </div>
                 </div>
                 <div class="row">
 
                     <div class="col-md-10 icone-mdp">
-                        <input type="password" class="form-control input-conex" placeholder="Confirmer" id="">
+                        <input type="text" class="form-control input-conex" placeholder="Confirmer" id="" name="confirm_password" autocomplete="off">
                         <i class="far fa-eye-slash" id="mdphide" onclick="affiche_mdp()"></i>
                     </div>
                 </div>
                 <div class="row">
         
                     <div class="col-md-10">
-                        <input type="phone" class="form-control input-conex" placeholder="Votre numéro whatsApp" id="">
+                        <input type="phone" class="form-control input-conex" placeholder="Votre numéro whatsApp" id="" name="whatsapp" autocomplete="off">
                     </div>
                 </div>
 
@@ -79,21 +87,22 @@
                 <div class="row">
                     <label for="" class="label col-md-2 control-label">Country</label>
                     <div class="col-md-10">
-                        <select name="" id="" class="form-control">
-                            <option value="">France</option>
-                            <option value="">Amérique</option>
-                            <option value="">Afrique</option>
-                            <option value="">Chine</option>
-                            <option value="">Autre</option>
+                        <select name="pays" id="" class="form-control">
+                            <option value="France">France</option>
+                            <option value="Amérique">Amérique</option>
+                            <option value="Afrique">Afrique</option>
+                            <option value="Chine">Chine</option>
+                            <option value="Autre">Autre</option>
 
                         </select>
                     </div>
                 </div>
                 <div class="col-md-2">
-                    <button class="btn-primary" id="bouton-connexion">Souscrire</button>
+                    <button class="btn-primary" id="bouton-connexion" type="submit">Souscrire</button>
                 </div>
         
             </div>
+        </form>
         </div>
     </div>
    </div>

@@ -26,6 +26,25 @@
     {% endblock 'contenu' %}
 
     {% include "layouts/footer.html" %}
+    <script>
+            function affiche_mdp(){
+            var codes = document.getElementById("katsaka")
+            var maso = document.getElementById("maso")
+
+            if(codes.type ==="password"){
+                codes.type="text"
+                maso.classList.replace("fa-eye-slash","fa-eye")
+            }
+
+          }
+            
+    </script>
+    <script>
+        var menus = document.querySelector(".sidebar")
+        function menu(){
+            menus.classList.toggle("menuActive")
+        }
+    </script>
         <script>
         function affiche_mdp(){
             var mdpd = document.querySelector("input-conex")

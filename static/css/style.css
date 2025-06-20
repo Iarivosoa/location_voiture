@@ -362,13 +362,20 @@ nav ul a{
     border-radius: 0px 10px 10px 0;
 }
 .image_taxi{
-    height: 450px !important;
+    height: auto !important;
+}
+.image_taxi p{
+    margin-bottom: 2rem;
+    margin-top: 5px;
+}
+.card-body #btn_taxi{
+margin-left: 2rem;
 }
 .image_taxi img{
     width: 100% !important;
     height: 300px !important;
-    background-color: red;
     padding-bottom: 15px;
+
 }
 .search-box{
     background-color: var(--bg-color);
@@ -459,7 +466,7 @@ border: 2px solid white;
 /* footer */
 footer{
     width: 100%;
-    height: 70vh;
+    height: auto;
     background-color: #030728;
     margin-top: 1rem;
     display: flex;
@@ -821,8 +828,8 @@ section {
 }
 
 .iconbox {
-    width: 54px;
-    height: 54px;
+    width: 100%;
+    height: 300px;
     display: flex;
     align-items: center;
     justify-content: center;
@@ -831,6 +838,11 @@ section {
     font-size: 32px;
     border-radius: 100px;
     flex: none;
+}
+.iconbox img{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
 }
 
 
@@ -934,4 +946,50 @@ section {
     right: 17px;
     color:black;
     cursor: pointer;
+}
+/* sidebar menu */
+.sidebar{
+    position:absolute;
+    max-width: 400px;
+    max-height: 0;
+    background-color: #fffe;
+    background: white;
+    top: 80px;
+    right: 20px;
+    border-radius: 10px;
+    z-index: 2000;
+    overflow: hidden;
+    color: black;
+    transition: max-height 0.3s;
+}
+.menuActive{
+    max-height: 400px;
+    height: 400px;
+    border-radius: 10px;
+    z-index: 2000;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.4);
+}
+.card-body a{
+margin-bottom: 4px;
+}
+.page_de_contacte{
+    background-image: url(../image/taxi2.png);
+    background-repeat: no-repeat;
+    background-size:auto;
+    background-position: center;
+}
+.ombre{
+    width: 100%;
+    height: 70vh;
+    background: rgba(0, 0, 0, 0.53);
+}
+.ombre input {
+    background-color: transparent;
+}
+.ombre textarea{
+    background-color: transparent;
+}
+.ombre textarea::placeholder{
+    color: white;
+    font-weight: 300;
 }

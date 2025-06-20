@@ -4,17 +4,61 @@
 {% block 'contenu' %}
 
 <!-- caroussel -->
+ <main class="offcanvas offcanvas-end" id="usertoll">
+    <div class="offcanvas-header">
+        <h2 class="offcanvas-tittle" style="color: black;">Utilisateur</h2>
+    </div>
+    <div class="offcanvas-body">
+        <h3>Utilisateur</h3>
+        <form action="">
+            <div class="mb-3">
+                <label for="" class="form-label">Nom</label>
+                <input type="text" class="form-control">
+            </div>
+        </form>
+            <div class="containre">
+                <div class="row">
+                    <ul>
+                        <li><a href="">Gérer mon compte</a></li>
+                        <li><a href="">Paramètre</a></li>
+                        <li><a href="">Gérer les cookies</a></li>
+                        <li><a href="">Paramètre</a></li>
+                    </ul>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <a href="{% url 'deconnexion_membre' %}">Déconnexion</a>
+                </div>
+            </div>
+
+    </div>
+ </main>
  <div class="carousel">
       <div class="search-box"><input type="search" class="recherche" placeholder="Recherche"><button><i class="fas fa-search"></i></button></div>
+       <!--menu de déconnexion  -->
+      <!-- <div class="sidebar" >
+            <div class="container">
+                <div class="row">
+                    <div class="col-lg-6">Gérer mon compte</div>
+                    <div class="col-lg-6">paramètre</div>
+                </div>
+            </div>
+            <div class="container">
+                <div class="row">
+                    <a href="{% url 'deconnexion_membre' %}">Déconnexion</a>
+                </div>
+            </div>
+        </div> -->
     <!-- list item -->
      <div class="list">
         <div class="item">
 
-            <img src="{% static 'image/slide.5.jpg.jpg' %}" alt="" >
+            <img src="{% static 'image/site_voyage/Nosy_be_espace.jpg' %}" alt="" >
             <div class="content">
                 <div class="author">Dès votre arrivé à l'Aéroport de Madagascar</div>
-                <div class="title">RESERVATION de Votre Taxi</div>
-                <div class="topic">accompagnement et guide</div>
+                <div class="title">TAXI EXPRESS de Madagascar</div>
+                <div class="topic">Taxi ville, Location de voiture et voyages</div>
                 <div class="des">
                     Faite votre réservation avant votre arrivé à Madagascar à tous moment
                 </div>
@@ -28,7 +72,7 @@
 
         <div class="item">
 
-            <img src="{% static 'image/slide.3.jpg.jpg' %}" alt="" >
+            <img src="{% static 'image/tax1_ivato.jpg' %}" alt="" >
             <div class="content">
                 <div class="author">LUNDEV</div>
                 <div class="title">UNE VOITURE DE LUXE</div>
@@ -62,23 +106,6 @@
 
         </div>
 
-        <div class="item">
-
-            <img src="{% static 'image/slide.5.jpg.jpg' %}" alt="" >
-            <div class="content">
-                <div class="author">Dès votre arrivé à l'Aéroport de Madagascar</div>
-                <div class="title">TRANSFERT ET LOCATION</div>
-                <div class="topic">A tous déstination et vos voyages à Madagascar</div>
-                <div class="des">
-                    Le service de qualité et votre accompagnement jusqu'à votre Hôtel ou à votre domicile 
-                </div>
-                <div class="buttons">
-                    <button><a href="">Réservation</a></button>
-                    <button><a href="{% url 'page_souscription' %}">S'inscrire</a></button>
-                </div>
-            </div>
-
-        </div>
 
         <div class="item">
             <img src="{% static 'image/slide.2.0.jpg.jpg' %}" alt="" >
@@ -103,7 +130,7 @@
      <div class="thumbnail">
 
         <div class="item">
-            <img src="{% static 'image/slide.5.jpg.jpg' %}" alt="" >
+            <img src="{% static 'image/site_voyage/Nosy_be_espace.jpg' %}" alt="" >
             <div class="content">
                 <div class="title">
                     Name Slider
@@ -115,19 +142,7 @@
         </div>
 
         <div class="item">
-            <img src="{% static 'image/slide.3.jpg.jpg' %}" alt="" >
-            <div class="content">
-                <div class="title">
-                    Name Slider
-                </div>
-                <div class="des">
-                    Description
-                </div>
-            </div>
-        </div>
-
-        <div class="item">
-            <img src="{% static 'image/slide.4.jpg.jpg' %}" alt="">
+             <img src="{% static 'image/tax1_ivato.jpg' %}" alt="" >
             <div class="content">
                 <div class="title">
                     Name Slider
@@ -139,16 +154,18 @@
         </div>
 
         <!-- <div class="item">
-            <img src="{% static 'image/slide.5.jpg.jpg' %}" alt="" >
+            <img src="{% static 'image/slide.4.jpg.jpg' %}" alt="">
             <div class="content">
                 <div class="title">
-                    Name Slider
+                    
                 </div>
                 <div class="des">
-                    Description
+                   
                 </div>
             </div>
         </div> -->
+
+
      </div>
      <!-- arrows -->
       <div class="arrows">
@@ -161,6 +178,10 @@
  </div>
 
  <script>
+        var menus = document.querySelector(".sidebar")
+        function menu(){
+            menus.classList.toggle("menuActive")
+        }
 
     // début du carousel 
     let nextDom = document.getElementById("next")
@@ -278,7 +299,7 @@
                     <div class="card-body">
                         <h5 class="card-title">Contacte</h5>
                         <p class="card-text">Pour plus d'information, veuillez nous contater en cliquant sur ce boutton</p>
-                        <a href="#" class="btn btn-primary" id="btn_scrolle">Avoir une conséillère</a>
+                        <a href="{% url 'contacte_admin' %}" class="btn btn-primary" id="btn_scrolle">Avoir une conséillère</a>
                     </div>
                 </div>
             </div>
@@ -286,7 +307,7 @@
             <div class="item mx-12">
                  
               <div class="card" style="width: 18rem;">
-                <img src="{% static 'image/taxi2.png' %}" class="card-img-top" alt="...">
+                <img src="{% static 'image/tax1_ivato.jpg' %}" class="card-img-top" alt="...">
                 <div class="card-body">
                 <h5 class="card-title">OFFRES</h5>
                 <p class="card-text">Cliquez ici pour voir les offres disponibles ou faire une demande d'offre</p>
@@ -304,42 +325,34 @@
   <!-- BLOGS -->
   <!-- section presenation servcie -->
        <section class="row w-100 py-0 bg-light" id="features">
-        <div class="col-lg-6 col-img"></div>
+        <div class="col-lg-6 col-img"><img src="{% static 'image/campagne.jpg' %}" alt="" style="width: 100%;"></div>
         <div class="col-lg-6 py-5">
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 offset-md-1">
-                        <h6 class="text-primary">WHY TO CHOOES US</h6>
-                        <h1>Best solution for your business</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque
-                            fuga
-                            in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
+                        <h6 class="text-primary">SITE IDEAL POUR UNE LOCATION DE VOITURE</h6>
+                        <h1>Service Taxi ville et location de voiture de Madagascar</h1>
+                        <p> <b>TEAM EXPRESS </b>est la prémière plateforme complète à Madagascar  dédiée aux déplacements touristiques et urbains. Basée à Antananarivo dans l'Aéroport Intérnationale d'Ivato, elle propose une <a href="">service de taxi ville rapide et fiable</a> pour tous vos circulations, des <a href="">locations et transfert de tous types de voitures</a> au meilleur prix pour les visiteurs, Ainsi que l'organisation de <a href="">voyage vers les plus beaux sites touristiques de l'îles</a>. Ques vous rend vos déplacements simples , économiques et inoubliables. </p>
 
                         <div class="feature d-flex mt-5">
-                            <div class="iconbox me-3">
-                                <i class='bx bxs-comment-edit'></i>
-                            </div>
+                           
                             <div>
-                                <h5>Feature</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                                <h5>Teams express </h5>
+                                <p>Service taxi ville d'Antananarivo, disponible 24h/24 et 7j/7</p>
                             </div>
                         </div>
                         <div class="feature d-flex">
-                            <div class="iconbox me-3">
-                                <i class='bx bxs-user-circle'></i>
-                            </div>
+                            
                             <div>
-                                <h5>Feature</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                                <h5>Location de voiture et transfert pendant votre visite de Madagascar</h5>
+                                <p>Créer un compte sur notre site et faites vos reservation en ligne</p>
                             </div>
                         </div>
                         <div class="feature d-flex">
-                            <div class="iconbox me-3">
-                                <i class='bx bxs-download'></i>
-                            </div>
+                           
                             <div>
-                                <h5>Feature</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
+                                <h5>Voyages dans sur tous les top 10 site tourstique de l'île </h5>
+                                <p>Nous organisons des voyages dans les plus beaux sites touristiques de Madagascar</p>
                             </div>
                         </div>
 
@@ -352,7 +365,7 @@
 <div class="container">
     <div class="row mb-2">
         <div class="col-md-8 mx-auto text-center">
-            <h1>TAXI</h1>
+            <h1>TAXI EXPRESS de Madagascar</h1>
             <p>Voici les taxis disponibles</p>
         </div>
     </div>
@@ -369,9 +382,13 @@
         <div class="card image_taxi">
           <img src="{{voiture.photo.url}}" class="card-img-top" alt="Taxi Standard">
           <div class="card-body">
-            <h5 class="card-title"> {{voiture.nom}} </h5>
+            <h5 class="card-title text-center"> {{voiture.nom}} </h5>
             <p class="card-text"> {{voiture.description}} </p>
-            <a href="" class="btn btn-warning">Réserver</a>
+            <P>25 £ <span>Pour vos circulations en Ville</span> </P>
+            <a href="{% url 'detail' voiture.id %}" class="btn btn-warning" >Voir détail</a>
+            {% if request.session.client %}
+              <a href="" class="btn btn-warning" id="btn_taxi">Réserver</a>
+            {% endif %}
           </div>
         </div>
           {% endif %}
@@ -399,7 +416,7 @@
                  {% for prod in produit %}
                      <div class="col-lg-4 col-sm-6">
                     <div class="project">
-                        <img src="{{prod.photo.url}}" alt="" width="350px" height="330px">
+                        <img src="{{prod.photo2.url}}" alt="" width="350px" height="330px">
                         <div class="overlay">
                             <div>
                                 <h4>{{prod.nom}}</h4>

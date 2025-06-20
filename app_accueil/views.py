@@ -1,4 +1,4 @@
-from django.shortcuts import render
+from django.shortcuts import render,redirect
 from .models import Insertion_voiture
 from django.core.paginator import Paginator
 from .views import*
@@ -42,3 +42,6 @@ def service(request):
 #afficher la page offre
 def offre(request):
     return render(request,'offre.html')
+#affiche page pour avoir une conséiller
+def contacte_admin(request):
+    return render(request,"conseiller.html")
