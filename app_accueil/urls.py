@@ -8,4 +8,6 @@ urlpatterns = [
     path("service",service,name="service"),
     path("offre",offre,name="offre"),
     path("contacte_admin",contacte_admin,name="contacte_admin"),
+    # affiche appropos.html
+    path("appropos",appropos,name="appropos")
 ]

@@ -28,6 +28,16 @@ DEBUG = True
 
 ALLOWED_HOSTS = [".onrender.com", "localhost", "127.0.0.1"]
 
+# config email
+
+EMAIL_HOST = "smtp.gmail.com"
+EMAIL_HOST_USER = "iarivosoaf@gmail.com"
+EMAIL_HOST_PASSWORD = "saca xfxt ximc jsfr"
+EMAIL_PORT = 587
+EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
+EMAIL_USE_TLS = True
+
+
 
 # Application definition
 
@@ -41,6 +51,7 @@ INSTALLED_APPS = [
     'app_accueil',
     'app_membre',
     'app_vacance',
+    'app_reservation',
 ]
 
 MIDDLEWARE = [

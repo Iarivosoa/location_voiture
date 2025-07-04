@@ -1,135 +1,335 @@
 {% extends "layouts/master.html" %}
 {% load static %}
-
 {% block 'contenu' %}
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+    <link rel="stylesheet" href="{% static 'aos/aos.css' %}">
+</head>
+
 
 <h1 class="text-center h1 py-3">OFFRES DISPONIBLE</h1>
 
-    <section class="row w-100 py-0 bg-light" id="features">
-        <div class="col-lg-6">
-            <img src="{% static 'image/taxi3.png' %}" alt="">
-        </div>
-        <div class="col-lg-6 py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <h6 class="text-primary">Un taxi class vous attends à l'Aéroport</h6>
-                        <h1>Voiture de l'aéroport Internationnale Ivato</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque
-                            fuga
-                            in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
+    <!-- About Section -->
+    <section id="about" class="about section">
 
-                        <div class="feature d-flex mt-5">
-                            <div>
-                                <h5>Circulation en ville</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
-                            </div>
-                        </div>
-                        <div class="feature d-flex">
-                            <div>
-                                <h5>Accompagnement à votre hôtel</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
-                            </div>
-                        </div>
-                        <div class="feature d-flex">
-                            
-                            <div>
-                                <h5>Avec un chauffeur privé</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
-                            </div>
-                        </div>
+      <div class="container">
 
-                    </div>
-                </div>
+        <div class="row position-relative">
+
+          <div class="col-lg-7 about-img" data-aos="zoom-out" data-aos-delay="200"><img src="{% static 'image/bri_for.jpg' %}"></div>
+
+          <div class="col-lg-7" data-aos="fade-up" data-aos-delay="100">
+            <h2 class="inner-title">Consequatur eius et magnam</h2>
+            <div class="our-story">
+              <h4>Est 1988</h4>
+              <h3>Our Story</h3>
+              <p>Inventore aliquam beatae at et id alias. Ipsa dolores amet consequuntur minima quia maxime autem. Quidem id sed ratione. Tenetur provident autem in reiciendis rerum at dolor. Aliquam consectetur laudantium temporibus dicta minus dolor.</p>
+              <ul>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea commo</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Duis aute irure dolor in reprehenderit in</span></li>
+                <li><i class="bi bi-check-circle"></i> <span>Ullamco laboris nisi ut aliquip ex ea</span></li>
+              </ul>
+              <p>Vitae autem velit excepturi fugit. Animi ad non. Eligendi et non nesciunt suscipit repellendus porro in quo eveniet. Molestias in maxime doloremque.</p>
+
+              <div class="watch-video d-flex align-items-center position-relative">
+                <i class="bi bi-play-circle"></i>
+                <a href="https://www.youtube.com/watch?v=Y7f98aduVJ8" class="glightbox stretched-link">Watch Video</a>
+              </div>
             </div>
-        </div>
-    </section>
-    <!-- fin du premiser section -->
-     <section class="row w-100 bg-light py-3">
-        <h1 class="text-center">Location des voitures à tous types pour votre visite de Magadascar</h1>
-        <div class="col-lg-4 rounded offres-dispo">
-            <img src="{% static 'image/starex2.png' %}" alt="" width="100%" height="400px">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid soluta id perferendis esse ex ipsum eius, molestiae corporis deleniti quaerat.</p>
-            <button>Reserver</button>
+          </div>
+
         </div>
 
-        <div class="col-lg-4 rounded">
-            <img src="{% static 'image/bus.png' %}" alt="" width="100%" height="400px">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid soluta id perferendis esse ex ipsum eius, molestiae corporis deleniti quaerat.</p>
-            <button>Reserver</button>
+      </div>
+
+    </section><!-- /About Section -->
+
+    
+    <!-- Clients Section -->
+    <section id="clients" class="clients section light-background">
+      <div class="container" data-aos="fade-up">
+
+        <div class="row gy-4">
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'image/art.jpg' %}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'image/art.jpg' %}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'image/art.jpg' %}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+           <img src="{% static 'image/art.jpg' %}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="{% static 'image/art.jpg' %}" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
+          <div class="col-xl-2 col-md-3 col-6 client-logo">
+            <img src="assets/img/clients/client-6.png" class="img-fluid" alt="">
+          </div><!-- End Client Item -->
+
         </div>
 
-        <div class="col-lg-4 rounded">
-            <img src="{% static 'image/landRover (2).jpg' %}" alt="" width="100%" height="400px">
-            <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Aliquid soluta id perferendis esse ex ipsum eius, molestiae corporis deleniti quaerat.</p>
-            <button>Reserver</button>
+      </div>
+
+    </section><!-- /Clients Section -->
+
+    
+    <!-- Features 2 Section -->
+    <section id="features-2" class="features section features-2">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Features</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4 justify-content-between">
+          <div class="features-image col-lg-4 d-flex align-items-center" data-aos="fade-up">
+            <img src="{% static 'image/campagne.jpg' %}" class="img-fluid" alt="">
+          </div>
+          <div class="col-lg-7 d-flex flex-column justify-content-center">
+
+            <div class="features-item d-flex" data-aos="fade-up" data-aos-delay="200">
+              <i class="bi bi-archive flex-shrink-0"></i>
+              <div>
+                <h4>Est labore ad</h4>
+                <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
+              </div>
+            </div><!-- End Features Item-->
+
+            <div class="features-item d-flex mt-5" data-aos="fade-up" data-aos-delay="300">
+              <i class="bi bi-basket flex-shrink-0"></i>
+              <div>
+                <h4>Harum esse qui</h4>
+                <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
+              </div>
+            </div><!-- End Features Item-->
+
+            <div class="features-item d-flex mt-5" data-aos="fade-up" data-aos-delay="400">
+              <i class="bi bi-broadcast flex-shrink-0"></i>
+              <div>
+                <h4>Aut occaecati</h4>
+                <p>Aut suscipit aut cum nemo deleniti aut omnis. Doloribus ut maiores omnis facere</p>
+              </div>
+            </div><!-- End Features Item-->
+
+            <div class="features-item d-flex mt-5 " data-aos="fade-up" data-aos-delay="500">
+              <i class="far fa-address-card"></i>
+              <div>
+                <h4>Beatae veritatis</h4>
+                <p>Expedita veritatis consequuntur nihil tempore laudantium vitae denat pacta</p>
+              </div>
+            </div><!-- End Features Item-->
+
+          </div>
         </div>
-            <button class="btn btn-primary"><a href="">Voir tous les voitures</a></button>
-     </section>
-     <!-- SUITE DE SECTION -->
-    <h1 class="text-center h1 py-3">Guide et accompagnement avec une vacances à Nosy be seulement 250£ le 5 jours</h1>
 
-    <section class="row w-100 py-2" id="features">
-  
-        <div class="col-lg-6 py-5">
-            <div class="container">
-                <div class="row">
-                    <div class="col-md-10 offset-md-1">
-                        <h6 class="text-primary">Vacances 5 jours pour une 250£</h6>
-                        <h1>Que vous soyez des touristes ou Vacancier</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur nisi necessitatibus repellat distinctio eveniet eaque
-                            fuga
-                            in cumque optio consectetur harum vitae debitis sapiente praesentium aperiam aut</p>
+      </div>
 
-                        <div class="feature d-flex mt-5">
-                            <div>
-                                <h5>Circulation en ville</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
-                            </div>
-                        </div>
-                        <div class="feature d-flex">
-                            <div>
-                                <h5>Accompagnement à votre hôtel</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
-                            </div>
-                        </div>
-                        <div class="feature d-flex">
-                            
-                            <div>
-                                <h5>Avec un chauffeur privé</h5>
-                                <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Nihil perspiciatis illo </p>
-                            </div>
-                        </div>
+    </section><!-- /Features 2 Section -->
 
-                    </div>
-                </div>
+        <!-- Services Section -->
+    <section id="services" class="services section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2 class="h2 text-center mt-3">Services</h2>
+        <p class="text-center">Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row gy-4">
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative" style="border: 2px solid blue;">
+              <div class="icon">
+                <i class="far fa-address-card"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Nesciunt Mete</h3>
+              </a>
+              <p>Provident nihil minus qui consequatur non omnis maiores. Eos accusantium minus dolores iure perferendis tempore et consequatur.</p>
             </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative" style="border: 2px solid blue;">
+              <div class="icon">
+                <i class="far fa-address-card"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Eosle Commodi</h3>
+              </a>
+              <p>Ut autem aut autem non a. Sint sint sit facilis nam iusto sint. Libero corrupti neque eum hic non ut nesciunt dolorem.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6"  data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative" style="border: 2px solid blue;">
+              <div class="icon">
+                <i class="far fa-address-card"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Ledo Markt</h3>
+              </a>
+              <p>Ut excepturi voluptatem nisi sed. Quidem fuga consequatur. Minus ea aut. Vel qui id voluptas adipisci eos earum corrupti.</p>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="400">
+            <div class="service-item position-relative" style="border: 2px solid blue;">
+              <div class="icon">
+                <i class="far fa-address-card"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Asperiores Commodit</h3>
+              </a>
+              <p>Non et temporibus minus omnis sed dolor esse consequatur. Cupiditate sed error ea fuga sit provident adipisci neque.</p>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
+            <div class="service-item position-relative" style="border: 2px solid blue;">
+              <div class="icon">
+                <i class="far fa-address-card"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link">
+                <h3>Velit Doloremque</h3>
+              </a>
+              <p>Cumque et suscipit saepe. Est maiores autem enim facilis ut aut ipsam corporis aut. Sed animi at autem alias eius labore.</p>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
+          <div class="col-lg-4 col-md-6"  data-aos="fade-up" data-aos-delay="100" >
+            <div class="service-item position-relative" style="border: 2px solid blue;">
+              <div class="icon">
+                <i class="far fa-address-card"></i>
+              </div>
+              <a href="service-details.html" class="stretched-link" style="border: 2px solid blue;">
+                <h3>Dolori Architecto</h3>
+              </a>
+              <p>Hic molestias ea quibusdam eos. Fugiat enim doloremque aut neque non et debitis iure. Corrupti recusandae ducimus enim.</p>
+              <a href="service-details.html" class="stretched-link"></a>
+            </div>
+          </div><!-- End Service Item -->
+
         </div>
 
-        <div class="col-lg-6">
-            <img src="{% static 'image/paysage1.png' %}" alt="" height="500px" width="100%">
+      </div>
+
+    </section><!-- /Services Section -->
+        <!-- Call To Action Section -->
+    <section id="call-to-action" class="call-to-action section dark-background mt-5"  data-aos="fade-up" data-aos-delay="100">
+
+      <img src="assets/img/cta-bg.jpg" alt="">
+
+      <div class="container-fluid call_action">
+        <div class="row justify-content-center">
+          <div class="col-xl-10">
+            <div class="text-center">
+              <h3>Call To Action</h3>
+              <p>Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+              <a class="cta-btn" href="#">Call To Action </a>
+            </div>
+          </div>
         </div>
-    </section>
-    <!-- 0 -->
-     <section class="container w-100 py-2">
-        <div class="row px-3 site">
+      </div>
 
-        <div class="col-lg-4">
-            <img src="{% static '/image/paysage2 (1).jpeg' %}" alt="">
+    </section><!-- /Call To Action Section -->
+    <!-- Team Section -->
+    <section id="team" class="team section">
+
+      <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up" data-aos-delay="100">
+        <h2>Team</h2>
+        <p>Necessitatibus eius consequatur ex aliquid fuga eum quidem sint consectetur velit</p>
+      </div><!-- End Section Title -->
+
+      <div class="container">
+
+        <div class="row">
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="{% static 'image/guide_chauffeur.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Walter White</h4>
+                <span>Web Development</span>
+                <p>
+                  Magni qui quod omnis unde et eos fuga et exercitationem. Odio veritatis perspiciatis quaerat qui aut aut aut
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="100">
+            <div class="member">
+              <img src="{% static 'image/IMG-20250616-WA0022.jpg' %}" class="img-fluid" alt="">
+              <div class="member-content">
+                <h4>Sarah Jhinson</h4>
+                <span>Marketing</span>
+                <p>
+                  Repellat fugiat adipisci nemo illum nesciunt voluptas repellendus. In architecto rerum rerum temporibus
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
+          <div class="col-lg-4 col-md-6 d-flex" data-aos="fade-up" data-aos-delay="300">
+            <div class="member">
+              <img src="{% static 'image/logo.jpg' %}" class="img-fluid" alt="" height="300px" width="300px">
+              <div class="member-content">
+                <h4>William Anderson</h4>
+                <span>Content</span>
+                <p>
+                  Voluptas necessitatibus occaecati quia. Earum totam consequuntur qui porro et laborum toro des clara
+                </p>
+                <div class="social">
+                  <a href=""><i class="bi bi-twitter-x"></i></a>
+                  <a href=""><i class="bi bi-facebook"></i></a>
+                  <a href=""><i class="bi bi-instagram"></i></a>
+                  <a href=""><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div><!-- End Team Member -->
+
         </div>
 
-        <div class="col-lg-4">
-            <img src="{% static 'image/paysage2 (1).jpg' %}" alt="">
-        </div>
+      </div>
 
-        <div class="col-lg-4">
-            <img src="{% static 'image/paysage2 (2).jpg' %}" alt="">
-        </div>
+    </section><!-- /Team Section -->
 
-        </div>
+    
+    <script src="{% static 'aos/aos.js' %}"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+    <script>
+      AOS.init()
+    </script>
 
-        <button type="button" class="btn btn-primary text-center p-2 rounded-4 my-3 ms-5" ><a href="{% url 'page_vacance' %}">Liste des site Touristiques disponibles</a></button>
-
-     </section>
-  
 {% endblock 'contenu' %}

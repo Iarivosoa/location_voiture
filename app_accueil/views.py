@@ -45,3 +45,23 @@ def offre(request):
 #affiche page pour avoir une conséiller
 def contacte_admin(request):
     return render(request,"conseiller.html")
+#def affiche appropos
+def appropos(request):
+    recup_prod = Insertion_voiture.objects.all()
+    pagination = Paginator(recup_prod,6)
+    page_num = request.GET.get("page",1)
+
+    recup_type = set(article.types for article in recup_prod)
+
+    try:
+        page = pagination.page(page_num)
+    except:
+        page = pagination.page(1)
+    
+    contenu = {
+        "produit":page,
+        "tous_prod":recup_prod,
+        "types":recup_type
+    }
+
+    return render(request,"appropos.html",contenu)

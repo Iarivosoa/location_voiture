@@ -7,3 +7,57 @@ bootstrap/
 fontawesome/
 **/fontawesome*
 *.fontawesome.*
+
+# Python
+__pycache__/
+*.py[cod]
+*.pyo
+*.pyd
+*.pyc
+
+# Django
+*.log
+*.pot
+*.pyc
+*.pyo
+*.db
+*.sqlite3
+*.sqlite
+*.pyc
+*.pyo
+*.pyd
+
+# VSCode
+.vscode/
+
+# Environnements virtuels
+venv/
+env/
+ENV/
+
+# Fichiers de configuration/déploiement
+*.env
+.env.*
+
+# Static & media
+staticfiles/
+media/
+
+# Système
+.DS_Store
+Thumbs.db
+
+# Fichiers de migration compilés
+**/migrations/*.pyc
+**/migrations/*.pyo
+
+# Base de données locale
+*.db
+*.sqlite3
+
+# Autres
+.idea/
+*.swp
+
+# Ne pas versionner les clés secrètes ou infos sensibles
+secrets.json
