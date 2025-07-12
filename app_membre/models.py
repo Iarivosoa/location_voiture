@@ -6,7 +6,7 @@ class Insertion_membre(models.Model):
     nom = models.CharField(max_length=100)
     prenom = models.CharField(max_length=100)
     email = models.EmailField()
-    date_naissance = models.DateField()
+    date = models.DateField(auto_now=True,blank=True,null=True)
     passsword = models.CharField(max_length=100)
     watsapp = models.IntegerField()
     pays = models.CharField(max_length=100)

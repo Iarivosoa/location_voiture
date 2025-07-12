@@ -2,7 +2,7 @@
 bootstrap/
 **/bootstrap*
 *.bootstrap.*
-
+.env
 # Ignore FontAwesome files
 fontawesome/
 **/fontawesome*

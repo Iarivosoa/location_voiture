@@ -2,7 +2,7 @@
 {% load static %}
 {% block 'contenu' %} 
 
-<div class="page-connex">
+<div class="page-connex" >
    <div class="container py-5">
     {% if request.method == "POST" %}
         {% if erreur %}
@@ -11,15 +11,21 @@
       
     {% endif %}
      <div class="row">
-        <div class="col-md-7">
+        <div class="col-md-7 texte_co">
             <h1 class="text-left">Bienvenu sur taxiMadagascar</h1>
-            <p class="text-left">Lorem ipsum dolor sit amet consectetur, adipisicing elit. Cupiditate temporibus corporis obcaecati tempore asperiores reiciendis, mollitia ullam dolorum ipsam debitis?</p>
+            <p class="text-left">Cliquer sur le Bouton créer un compte si vous en avez pas encore sinon entrer votre email et votre mot de passe pour faire la réservation</p>
         </div>
         <!-- formulaire -->
         <div class="col-md-5" id="form-connexion">
+            {% if messages %}
+                {% for message in messages %}
+                  <p style="color:white;font-size: 2vw;text-transform: lowercase;">{{message}}</p>
+                {% endfor %}
+              
+            {% endif %}
             <form action="{% url 'connexion_membre' %}" method="POST" enctype="multipart/form-data">
                 {% csrf_token %}
-                            <div class="row">
+                <div class="row">
                 <div class="col-md-6">
                     <h3 class="text-left">Connexion</h3>
                 </div>

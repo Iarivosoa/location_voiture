@@ -4,6 +4,8 @@ from django.core.exceptions import ValidationError
 import hashlib
 from django.core.validators import validate_email
 from django.contrib.auth import logout
+from django.contrib import messages
+from django.views.decorators.cache import never_cache
 
 # Create your views here.
 def page_connexion(request):
@@ -18,20 +20,22 @@ def crypt_mdp(mdp):
     return crypt_mdps.hexdigest()
 
 # function pour souscrire des membres
+@never_cache
 def souscrire_membre(request):
+    if request.session["client"]:
+        return redirect("accueil")
 
     if request.method == "POST":
         
         nom = request.POST.get("nom")
         prenom = request.POST.get("prenom")
         email = request.POST.get("email")
-        date_naissance = request.POST.get("date_naissance")
         password = request.POST.get("password")
         confirm_password = request.POST.get("confirm_password")
         watsapp = request.POST.get("whatsapp")
         pays = request.POST.get("pays")
 
-        if nom !="" and prenom != "" and email != "" and date_naissance != "" and password != "" and confirm_password !="" and watsapp != "" and pays != "":
+        if nom !="" and prenom != "" and email != "" and password != "" and confirm_password !="" and watsapp != "" and pays != "":
             try:
                 validate_email(email)
             except ValidationError:
@@ -49,13 +53,13 @@ def souscrire_membre(request):
                                 nom = nom,
                                 prenom = prenom,
                                 email = email,
-                                date_naissance = date_naissance,
                                 passsword = crypt_mdp(password),
                                 watsapp = watsapp,
                                 pays = pays
                         )
                         Inserer.save()
-                        return render(request,"connexion.html")
+                        messages.success(request,"Veuiller Connecter car votre compte a étet bien crée")
+                        return redirect("page_connexion")
                     else:
                         erreur = "WatsApp non valide"
                         return render(request, "souscription.html", {"erreur": erreur}) 
@@ -75,7 +79,11 @@ def souscrire_membre(request):
 
 
 # fonction connexion membre
+@never_cache
 def connexion_membre(request):
+    if request.session["client"]:
+        return redirect("accueil")
+    
     if request.method == "POST":
         email = request.POST.get("email")
         password = request.POST.get("mot_de_passe")
@@ -83,10 +91,10 @@ def connexion_membre(request):
 
         if email !="" and password !="":
 
-            try:
-                recup_membre = Insertion_membre.objects.get(email = email)
-            except recup_membre.DoesNotExist:
-                erreur = "cet email n'existe pas"
+            
+            recup_membre = Insertion_membre.objects.get(email=email)
+            if not recup_membre:
+                erreur = "Email non trouvé"
                 return render(request,"connexion.html",{"erreur":erreur})
             
             if crypt_mdp(password) == recup_membre.passsword:
@@ -102,7 +110,8 @@ def connexion_membre(request):
                     "email":recup_membre.email
                 }
                 request.session["client"] = recup_user
-                return render(request,"chargement.html",{"membre":recup_user})
+
+                return redirect("chargement")
 
 
         

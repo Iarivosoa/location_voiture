@@ -21,7 +21,7 @@
               <div class="alert alert-success mt-3">{{ message }}</div>
             {% endfor %}
           {% endif %}
-          <form method="post" action="">
+          <form method="post" action="{% url 'reserver' %}">
             {% csrf_token %}
             <div class="row g-3">
               <div class="col-md-6">
@@ -38,7 +38,7 @@
               </div>
               <div class="col-md-6">
                 <label for="ville_depart" class="form-label fw-bold text-primary">Déstination <span class="text-danger">*</span></label>
-                <select class="form-select rounded-pill" id="ville_depart" name="ville_depart" required>
+                <select class="form-select rounded-pill" id="ville_depart" name="destination" required>
                   <option value="">Sélectionnez une ville</option>
                   <option value="Analakely">Analakely</option>
                   <option value="Ankazomanga">Ankazomanga</option>
@@ -104,6 +104,7 @@
     </div>
   </div>
 </div>
+
 <style>
   .card-header.bg-gradient-primary {
     background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%) !important;

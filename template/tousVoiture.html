@@ -1,0 +1,28 @@
+{% extends "layouts/master.html" %}
+
+{% load static %}
+
+{% block 'contenu' %}
+
+<section class="container">
+  <div class="row py-4">
+    {% for voiture in tous_voiture %}
+      <div class="col-lg-4">
+        <div class="card mb-4 shadow-sm">
+          <img src="{{ voiture.photo.url }}" class="card-img-top" alt="{{ voiture.nom }}">
+          <div class="card-body">
+            <h5 class="card-title">{{ voiture.nom }}</h5>
+            
+            {% if request.session.client %}
+              <a href="{% url 'reservation' voiture.id %}" class="btn btn-warning" >Réserver</a>
+            {% else %}
+                <a href="{% url 'page_connexion' %}" class="btn btn-warning" >Réserver</a>
+            {% endif %}
+          </div>
+        </div>
+      </div>
+    {% endfor %}
+  </div>
+</section>
+
+{% endblock 'contenu' %}

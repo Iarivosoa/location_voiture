@@ -3,7 +3,17 @@
     padding: 0;
     font-family:"Sora",sans-serif;
 }
+.header_logo{
+        height: 61px;
+        width: 150px;
+        margin-left: 30px;
+        border-radius: 20px;
+        box-shadow: 1px 1px 1px 1px white;
 
+    }
+*input, textarea {
+    text-transform: none !important;
+}
 .collapse ul{
     margin-right: 5px;
 }
@@ -17,6 +27,7 @@ header{
     overflow-y: hidden;
     position: fixed !important;
     width: 100%;
+    /* margin-bottom: 30vh !important; */
 }
 header a{
     color: white;
@@ -983,13 +994,14 @@ margin-bottom: 4px;
     color: white;
 }
 .ombre{
-    width: 100%;
+    width: 99.2%;
     height: 70vh;
     background: rgba(0, 0, 0, 0.655);
-        background-repeat: no-repeat;
+    background-repeat: no-repeat;
     background-size:auto;
     background-position: center;
     background-image: url(../image/IMG-20250616-WA0001.jpg);
+    background-blend-mode: multiply;
 }
 .ombre input {
     background-color: transparent;
@@ -1361,7 +1373,7 @@ body{
     padding-top: 2vh;
 
 }
-.drop-item:hover .dropdown{
+.drop-item:hover .dropdowns{
     display: flex;
 }
 .drop-item{
@@ -1369,7 +1381,7 @@ body{
     display: flex;
     flex-direction: column;
 }
-.dropdown{
+.dropdowns{
     min-width: 220px;
     /* display: none; */
     flex-direction: column;
@@ -1380,19 +1392,33 @@ body{
 .icone_accueil{
       position:absolute;
       right: 32px;
-      bottom: 200px;
+      bottom: 24vh;
       z-index: 50;
       display: flex;
       flex-direction: column;
-      gap: 18px;
       font-size: 35px;
       transition: 1s;
+      background-color: rgba(44, 40, 40, 0.671);
+      border-radius: 10px;
+      filter: brightness(50px);
 }
 .icone_accueil i:hover{
-    background-color: white;
     transform: scale(1.2);
     padding: 2px;
+    color: white !important;
 
+}
+@media screen and (max-width:920px) {
+  .texte_souscrire,.texte_co{
+    display: none !important;
+  }
+}
+#btn_date{
+  border-bottom: 2px solid white;
+  width: 80%;
+  cursor: pointer;
+  background-color: transparent;
+  color: white;
 }
 /* fin dropdown */
   .apropos {
@@ -1579,7 +1605,7 @@ body{
   background-color: var(--surface-color);
   text-align: center;
   border: 1px solid color-mix(in srgb, var(--default-color), transparent 85%);
-  padding: 80px 20px;
+  /* padding: 80px 20px; */
   transition: border ease-in-out 0.3s;
   height: 100%;
 }
@@ -1767,8 +1793,7 @@ body{
     box-shadow: inset 0 0 0 2px rgba(255, 255, 255, 0.5);
 }
 /*  */
-# Blog Hero Section
---------------------------------------------------------------*/
+/* # Blog Hero Section */
 .blog-hero {
   padding-top: 20px;
 }
