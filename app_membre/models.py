@@ -10,7 +10,8 @@ class Insertion_membre(models.Model):
     passsword = models.CharField(max_length=100)
     watsapp = models.IntegerField()
     pays = models.CharField(max_length=100)
-
+    reset_token = models.CharField(max_length=100, blank=True, null=True)
+    reset_token_created = models.DateTimeField(auto_now_add=True, blank=True, null=True)
 
     def __str__(self):
         return f"{self.prenom} {self.nom}"

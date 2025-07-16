@@ -1,0 +1,21 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+{% block 'contenu' %}
+
+<div style="position: relative;height: 100vh;">
+    <form action="" class="form_reset" method="POST">
+        {% csrf_token %}
+        <h3> {{message}} </h3>
+        <h3 class="h1" style="color: black;">Réinitialiser votre mot de passe</h3>
+            <label for="" style="color: black;">Nouveau mot de passe</label>
+            <input type="text" name="new_password" required>
+        
+        
+            <label for="" style="color: black;">Confirmer le mot de passe</label>
+            <input type="text" name="confirm_password" required>
+        
+        <button type="submit">Envoyer</button>
+    </form>
+</div>
+  
+{% endblock 'contenu' %}

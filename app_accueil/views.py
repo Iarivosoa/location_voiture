@@ -1,6 +1,7 @@
 from django.shortcuts import render,redirect
 from .models import Insertion_voiture
 from django.core.paginator import Paginator
+from django.utils.translation import gettext as _
 from .views import*
 
 # Create your views here.

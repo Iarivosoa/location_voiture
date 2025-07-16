@@ -87,7 +87,7 @@
           {% for site in Sites %}
           <div class="col-lg-4 col-md-6" data-aos="fade-up" data-aos-delay="100">
             <div class="service-item position-relative">
-              <a href="" class="stretched-link">
+              <a href="{% url 'service_detail' site.id %}" class="stretched-link">
                 <div class="service-img">
                   <img src="{{site.photo1.url}}" alt="" style="width: 100%; height:35vh; position: relative; margin-bottom: 3vw;border-radius: 5px;">
                 </div>
@@ -112,7 +112,7 @@
 
       <!-- Section Title -->
       <div class="container section-title" data-aos="fade-up">
-        <h2>Nos atouts</h2>
+        <h2>TAXI EXPRESS moin chère</h2>
         <p>Découvrez pourquoi nos offres sont les plus appréciées des voyageurs à Madagascar</p>
       </div><!-- End Section Title -->
 

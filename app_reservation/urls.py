@@ -5,4 +5,6 @@ urlpatterns = [
     path('reservation/', reservation, name='reserver'),
     # path('envoyer_whatsapp/', envoyer_whatsapp, name='envoyer_whatsapp'),
     path("serviceRapide",envoyer_whatsapp, name="envoyer_whatsapp"),
+    # reservation rapide
+    path("reservation",reservation,name="reservation")
 ]

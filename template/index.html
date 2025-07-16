@@ -54,7 +54,7 @@
      Votre service de voyage à Madagascar
     </p>
             {% if request.session.client %}
-              <a href="{% url 'serviceRapide' %}" class="btn_reserve"  data-aos="fade-up" data-aos-delay="100" >Réserver un taxi</a>
+              <a href="{% url 'reserver'%}" class="btn_reserve"  data-aos="fade-up" data-aos-delay="100" >Réserver un taxi</a>
             {% else %}
                 <a href="{% url 'page_connexion' %}" class="btn_reserve"  data-aos="fade-up" data-aos-delay="100">Réserver un taxi</a>
             {% endif %}

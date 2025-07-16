@@ -21,6 +21,7 @@
               <div class="alert alert-success mt-3">{{ message }}</div>
             {% endfor %}
           {% endif %}
+          <!--  -->
           <form method="post" action="{% url 'reserver' %}">
             {% csrf_token %}
             <div class="row g-3">

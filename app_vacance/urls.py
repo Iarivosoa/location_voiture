@@ -13,5 +13,8 @@ urlpatterns = [
     # pour service rapide.html
     path("serviceRapide/",serviceRapide,name="serviceRapide"),
     # OFFRE DISPO
-    path("offre_site",offre,name="offre_site")
+    path("offre_site",offre,name="offre_site"),
+    # detail pour les offres park
+    path("service_detail/<int:id>",service_detail,name="service_detail")
+    
 ]

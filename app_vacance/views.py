@@ -28,5 +28,14 @@ def offre(request):
     recup_offre = Site_park.objects.all()
 
     return render(request,"offre.html",{"Sites":recup_offre})
+# page pour detail des park
+def service_detail(request,id):
+    recup_park = Site_park.objects.get(pk=id)
+    recupTous = Site_park.objects.all()
+    contenu = {
+        "details":recup_park,
+        "parks":recupTous
+    }
+    return render(request,"detail_park.html",contenu)
 
 # Create your views here.

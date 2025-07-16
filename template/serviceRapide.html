@@ -15,7 +15,7 @@
     <!-- Bloc formulaire réservation rapide -->
     <div class="col-lg-7">
       <div class="card shadow-lg border-0 mb-4" style="margin-top: 30px;">
-        <!-- <div class="card-header bg-gradient-primary text-white text-center" style="background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);">
+         <div class="card-header bg-gradient-primary text-white text-center" style="background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);">
           <h4 class="mb-0"><i class="fa fa-stopwatch me-2"></i>Réservation rapide</h4>
         </div>
         <div class="card-body p-4">
@@ -24,24 +24,24 @@
               <div class="alert alert-success mt-3">{{ message }}</div>
             {% endfor %}
           {% endif %} -->
-          <!-- <form method="post" action="">
-            <!-- Section champs réservation rapide, à compléter avec action dans la vue Django -->
-            <!-- {% csrf_token %} -->
-            <!-- <div class="row g-3">
+          <form method="post" action="">
+            Section champs réservation rapide, à compléter avec action dans la vue Django
+            {% csrf_token %} 
+            <div class="row g-3">
               <div class="col-md-6">
                 <label for="nom" class="form-label fw-bold text-primary">Nom <span class="text-danger">*</span></label>
                 <input type="text" class="form-control rounded-pill" id="nom" name="nom" required placeholder="Votre nom">
               </div>
               <div class="col-md-6">
                 <label for="telephone" class="form-label fw-bold text-primary">Téléphone <span class="text-danger">*</span></label> -->
-                <!-- <input type="tel" class="form-control rounded-pill" id="telephone" name="telephone" required placeholder="Ex: 0700000000">
+                <input type="tel" class="form-control rounded-pill" id="telephone" name="telephone" required placeholder="Ex: 0700000000">
               </div>
               <div class="col-md-6">
                 <label for="depart" class="form-label fw-bold text-primary">Départ <span class="text-danger">*</span></label>
                 <input type="text" class="form-control rounded-pill" id="depart" name="depart" required placeholder="Lieu de prise en charge">
               </div>
               <div class="col-md-6"> -->
-                <!-- <label for="destination" class="form-label fw-bold text-primary">Destination <span class="text-danger">*</span></label>
+                <label for="destination" class="form-label fw-bold text-primary">Destination <span class="text-danger">*</span></label>
                 <input type="text" class="form-control rounded-pill" id="destination" name="destination" required placeholder="Votre destination">
               </div>
               <div class="col-md-6">
@@ -50,26 +50,26 @@
               </div>
               <div class="col-md-6">
                 <label for="heure" class="form-label fw-bold text-primary">Heure souhaitée</label> -->
-                <!-- <input type="time" class="form-control rounded-pill" id="heure" name="heure">
+                <input type="time" class="form-control rounded-pill" id="heure" name="heure">
               </div>
               <div class="col-12">
                 <label for="commentaire" class="form-label fw-bold text-primary">Commentaire</label>
                 <textarea class="form-control rounded-4" id="commentaire" name="commentaire" rows="2" placeholder="Infos complémentaires (optionnel)"></textarea>
               </div>
-            </div> -->
-            <!-- <div class="d-grid mt-4">
+            </div> 
+            <div class="d-grid mt-4">
               <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow-sm">
                 <i class="fa fa-bolt me-2"></i>Réserver maintenant
               </button>
             </div>
-          </form>  -->
-        <!-- </div>
-      </div> -->
+          </form> 
+      </div>
+      </div> 
       <!-- Bloc formulaire de contact rapide -->
-      <!-- <div class="card shadow border-0">
+      <div class="card shadow border-0">
         <div class="card-header bg-secondary text-white text-center">
           <h5 class="mb-0"><i class="fa fa-envelope me-2"></i>Contact express</h5>
-        </div> -->
+        </div> 
         <div class="card-body p-4">
          <h2> {{erreur}} </h2>
           <!-- DEBUT DU FORMULAIRE -->
