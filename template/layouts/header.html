@@ -1,9 +1,16 @@
-
+{% load i18n %}
 {% load static %}
 
 
+<div class="navs">
+    <ul>
+        <li><a href=""> <i class="fas fa-phone"></i> +261 38 67 873 20</a></li>
+        <li><a href="" style="letter-spacing: 5px;"> <i class="fas fa-envelope"></i>teams-express@gmail.com</a></li>
+        <li><a href=""  style="letter-spacing: 5px;"><i class="fab fa-facebook"></i>Facebook</a></li>
+    </ul>
+</div>
 {% if request.session.client %}
-  <header class="navbar navbar-expand-lg bg-dark">
+  <header class="navbar navbar-expand-lg bg-dark header">
     <a href="#" class="navbar-brand">
         <img src="{% static 'image/logo.jpg' %}" class="header_logo" alt="img">
     </a>
@@ -12,17 +19,21 @@
     </button>
     <div class="collapse navbar-collapse bg-dark" id="nav-content">
         <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a  href="{% url 'accueil' %}">ACCUEIL</a></li>
-            <li class="nav-item"><a href="{% url 'service' %}">SERVICE</a></li>
-            <li class="nav-item"><a href="{% url 'tousVoiture' %}">RESERVER</a></li>
-            <li> <select name="" id="">
-                <option value="" class="" selected>Langue</option>
-                <option value="">Français</option>
-                <option value="">Anglais</option>
-            </select> 
+            <li class="nav-item"><a  href="{% url 'accueil' %}">{% trans "ACCUEIL" %}</a></li>
+            <li class="nav-item"><a href="{% url 'service' %}">{% trans "SERVICE" %}</a></li> 
+            <li class="nav-item"><a href="{% url 'tousVoiture' %}">{% trans "RESERVER" %}</a></li>
+            <li> 
+                <form action="{% url 'set_language' %}" method="POST">
+                    {% csrf_token %}
+                    <select name="language" onchange="this.form.submit()" class="form-select">
+                        <option value="">{% trans "Langue" %}</option>
+                        <option value="en" {% if LANGUAGE_CODE == "en" %}selected{% endif %}>English</option>
+                        <option value="fr" {% if LANGUAGE_CODE == "fr" %}selected{% endif %}>Français</option>
+                    </select>
+                </form>
             </li>
             <button class="btn btn-primary mx-3" data-bs-toggle="offcanvas" data-bs-target="#usertoll" ><i class="far fa-list-alt" style="height: 5px;"></i></button>
-            <!-- <li class="nav-item"><button onclick="menu()" class="btn-primary" style="background-color: transparent;margin-right: 3px; color: white;width: 150px;" >MENU</button></li> -->
+            <!-- <li class="nav-item"><button onclick="menu()" class="btn-primary" style="background-color: transparent;margin-right: 3px; color: white;width: 150px;" >{% trans "MENU" %}</button></li> -->
             <!-- <li class="nav-item"><i class="fas fa-search" id="loupe"></i></li> -->
         </ul>
     </div>
@@ -39,16 +50,20 @@
     </button>
     <div class="collapse navbar-collapse bg-dark" id="nav-content" >
         <ul class="navbar-nav ms-auto">
-            <li class="nav-item"><a  href="{% url 'accueil' %}">ACCUEIL</a></li>
-            <li class="nav-item"><a href="{% url 'service' %}">SERVICE</a></li>
-            <li class="nav-item"><a href="{% url "appropos" %}">APPROPOS</a></li>
-            <li> <select name="" id="">
-                <option value="" class="" selected>Langue</option>
-                <option value="">Français</option>
-                <option value="">Anglais</option>
-            </select> 
+            <li class="nav-item"><a  href="{% url 'accueil' %}">{% trans "ACCUEIL" %}</a></li>
+            <li class="nav-item"><a href="{% url 'service' %}">{% trans "SERVICE" %}</a></li>
+            <li class="nav-item"><a href="{% url 'appropos' %}">{% trans "APPROPOS" %}</a></li>
+            <li> 
+                <form action="{% url 'set_language' %}" method="POST">
+                    {% csrf_token %}
+                    <select name="language" onchange="this.form.submit()" class="form-select">
+                        <option value="">{% trans "Langue" %}</option>
+                        <option value="en" {% if LANGUAGE_CODE == "en" %}selected{% endif %}>English</option>
+                        <option value="fr" {% if LANGUAGE_CODE == "fr" %}selected{% endif %}>Français</option>
+                    </select>
+                </form>
             </li>
-            <li class="nav-item"><a href="{% url 'page_connexion' %}">CONNEXION</a></li>
+            <li class="nav-item"><a href="{% url 'page_connexion' %}">{% trans "CONNEXION" %}</a></li>
             <!-- <li class="nav-item"><i class="fas fa-search" id="loupe"></i></li> -->
         </ul>
     </div>
@@ -57,5 +72,41 @@
  
 
 {% endif %}
-
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('.header');
+        var navs = document.querySelector('.navs');
+        if (header && navs) {
+            if (window.scrollY > window.innerHeight * 0.2) {
+                navs.style.display = 'none';
+                header.classList.add('scrolled');
+            } else {
+                navs.style.display = 'block';
+                header.classList.remove('scrolled');
+            }
+        }
+    });
+});
+</script>
+<style>
+    .scrolled {
+        animation: scroll 1s ease-in-out;
+        transition: 5s ease-in-out;
+        position: fixed;
+        top: 0;
+        box-shadow: inset 0 0 10px rgba(0, 0, 0, 0.1);
+    }
+    @keyframes scroll {
+        from {
+            top: -100px;
+            opacity: 0;
+        }
+        to {
+            top: 0;
+            opacity: 1;
+        }
+        
+    }
+</style>
 

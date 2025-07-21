@@ -1,0 +1,274 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-19 10:24+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\template\index.html:16
+msgid "Location"
+msgstr "Car rental"
+
+#: .\template\index.html:18
+msgid "tarif"
+msgstr "Rates"
+
+#: .\template\index.html:19
+msgid "réserver un véhicule"
+msgstr "book a vehicle"
+
+#: .\template\index.html:24
+msgid "Taxi ville"
+msgstr "City taxi"
+
+#: .\template\index.html:26
+msgid "service rapide"
+msgstr "Quick service"
+
+#: .\template\index.html:27
+msgid "TAXI DISPONIBLE"
+msgstr "AVAILABLE TAXI"
+
+#: .\template\index.html:33 .\template\index.html:261 .\template\index.html:263
+msgid "Voyages"
+msgstr "Trips"
+
+#: .\template\index.html:35
+msgid "déstination"
+msgstr "Destination"
+
+#: .\template\index.html:36
+msgid "Offres disponibles"
+msgstr "Available offers"
+
+#: .\template\index.html:37
+msgid "conséils"
+msgstr "Advice"
+
+#: .\template\index.html:53
+msgid "Bienvenue chez Taxi Express de Madagascar"
+msgstr "Welcome to Taxi Express Madagascar"
+
+#: .\template\index.html:55
+msgid "Votre service de voyage à Madagascar"
+msgstr "Your travel service in Madagascar"
+
+#: .\template\index.html:58 .\template\index.html:60
+msgid "Réserver un taxi"
+msgstr "Book a taxi"
+
+#: .\template\index.html:223
+msgid "NOS OPTIONS"
+msgstr "OUR OPTIONS"
+
+#: .\template\index.html:224
+msgid "Inscrivez_vous et choisir votre option pour vos voyages et circulation en ville avec nous"
+msgstr "Sign up and choose your option for your trips and city travel with us"
+
+#: .\template\index.html:238
+msgid "Souscription"
+msgstr "Subscription"
+
+#: .\template\index.html:239
+msgid "Inscrive-vous  ou connecté sur votre compte pour bien valider votre réservation"
+msgstr "Sign up or log in to your account to validate your reservation"
+
+#: .\template\index.html:240
+msgid "S'inscrire"
+msgstr "Sign up"
+
+#: .\template\index.html:249
+msgid "Ma réservation"
+msgstr "My reservation"
+
+#: .\template\index.html:250
+msgid "Consulter mes historiques de réservation ou voir les détails des mes réserations en ligne"
+msgstr "Check my reservation history or see details of my online bookings"
+
+#: .\template\index.html:251
+msgid "MES RESERVATIONS"
+msgstr "MY RESERVATIONS"
+
+#: .\template\index.html:262
+msgid "Nous organisons vos voyages à tous les SITES Touristiques de Madagascar avec un prix très attractifs"
+msgstr "We organize your trips to all tourist sites in Madagascar at very attractive prices"
+
+#: .\template\index.html:272
+msgid "Contacte"
+msgstr "Contact"
+
+#: .\template\index.html:273
+msgid "Pour plus d'information, veuillez nous contater en cliquant sur ce boutton"
+msgstr "For more information, please contact us by clicking this button"
+
+#: .\template\index.html:274
+msgid "Avoir une conséillère"
+msgstr "Get advice"
+
+#: .\template\index.html:284
+msgid "OFFRES"
+msgstr "OFFERS"
+
+#: .\template\index.html:285
+msgid "Cliquez ici pour voir les offres disponibles ou faire une demande d'offre"
+msgstr "Click here to see available offers or make a request"
+
+#: .\template\index.html:286
+msgid "Voir les offres"
+msgstr "See offers"
+
+#: .\template\index.html:309
+msgid "SITE IDEAL POUR UNE LOCATION DE VOITURE"
+msgstr "IDEAL SITE FOR CAR RENTAL"
+
+#: .\template\index.html:310
+msgid "Service Taxi ville et location de voiture de Madagascar"
+msgstr "City taxi and car rental service in Madagascar"
+
+#: .\template\index.html:311
+msgid "est la prémière plateforme complète à Madagascar  dédiée aux déplacements touristiques et urbains. Basée à Antananarivo dans l'Aéroport Intérnationale d'Ivato, elle propose une"
+msgstr "is the first complete platform in Madagascar dedicated to tourist and urban travel. Based in Antananarivo at Ivato International Airport, it offers"
+
+#: .\template\index.html:311
+msgid "service de taxi ville rapide et fiable"
+msgstr "fast and reliable city taxi service"
+
+#: .\template\index.html:311
+msgid "pour tous vos circulations, des"
+msgstr "for all your trips,"
+
+#: .\template\index.html:311
+msgid "locations et transfert de tous types de voitures"
+msgstr "rental and transfer of all types of cars"
+
+#: .\template\index.html:311
+msgid "au meilleur prix pour les visiteurs, Ainsi que l'organisation de"
+msgstr "at the best price for visitors, as well as the organization of"
+
+#: .\template\index.html:311
+msgid "voyage vers les plus beaux sites touristiques de l'îles"
+msgstr "trips to the most beautiful tourist sites of the island"
+
+#: .\template\index.html:311
+msgid "Ques vous rend vos déplacements simples , économiques et inoubliables."
+msgstr "which makes your trips simple, economical and unforgettable."
+
+#: .\template\index.html:316
+msgid "Teams express"
+msgstr "Teams express"
+
+#: .\template\index.html:317
+msgid "Service taxi ville d'Antananarivo, disponible 24h/24 et 7j/7"
+msgstr "City taxi service in Antananarivo, available 24/7"
+
+#: .\template\index.html:323
+msgid "Location de voiture et transfert pendant votre visite de Madagascar"
+msgstr "Car rental and transfer during your visit to Madagascar"
+
+#: .\template\index.html:324
+msgid "Créer un compte sur notre site et faites vos reservation en ligne"
+msgstr "Create an account on our site and make your reservation online"
+
+#: .\template\index.html:330
+msgid "Voyages dans sur tous les top 10 site tourstique de l'île"
+msgstr "Trips to the top 10 tourist sites of the island"
+
+#: .\template\index.html:331
+msgid "Nous organisons des voyages dans les plus beaux sites touristiques de Madagascar"
+msgstr "We organize trips to the most beautiful tourist sites in Madagascar"
+
+#: .\template\index.html:345
+msgid "TAXI EXPRESS de Madagascar"
+msgstr "TAXI EXPRESS of Madagascar"
+
+#: .\template\index.html:346
+msgid "Voici les taxis disponibles"
+msgstr "Here are the available taxis"
+
+#: .\template\index.html:367 .\template\index.html:369
+msgid "Réserver"
+msgstr "Book"
+
+#: .\template\index.html:391
+msgid "Transfert"
+msgstr "Transfer"
+
+#: .\template\index.html:392
+msgid "LOUER ET VOYAGER A TOUS MOMENT"
+msgstr "RENT AND TRAVEL AT ANY TIME"
+
+#: .\template\index.html:393
+msgid "Nos véhicules sont disponibles aussi bien en"
+msgstr "Our vehicles are available both in"
+
+#: .\template\index.html:393
+msgid "Service taxi ville"
+msgstr "City taxi service"
+
+#: .\template\index.html:393
+msgid "et en"
+msgstr "and in"
+
+#: .\template\index.html:393
+msgid "Transfert privé"
+msgstr "Private transfer"
+
+#: .\template\index.html:393
+msgid "pour tous vos déplacements"
+msgstr "for all your trips"
+
+#: .\template\index.html:406
+msgid "Voir détail"
+msgstr "See details"
+
+#: .\template\index.html:424
+msgid "TEAMS EXPRESS, votre taxi fiable et qualité"
+msgstr "TEAMS EXPRESS, your reliable and quality taxi"
+
+#: .\template\index.html:425
+msgid "Profitez du meilleur rapport qualité-prix pour vos circulation en ville depuis ou vers l'aéroport. Ponctuels, sécurisé et toujours disponibles, nos chauffeurs vous accueillent avec le sourire. Réservez dès maintenant avec Teams Express"
+msgstr "Enjoy the best value for your city trips to or from the airport. Punctual, safe and always available, our drivers welcome you with a smile. Book now with Teams Express"
+
+#: .\template\layouts\header.html:15
+msgid "ACCUEIL"
+msgstr "HOME"
+
+#: .\template\layouts\header.html:16
+msgid "SERVICE"
+msgstr "SERVICE"
+
+#: .\template\layouts\header.html:17
+msgid "RESERVER"
+msgstr "BOOK"
+
+#: .\template\layouts\header.html:22 .\template\layouts\header.html:54
+msgid "Langue"
+msgstr "Language"
+
+#: .\template\layouts\header.html:29
+msgid "MENU"
+msgstr "MENU"
+
+#: .\template\layouts\header.html:49
+#, fuzzy
+#| msgid "A PROPOS"
+msgid "APPROPOS"
+msgstr "ABOUT"
+
+#: .\template\layouts\header.html:61
+msgid "CONNEXION"
+msgstr "LOGIN"
+

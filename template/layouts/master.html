@@ -204,3 +204,21 @@
     </script>
   </body>
 </html>
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    window.addEventListener('scroll', function() {
+        var header = document.querySelector('.header');
+        var navs = document.querySelector('.navs');
+        if (header && navs) {
+            if (window.scrollY > window.innerHeight * 0.2) {
+                navs.style.display = 'none';
+                header.classList.add('scrolled');
+            } else {
+                navs.style.display = 'block';
+                header.classList.remove('scrolled');
+            }
+        }
+    });
+});
+</script>

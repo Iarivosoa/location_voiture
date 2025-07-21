@@ -11,11 +11,16 @@ from django.conf import settings
 from datetime import datetime
 from django.utils import timezone
 from django.utils.crypto import get_random_string
+from django.contrib.auth.decorators import login_required
 
 # Create your views here.
 def page_connexion(request):
+    if request.session.get("client"):
+        return redirect("accueil")
     return render(request,"connexion.html")
 def page_souscription(request):
+    if request.session.get("client"):
+        return redirect("accueil")
     return render(request,"souscription.html")
 
 # cryptage mot de passe
@@ -27,8 +32,9 @@ def crypt_mdp(mdp):
 # function pour souscrire des membres
 @never_cache
 def souscrire_membre(request):
+    if request.session.get("client"):
+        return redirect("accueilz")
  
-
     if request.method == "POST":
         
         nom = request.POST.get("nom")
@@ -84,42 +90,43 @@ def souscrire_membre(request):
 
 # fonction connexion membre
 
+@never_cache
 def connexion_membre(request):
+    if request.session.get("client"):
+        return redirect("accueil")
     
     if request.method == "POST":
         email = request.POST.get("email")
         password = request.POST.get("mot_de_passe")
         validation = True
+        try:
 
-        if email !="" and password !="":
+            if email !="" and password !="":
+                recup_membre = Insertion_membre.objects.get(email = email)
+                if crypt_mdp(password) != recup_membre.passsword:
+                    validation = False
+                    erreur = "Mot de passe incrorrecte"
+                    return render(request,"connexion.html",{"erreur":erreur})
 
-            
-            recup_membre = Insertion_membre.objects.get(email=email)
-            if not recup_membre:
-                erreur = "Email non trouvé"
-                return render(request,"connexion.html",{"erreur":erreur})
-            
-            if crypt_mdp(password) == recup_membre.passsword:
-                validation = True
-                pass
+                if recup_membre.email == email :
+                    if validation:
+                        recup_user = {
+                            "id":recup_membre.id,
+                            "nom":recup_membre.nom,
+                            "email":recup_membre.email
+                        }
+                        request.session["client"] = recup_user
+
+                        return redirect("chargement")
             else:
-                erreur = "Mot de passe incrorrecte"
+                erreur = "Veuillez remplir tous les champs"
                 return render(request,"connexion.html",{"erreur":erreur})
-            if validation:
-                recup_user = {
-                    "id":recup_membre.id,
-                    "nom":recup_membre.nom,
-                    "email":recup_membre.email
-                }
-                request.session["client"] = recup_user
-
-                return redirect("chargement")
-
-
-        
-        else:
-            erreur = "Veuillez remplir tous les champs"
+        except Insertion_membre.DoesNotExist:
+            validation = False
+            erreur = "compte n'existe pas"
             return render(request,"connexion.html",{"erreur":erreur})
+                
+
 
 
     return render(request,"connexion.html") 
@@ -156,6 +163,7 @@ def reset_password(request):
     return render(request,"reset_password.html",{"message":"Consulter votre email pour avoir le lien"})
 # pager pour le nouveau mot de passe
 def page_reset_password(request, token):
+
     if request.method == "POST":
         new_password = request.POST.get("new_password")
         confirm_new_password = request.POST.get("confirm_password")

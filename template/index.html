@@ -1,5 +1,6 @@
 {% extends "layouts/master.html" %}
 {% load static %}
+{% load i18n %}
 
 {% block 'contenu' %}
 <head>
@@ -12,28 +13,27 @@
     <div class="drops" style="opacity: 1;">
        <ul class="drop-list">
            <li class="drop-item"> 
-               <span class="drop_titre">Location</span>
+               <span class="drop_titre">{% trans "Location" %}</span>
                <div class="dropdowns">
-                   <a href="{% url 'tarif' %}">tarif</a>
-                   <a href="{% url 'serviceRapide' %}">réserver un véhicule</a>
+                   <a href="{% url 'tarif' %}">{% trans "tarif" %}</a>
+                   <a href="{% url 'serviceRapide' %}">{% trans "réserver un véhicule" %}</a>
                </div>
            </li>
    
            <li class="drop-item"> 
-               <span class="drop_titre">Taxi ville</span>
+               <span class="drop_titre">{% trans "Taxi ville" %}</span>
                <div class="dropdowns">
-                   <a href="{% url 'serviceRapide' %}">service rapide</a>
-                   <a href="{% url 'tousVoiture' %}">TAXI DISPONIBLE</a>
+                   <a href="{% url 'serviceRapide' %}">{% trans "service rapide" %}</a>
+                   <a href="{% url 'tousVoiture' %}">{% trans "TAXI DISPONIBLE" %}</a>
               
                </div>
            </li>
    
            <li class="drop-item"> 
-               <span class="drop_titre">Voyages</span>
+               <span class="drop_titre">{% trans "Voyages" %}</span>
                <div class="dropdowns">
-                   <a href="{% url 'voyage' %}">déstination</a>
-                   <a href="{% url 'offre_site' %}">Offres disponibles</a>
-                   <a href="{% url 'contacte_admin' %}">conséils</a>
+                   <a href="{% url 'offre_site' %}">{% trans "Offres disponibles" %}</a>
+                   <a href="{% url 'contacte_admin' %}">{% trans "conséils" %}</a>
                </div>
            </li>
 <!--    
@@ -49,14 +49,14 @@
     </div>
     <!-- phrase -->
   <div class="apropos" id="apropos-text"  data-aos="fade-up" data-aos-delay="100">
-    <h1 style="color: coral; font-weight: 600;" data-aos="fade-right" data-aos-delay="100">Bienvenue chez Taxi Express de Madagascar</h1>
-    <p  data-aos="fade-left" data-aos-delay="100">
-     Votre service de voyage à Madagascar
+    <h1 style="color: coral; font-weight: 600;" data-aos="fade-right" data-aos-delay="100">{% trans "Bienvenue chez Taxi Express de Madagascar" %}</h1>
+    <p  data-aos="fade-left" data-aos-delay="100" style="text-transform:initial;">
+     {% trans "Votre service de voyage à Madagascar" %}
     </p>
             {% if request.session.client %}
-              <a href="{% url 'reserver'%}" class="btn_reserve"  data-aos="fade-up" data-aos-delay="100" >Réserver un taxi</a>
+              <a href="{% url 'reserver'%}" class="btn_reserve"  data-aos="fade-up" data-aos-delay="100" >{% trans "Réserver un taxi" %}</a>
             {% else %}
-                <a href="{% url 'page_connexion' %}" class="btn_reserve"  data-aos="fade-up" data-aos-delay="100">Réserver un taxi</a>
+                <a href="{% url 'page_connexion' %}" class="btn_reserve"  data-aos="fade-up" data-aos-delay="100">{% trans "Réserver un taxi" %}</a>
             {% endif %}
     <a href="" ></a>
   </div>
@@ -70,7 +70,9 @@
 
         <img src="{% static 'image/tax1_ivato.jpg' %}" alt="">
 
-        <img src="{% static 'image/rova (2).jpg' %}" alt="">
+        <img src="{% static 'image/site_voyage/Lemur1.jpeg' %}">
+
+        <img src="{% static 'image/site_voyage/Lemur3_fVln9QM.jpg' %}">
 
         <img src="{% static 'image/voiture_Ivato.jpg' %}" alt="">
 
@@ -219,8 +221,8 @@
       <div class="container" data-aos="fade-up" data-aos-delay="100">
           <div class="row mb-5">
               <div class="col-md-8 mx-auto text-center">
-                  <h2>NOS OPTIONS</h2>
-                  <p>Inscrivez_vous et choisir votre option pour vos voyages et circulation en ville avec nous</p>
+                  <h2>{% trans "NOS OPTIONS" %}</h2>
+                  <p>{% trans "Inscrivez_vous et choisir votre option pour vos voyages et circulation en ville avec nous" %}</p>
               </div>
           </div>
           
@@ -234,9 +236,9 @@
               <div class="card" style="width: 18rem;">
                 <img src="{% static 'image/inscription.png' %}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Souscription</h5>
-                        <p class="card-text">Inscrive-vous  ou connecté sur votre compte pour bien valider votre réservation</p>
-                        <a href="{% url 'page_souscription' %}" class="btn btn-primary" id="btn_scrolle">S'inscrire</a>
+                        <h5 class="card-title">{% trans "Souscription" %}</h5>
+                        <p class="card-text">{% trans "Inscrive-vous  ou connecté sur votre compte pour bien valider votre réservation" %}</p>
+                        <a href="{% url 'page_souscription' %}" class="btn btn-primary" id="btn_scrolle">{% trans "S'inscrire" %}</a>
                     </div>
                 </div>
             </div>
@@ -245,9 +247,9 @@
               <div class="card" style="width: 18rem;">
                 <img src="{% static 'image/historique.png' %}" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 class="card-title">Ma réservation</h5>
-                <p class="card-text">Consulter mes historiques de réservation ou voir les détails des mes réserations en ligne</p>
-                <a href="#" class="btn btn-primary" id="btn_scrolle">MES RESERVATIONS</a>
+                <h5 class="card-title">{% trans "Ma réservation" %}</h5>
+                <p class="card-text">{% trans "Consulter mes historiques de réservation ou voir les détails des mes réserations en ligne" %}</p>
+                <a href="#" class="btn btn-primary" id="btn_scrolle">{% trans "MES RESERVATIONS" %}</a>
                 </div>
                 </div>
             </div>
@@ -257,9 +259,9 @@
               <div class="card" style="width: 18rem;">
                 <img src="{% static 'image/site_voyage/Nosy_be.jpg' %}" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 class="card-title">Voyages</h5>
-                <p class="card-text">Nous organisons vos voyages à tous les SITES Touristiques de Madagascar avec un prix très attractifs</p>
-                <a href="{% url 'voyage' %}" class="btn btn-primary" id="btn_scrolle">Voyages</a>
+                <h5 class="card-title">{% trans "Voyages" %}</h5>
+                <p class="card-text">{% trans "Nous organisons vos voyages à tous les SITES Touristiques de Madagascar avec un prix très attractifs" %}</p>
+                <a href="{% url 'voyage' %}" class="btn btn-primary" id="btn_scrolle">{% trans "Voyages" %}</a>
                 </div>
                 </div>
             </div>
@@ -268,9 +270,9 @@
               <div class="card" style="width: 18rem;">
                 <img src="{% static 'image/conseillere.png' %}" class="card-img-top" alt="...">
                     <div class="card-body">
-                        <h5 class="card-title">Contacte</h5>
-                        <p class="card-text">Pour plus d'information, veuillez nous contater en cliquant sur ce boutton</p>
-                        <a href="{% url 'contacte_admin' %}" class="btn btn-primary" id="btn_scrolle">Avoir une conséillère</a>
+                        <h5 class="card-title">{% trans "Contacte" %}</h5>
+                        <p class="card-text">{% trans "Pour plus d'information, veuillez nous contater en cliquant sur ce boutton" %}</p>
+                        <a href="{% url 'contacte_admin' %}" class="btn btn-primary" id="btn_scrolle">{% trans "Avoir une conséillère" %}</a>
                     </div>
                 </div>
             </div>
@@ -280,9 +282,9 @@
               <div class="card" style="width: 18rem;">
                 <img src="{% static 'image/tax1_ivato.jpg' %}" class="card-img-top" alt="...">
                 <div class="card-body">
-                <h5 class="card-title">OFFRES</h5>
-                <p class="card-text">Cliquez ici pour voir les offres disponibles ou faire une demande d'offre</p>
-                <a href="{% url 'offre_site' %}" class="btn btn-primary" id="btn_scrolle">Voir les offres</a>
+                <h5 class="card-title">{% trans "OFFRES" %}</h5>
+                <p class="card-text">{% trans "Cliquez ici pour voir les offres disponibles ou faire une demande d'offre" %}</p>
+                <a href="{% url 'offre_site' %}" class="btn btn-primary" id="btn_scrolle">{% trans "Voir les offres" %}</a>
                 </div>
                 </div>
             </div>
@@ -305,29 +307,29 @@
             <div class="container">
                 <div class="row">
                     <div class="col-md-10 offset-md-1" data-aos="fade-left" data-aos-delay="100">
-                        <h6 class="text-primary">SITE IDEAL POUR UNE LOCATION DE VOITURE</h6>
-                        <h1>Service Taxi ville et location de voiture de Madagascar</h1>
-                        <p> <b>TEAM EXPRESS </b>est la prémière plateforme complète à Madagascar  dédiée aux déplacements touristiques et urbains. Basée à Antananarivo dans l'Aéroport Intérnationale d'Ivato, elle propose une <a href="">service de taxi ville rapide et fiable</a> pour tous vos circulations, des <a href="">locations et transfert de tous types de voitures</a> au meilleur prix pour les visiteurs, Ainsi que l'organisation de <a href="">voyage vers les plus beaux sites touristiques de l'îles</a>. Ques vous rend vos déplacements simples , économiques et inoubliables. </p>
+                        <h6 class="text-primary">{% trans "SITE IDEAL POUR UNE LOCATION DE VOITURE" %}</h6>
+                        <h1>{% trans "Service Taxi ville et location de voiture de Madagascar" %}</h1>
+                        <p> <b>TEAM EXPRESS </b>{% trans "est la prémière plateforme complète à Madagascar  dédiée aux déplacements touristiques et urbains. Basée à Antananarivo à l'Aéroport Intérnationale d'Ivato, elle propose une" %} <a href="">{% trans "service de taxi ville rapide et fiable" %}</a> {% trans "pour tous vos circulations, des" %} <a href="">{% trans "locations et transfert de tous types de voitures" %}</a> {% trans "au meilleur prix pour les visiteurs, Ainsi que l'organisation de" %} <a href="">{% trans "voyage vers les plus beaux sites touristiques de l'îles" %}</a>. {% trans "Ques vous rend vos déplacements simples , économiques et inoubliables." %} </p>
 
                         <div class="feature d-flex mt-2">
                            
                             <div>
-                                <h5>Teams express </h5>
-                                <p>Service taxi ville d'Antananarivo, disponible 24h/24 et 7j/7</p>
+                                <h5>{% trans "Teams express" %}</h5>
+                                <p>{% trans "Service taxi ville d'Antananarivo, disponible 24h/24 et 7j/7" %}</p>
                             </div>
                         </div>
                         <div class="feature d-flex">
                             
                             <div>
-                                <h5>Location de voiture et transfert pendant votre visite de Madagascar</h5>
-                                <p>Créer un compte sur notre site et faites vos reservation en ligne</p>
+                                <h5>{% trans "Location de voiture et transfert pendant votre visite de Madagascar" %}</h5>
+                                <p>{% trans "Créer un compte sur notre site et faites vos reservation en ligne" %}</p>
                             </div>
                         </div>
                         <div class="feature d-flex">
                            
                             <div>
-                                <h5>Voyages dans sur tous les top 10 site tourstique de l'île </h5>
-                                <p>Nous organisons des voyages dans les plus beaux sites touristiques de Madagascar</p>
+                                <h5>{% trans "Voyages dans sur tous les top 10 site tourstique de l'île" %}</h5>
+                                <p>{% trans "Nous organisons des voyages dans les plus beaux sites touristiques de Madagascar" %}</p>
                             </div>
                         </div>
 
@@ -341,8 +343,8 @@
 <div class="container">
     <div class="row mb-2">
         <div class="col-md-8 mx-auto text-center">
-            <h1>TAXI EXPRESS de Madagascar</h1>
-            <p>Voici les taxis disponibles</p>
+            <h1>{% trans "TAXI EXPRESS de Madagascar" %}</h1>
+            <p>{% trans "Voici les taxis disponibles" %}</p>
         </div>
     </div>
 </div>
@@ -363,9 +365,9 @@
             <!-- <a href="{% url 'detail' voiture.id %}" class="btn btn-warning" >Voir détail</a> -->
             
             {% if request.session.client %}
-              <a href="{% url 'reservation' voiture.id %}" class="btn btn-warning" >Réserver</a>
+              <a href="{% url 'reservation' voiture.id %}" class="btn btn-warning" >{% trans "Réserver" %}</a>
             {% else %}
-                <a href="{% url 'page_connexion' %}" class="btn btn-warning" >Réserver</a>
+                <a href="{% url 'page_connexion' %}" class="btn btn-warning" >{% trans "Réserver" %}</a>
             {% endif %}
           
 
@@ -387,9 +389,9 @@
         <div class="container-fluid">
             <div class="row mb-5">
                 <div class="col-md-8 mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
-                    <h6 class="text-primary">Transfert</h6>
-                    <h1>LOUER ET VOYAGER A TOUS MOMENT</h1>
-                    <p>Nos véhicules sont disponibles aussi bien en <a href="">Service taxi ville</a> et en <a href="">Transfert privé</a> pour tous vos déplacements</p>
+                    <h6 class="text-primary">{% trans "Transfert" %}</h6>
+                    <h1>{% trans "LOUER ET VOYAGER A TOUS MOMENT" %}</h1>
+                    <p>{% trans "Nos véhicules sont disponibles aussi bien en" %} <a href="">{% trans "Service taxi ville" %}</a> {% trans "et en" %} <a href="">{% trans "Transfert privé" %}</a> {% trans "pour tous vos déplacements" %}</p>
                 </div>
             </div>
             <div class="row g-3" data-aos="fade-up" data-aos-delay="100">
@@ -402,7 +404,7 @@
                                 <h4>{{prod.nom}}</h4>
                                  <h6> {{prod.types}} </h6>
                         
-                                  <button><a href="{% url 'detail' prod.id %}">Voir détail</a></button>
+                                  <button><a href="{% url 'detail' prod.id %}">{% trans "Voir détail" %}</a></button>
                                   
                             </div>
                         </div>
@@ -420,8 +422,8 @@
         <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
           <div class="col-xl-10">
             <div class="text-center py-5">
-              <h3>TEAMS EXPRESS, votre taxi fiable et qualité</h3>
-              <p>Profitez du meilleur rapport qualité-prix pour vos circulation en ville depuis ou vers l'aéroport. Ponctuels, sécurisé et toujours disponibles, nos chauffeurs vous accueillent avec le sourire. Réservez dès maintenant avec Teams Express </a>
+              <h3>{% trans "TEAMS EXPRESS, votre taxi fiable et qualité" %}</h3>
+              <p>{% trans "Profitez du meilleur rapport qualité-prix pour vos circulation en ville depuis ou vers l'aéroport. Ponctuels, sécurisé et toujours disponibles, nos chauffeurs vous accueillent avec le sourire. Réservez dès maintenant avec Teams Express" %}</p>
             </div>
           </div>
         </div>

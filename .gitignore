@@ -3,6 +3,8 @@ bootstrap/
 **/bootstrap*
 *.bootstrap.*
 .env
+*.medi
+venv/*
 # Ignore FontAwesome files
 fontawesome/
 **/fontawesome*
@@ -58,6 +60,7 @@ Thumbs.db
 # Autres
 .idea/
 *.swp
+*.txt
 
 # Ne pas versionner les clés secrètes ou infos sensibles
 secrets.json

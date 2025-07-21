@@ -66,3 +66,7 @@ def appropos(request):
     }
 
     return render(request,"appropos.html",contenu)
+
+# PARTIE FONCTION DE CHANGEMENT DE LANGUE
+def changement_langue(request):
+    pass

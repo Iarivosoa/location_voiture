@@ -22,5 +22,5 @@ urlpatterns = [
     path('',include('app_accueil.urls')),
     path('',include('app_membre.urls')),
     path('',include('app_vacance.urls')),
-    path('',include('app_reservation.urls')),
+    path('',include('app_reservation.urls'))
 ]
