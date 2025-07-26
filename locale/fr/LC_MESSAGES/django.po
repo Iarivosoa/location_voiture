@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-20 19:25+0200\n"
+"POT-Creation-Date: 2025-07-25 11:00+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
-
-#: .\template\appropos.html:18
-msgid "À propos de l’application "
-msgstr "À propos de l’application "
 
 #: .\template\appropos.html:19
 msgid ""
@@ -248,10 +244,6 @@ msgstr "conséils"
 msgid "Bienvenue chez Taxi Express de Madagascar"
 msgstr "Bienvenue chez Taxi Express de Madagascar"
 
-#: .\template\index.html:54
-msgid "Votre service de voyage à Madagascar"
-msgstr "Votre service de voyage à Madagascar"
-
 #: .\template\index.html:57 .\template\index.html:59
 msgid "Réserver un taxi"
 msgstr "Réserver un taxi"
@@ -345,9 +337,14 @@ msgid "Service Taxi ville et location de voiture de Madagascar"
 msgstr "Service Taxi ville et location de voiture de Madagascar"
 
 #: .\template\index.html:312
+#, fuzzy
+#| msgid ""
+#| "est la prémière plateforme complète à Madagascar  dédiée aux déplacements "
+#| "touristiques et urbains. Basée à Antananarivo dans l'Aéroport "
+#| "Intérnationale d'Ivato, elle propose une"
 msgid ""
 "est la prémière plateforme complète à Madagascar  dédiée aux déplacements "
-"touristiques et urbains. Basée à Antananarivo dans l'Aéroport Intérnationale "
+"touristiques et urbains. Basée à Antananarivo à l'Aéroport Intérnationale "
 "d'Ivato, elle propose une"
 msgstr ""
 "est la première plateforme complète à Madagascar dédiée aux déplacements "
@@ -465,6 +462,18 @@ msgstr ""
 "depuis ou vers l'aéroport. Ponctuels, sécurisés et toujours disponibles, nos "
 "chauffeurs vous accueillent avec le sourire. Réservez dès maintenant avec "
 "Teams Express"
+
+#: .\template\layouts\footer.html:10
+msgid ""
+"Service de réservation de taxi fiable et rapide à Madagascar. Disponible 7j/"
+"7."
+msgstr ""
+"Service de réservation de taxi fiable et rapide à Madagascar. Disponible 7j/"
+"7."
+
+#: .\template\layouts\footer.html:23
+msgid "Politique de confidentialité"
+msgstr "Politique de confidentialité"
 
 #: .\template\layouts\header.html:22 .\template\layouts\header.html:53
 msgid "ACCUEIL"
@@ -641,6 +650,12 @@ msgstr ""
 "richesse naturelle et culturel de l'îles avec Teams Express. contacter nous "
 "en WatsApp +261 38 67 873 20"
 
+#~ msgid "À propos de l’application "
+#~ msgstr "À propos de l’application "
+
+#~ msgid "Votre service de voyage à Madagascar"
+#~ msgstr "Votre service de voyage à Madagascar"
+
 #~ msgid "déstination"
 #~ msgstr "déstination"
 
@@ -677,3 +692,7 @@ msgstr ""
 #~ "tels que le PALAIS DE LA REINE et de la CATHEDRALE CATHOLIQUE jusqu'aux "
 #~ "ESCALIERS JUMELES opposé et l'AVENUE de L'INDEPENDANCE, le marché "
 #~ "d'Analakely et bien plus encore."
+
+
+
+

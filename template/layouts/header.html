@@ -2,6 +2,8 @@
 {% load static %}
 
 
+
+{% if request.session.client %}
 <div class="navs">
     <ul>
         <li><a href=""> <i class="fas fa-phone"></i> +261 38 67 873 20</a></li>
@@ -9,7 +11,6 @@
         <li><a href=""  style="letter-spacing: 5px;"><i class="fab fa-facebook"></i>Facebook</a></li>
     </ul>
 </div>
-{% if request.session.client %}
   <header class="navbar navbar-expand-lg bg-dark header">
     <a href="#" class="navbar-brand">
         <img src="{% static 'image/logo.jpg' %}" class="header_logo" alt="img">
@@ -41,6 +42,13 @@
 </header>
 
 {% else %}
+<div class="navs">
+    <ul>
+        <li><a href=""> <i class="fas fa-phone"></i> +261 38 67 873 20</a></li>
+        <li><a href="" style="letter-spacing: 5px;"> <i class="fas fa-envelope"></i>teams-express@gmail.com</a></li>
+        <li><a href=""  style="letter-spacing: 5px;"><i class="fab fa-facebook"></i>Facebook</a></li>
+    </ul>
+</div>
   <header class="navbar navbar-expand-lg bg-dark">
     <a href="#" class="navbar-brand">
         <img src="{% static 'image/logo.jpg' %}" class="header_logo">

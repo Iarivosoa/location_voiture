@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: PACKAGE VERSION\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2025-07-21 06:50+0200\n"
+"POT-Creation-Date: 2025-07-25 11:36+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,10 +17,6 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
-
-#: .\template\appropos.html:18
-msgid "À propos de l’application "
-msgstr "About the"
 
 #: .\template\appropos.html:19
 msgid ""
@@ -240,10 +236,6 @@ msgstr ""
 msgid "Bienvenue chez Taxi Express de Madagascar"
 msgstr "Welcome to Taxi Express Madagascar"
 
-#: .\template\index.html:54
-msgid "Votre service de voyage à Madagascar"
-msgstr "Your travel service in Madagascar"
-
 #: .\template\index.html:57 .\template\index.html:59
 msgid "Réserver un taxi"
 msgstr "Book a taxi"
@@ -451,6 +443,18 @@ msgstr ""
 "safe and always available, our drivers welcome you with a smile. Book now "
 "with Teams Express"
 
+#: .\template\layouts\footer.html:10
+msgid ""
+"Service de réservation de taxi fiable et rapide à Madagascar. Disponible 7j/"
+"7."
+msgstr ""
+"Reliable and fast taxi booking service in Madagascar. Available 7 days a "
+"week."
+
+#: .\template\layouts\footer.html:23
+msgid "Politique de confidentialité"
+msgstr "Politique de confidentialité"
+
 #: .\template\layouts\header.html:22 .\template\layouts\header.html:53
 msgid "ACCUEIL"
 msgstr "HOME"
@@ -622,6 +626,12 @@ msgstr ""
 "with comfortable accommodation and stress-free tours. Enjoy moments of "
 "complicity by exploring the natural and cultural wealth of the islands with "
 "Teams Express. Contact us on WhatsApp +261 38 67 873 20"
+
+#~ msgid "À propos de l’application "
+#~ msgstr "About the"
+
+#~ msgid "Votre service de voyage à Madagascar"
+#~ msgstr "Your travel service in Madagascar"
 
 #~ msgid "déstination"
 #~ msgstr "Destination"

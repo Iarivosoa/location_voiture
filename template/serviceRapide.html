@@ -23,9 +23,8 @@
             {% for message in messages %}
               <div class="alert alert-success mt-3">{{ message }}</div>
             {% endfor %}
-          {% endif %} -->
+          {% endif %} 
           <form method="post" action="">
-            Section champs réservation rapide, à compléter avec action dans la vue Django
             {% csrf_token %} 
             <div class="row g-3">
               <div class="col-md-6">
@@ -33,14 +32,14 @@
                 <input type="text" class="form-control rounded-pill" id="nom" name="nom" required placeholder="Votre nom">
               </div>
               <div class="col-md-6">
-                <label for="telephone" class="form-label fw-bold text-primary">Téléphone <span class="text-danger">*</span></label> -->
+                <label for="telephone" class="form-label fw-bold text-primary">Téléphone <span class="text-danger">*</span></label> 
                 <input type="tel" class="form-control rounded-pill" id="telephone" name="telephone" required placeholder="Ex: 0700000000">
               </div>
               <div class="col-md-6">
                 <label for="depart" class="form-label fw-bold text-primary">Départ <span class="text-danger">*</span></label>
                 <input type="text" class="form-control rounded-pill" id="depart" name="depart" required placeholder="Lieu de prise en charge">
               </div>
-              <div class="col-md-6"> -->
+              <div class="col-md-6">
                 <label for="destination" class="form-label fw-bold text-primary">Destination <span class="text-danger">*</span></label>
                 <input type="text" class="form-control rounded-pill" id="destination" name="destination" required placeholder="Votre destination">
               </div>
@@ -49,7 +48,7 @@
                 <input type="number" class="form-control rounded-pill" id="nombre_personnes" name="nombre_personnes" min="1" value="1">
               </div>
               <div class="col-md-6">
-                <label for="heure" class="form-label fw-bold text-primary">Heure souhaitée</label> -->
+                <label for="heure" class="form-label fw-bold text-primary">Heure souhaitée</label>
                 <input type="time" class="form-control rounded-pill" id="heure" name="heure">
               </div>
               <div class="col-12">
