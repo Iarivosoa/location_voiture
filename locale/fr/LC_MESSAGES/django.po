@@ -694,5 +694,37 @@ msgstr ""
 #~ "d'Analakely et bien plus encore."
 
 
+msgid " Bienvenue sur la page de contact de Taxi Express Madagascar !"
+msgstr " Bienvenue sur la page de contact de Taxi Express Madagascar !"
+msgid "Nous sommes ravis de vous offrir un service de transport fiable et professionnel à l'Aéroport International Ivato de Madagascar. Que vous arriviez à l'aéroport ou que vous ayez besoin d'un transport pour vos déplacements dans la capitale et au-delà. Nous mettons à votre disposition plusieurs moyens de communication pour rendre votre expérience avec nous aussi simple et agréable que possible."
+msgstr "Nous sommes ravis de vous offrir un service de transport fiable et professionnel à l'Aéroport International Ivato de Madagascar. Que vous arriviez à l'aéroport ou que vous ayez besoin d'un transport pour vos déplacements dans la capitale et au-delà. Nous mettons à votre disposition plusieurs moyens de communication pour rendre votre expérience avec nous aussi simple et agréable que possible."
 
+msgid "Pour nous contacter rapidement, voici nos coordonnées :"
+msgstr "Pour nous contacter rapidement, voici nos coordonnées :"
+msgid "– Nous vous recommandons de nous contacter directement via WhatsApp pour une réponse instantanée et un service personnalisé. Notre équipe est disponible pour répondre à vos questions et confirmer votre réservation en quelques minutes. "
+msgstr "– Nous vous recommandons de nous contacter directement via WhatsApp pour une réponse instantanée et un service personnalisé. Notre équipe est disponible pour répondre à vos questions et confirmer votre réservation en quelques minutes. "
 
+msgid " Si vous préférez un échange plus détaillé, vous pouvez nous envoyer un email et nous reviendrons vers vous dans les plus brefs délais. "
+msgstr " Si vous préférez un échange plus détaillé, vous pouvez nous envoyer un email et nous reviendrons vers vous dans les plus brefs délais. "
+msgid " –Numéro à Madagascar; Vous pouvez également nous appeler pour toute demande urgente ou pour discuter de vos besoins de transport. "
+msgstr " –Numéro à Madagascar; Vous pouvez également nous appeler pour toute demande urgente ou pour discuter de vos besoins de transport. "
+msgid "Pourquoi privilégier WhatsApp ?"
+msgstr "Pourquoi privilégier WhatsApp ?"
+
+msgid "Réponse instantanée, Il vous suffit d'un simple message pour réserver votre taxi ou obtenir des informations."
+msgstr "Réponse instantanée, Il vous suffit d'un simple message pour réserver votre taxi ou obtenir des informations."
+
+msgid "WhatsApp vous permet d'échanger directement avec notre équipe, sans intermédiaires ni risques."
+msgstr "WhatsApp vous permet d'échanger directement avec notre équipe, sans intermédiaires ni risques."
+
+msgid "Chez Taxi Express Madagascar, nous mettons un point d'honneur à vous offrir une expérience de transport irréprochable, avec une ponctualité, une sécurité et un confort qui font la différence. Nous vous attendons pour vos prochains trajets à Ivato et ailleurs !"
+msgstr "Chez Taxi Express Madagascar, nous mettons un point d'honneur à vous offrir une expérience de transport irréprochable, avec une ponctualité, une sécurité et un confort qui font la différence. Nous vous attendons pour vos prochains trajets à Ivato et ailleurs !"
+
+msgid "Ecrivez_nous ici directement"
+msgstr "Ecrivez_nous ici directement"
+msgid "votre nom"
+msgstr "votre nom"
+msgid "votre WatsApp"
+msgstr "votre WatsApp"
+msgid "votre email"
+msgstr "votre email"

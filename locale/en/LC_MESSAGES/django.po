@@ -656,3 +656,42 @@ msgstr ""
 #~ "discover iconic sites such as the QUEEN'S PALACE and the CATHOLIC "
 #~ "CATHEDRAL, as well as the TWIN STAIRS opposite and INDEPENDENCE AVENUE, "
 #~ "the Analakely Market, and much more."
+
+msgid " Bienvenue sur la page de contact de Taxi Express Madagascar !"
+msgstr "Welcome to the Taxi Express Madagascar contact page!"
+
+msgid "Nous sommes ravis de vous offrir un service de transport fiable et professionnel à l'Aéroport International Ivato de Madagascar. Que vous arriviez à l'aéroport ou que vous ayez besoin d'un transport pour vos déplacements dans la capitale et au-delà. Nous mettons à votre disposition plusieurs moyens de communication pour rendre votre expérience avec nous aussi simple et agréable que possible."
+
+msgstr "We are pleased to offer you reliable and professional transportation services at Madagascar's Ivato International Airport. Whether you are arriving at the airport or need transportation for your travels in the capital and beyond, we offer several means of communication to make your experience with us as simple and enjoyable as possible."
+
+msgid "Pour nous contacter rapidement, voici nos coordonnées :"
+msgstr "To contact us quickly, here are our contact details:"
+
+msgid "– Nous vous recommandons de nous contacter directement via WhatsApp pour une réponse instantanée et un service personnalisé. Notre équipe est disponible pour répondre à vos questions et confirmer votre réservation en quelques minutes. "
+msgstr "– We recommend contacting us directly via WhatsApp for an instant response and personalized service. Our team is available to answer your questions and confirm your booking within minutes."
+msgid " Si vous préférez un échange plus détaillé, vous pouvez nous envoyer un email et nous reviendrons vers vous dans les plus brefs délais. "
+msgstr "If you prefer a more detailed exchange, you can send us an email and we will get back to you as soon as possible."
+msgid " –Numéro à Madagascar; Vous pouvez également nous appeler pour toute demande urgente ou pour discuter de vos besoins de transport. "
+msgstr "–Number in Madagascar; You can also call us for any urgent request or to discuss your transportation needs."
+msgid "Pourquoi privilégier WhatsApp ?"
+msgstr "Why choose WhatsApp?"
+
+msgid "Réponse instantanée, Il vous suffit d'un simple message pour réserver votre taxi ou obtenir des informations."
+msgstr "Instant response, just a simple message away to book your taxi or get information."
+
+msgid "WhatsApp vous permet d'échanger directement avec notre équipe, sans intermédiaires ni risques."
+msgstr "WhatsApp allows you to communicate directly with our team, without intermediaries or risks."
+
+msgid "Chez Taxi Express Madagascar, nous mettons un point d'honneur à vous offrir une expérience de transport irréprochable, avec une ponctualité, une sécurité et un confort qui font la différence. Nous vous attendons pour vos prochains trajets à Ivato et ailleurs !"
+
+msgstr "At Taxi Express Madagascar, we pride ourselves on providing you with an impeccable transportation experience, with punctuality, safety, and comfort that make all the difference. We look forward to seeing you for your next trips to Ivato and beyond!"
+
+msgid "Ecrivez_nous ici directement"
+msgstr "Write to us directly here"
+
+msgid "votre nom"
+msgstr "your name"
+msgid "votre WatsApp"
+msgstr "your WatsApp"
+msgid "votre email"
+msgstr "your email"
