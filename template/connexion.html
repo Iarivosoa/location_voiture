@@ -1,4 +1,5 @@
 {% extends "layouts/master.html" %}
+{% load i18n %}
 {% load static %}
 {% block 'contenu' %} 
 
@@ -12,8 +13,8 @@
     {% endif %}
      <div class="row">
         <div class="col-md-7 texte_co">
-            <h1 class="text-left">Bienvenu sur taxiMadagascar</h1>
-            <p class="text-left">Cliquer sur le Bouton créer un compte si vous en avez pas encore sinon entrer votre email et votre mot de passe pour faire la réservation</p>
+            <h1 class="text-left">{% trans "Bienvenu chez Teams Express le taxi officiel de l'aéroport d'Ivato " %}</h1>
+            <p class="text-left">{% trans "Cliquer sur le Bouton créer un compte si vous en avez pas encore sinon entrer votre email et votre mot de passe pour faire la réservation" %}</p>
         </div>
         <!-- formulaire -->
         <div class="col-md-5" id="form-connexion">
@@ -34,7 +35,7 @@
                 {% endif %}
                 <div class="row">
                 <div class="col-md-6">
-                    <h3 class="text-left">Connexion</h3>
+                    <h3 class="text-left">{% trans "Connexion" %}</h3>
                 </div>
                 <div class="col-md-6">
                     <span></span>
@@ -57,11 +58,11 @@
                 </div>
 
                 <div class="col-md-2">
-                    <button class="btn-primary" id="bouton-connexion" type="submit">Connexion</button>
+                    <button class="btn-primary" id="bouton-connexion" type="submit">{% trans "Connexion" %}</button>
                 </div>
                 <div class="création">
-                    <a href="{% url 'page_souscription' %}">Créer un Compte</a>
-                    <a href="{% url 'reset_password' %}">Mot de passe oublié</a>
+                    <a href="{% url 'page_souscription' %}">{% trans "Créer un Compte" %}</a>
+                    <a href="{% url 'reset_password' %}">{% trans "Mot de passe oublié" %}</a>
                 </div>
             </div>
             </form>
