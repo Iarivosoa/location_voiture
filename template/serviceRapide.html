@@ -1,0 +1,125 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+
+{% block 'contenu' %}
+<div class="container py-5">
+  <div class="row justify-content-center align-items-stretch g-4 mb-2">
+    <!-- Bloc argumentaire et image -->
+    <div class="col-lg-5 d-flex flex-column justify-content-center py-1 mb-lg-0">
+      <img src="{% static 'image/tax1_ivato.jpg' %}" alt="Taxi Service Rapide" class="img-fluid rounded shadow mb-3" style="max-height: 320px; object-fit: cover;">
+      <div class="bg-primary text-white rounded-3 p-3 shadow-sm">
+        <h3 class="mb-2"><i class="fa fa-bolt me-2"></i>Service Rapide TEAMS EXPRESS</h3>
+        <p class="mb-0">Besoin d’un taxi <b>immédiatement</b> ? Profitez de notre service express : <span class="fw-bold">réservation ultra-rapide</span>, réponse instantanée, <span class="text-warning">prix compétitifs</span> et <span class="text-warning">chauffeurs professionnels</span> partout à Antananarivo !</p>
+      </div>
+    </div>
+    <!-- Bloc formulaire réservation rapide -->
+    <div class="col-lg-7">
+      <div class="card shadow-lg border-0 mb-4" style="margin-top: 30px;">
+         <div class="card-header bg-gradient-primary text-white text-center" style="background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);">
+          <h4 class="mb-0"><i class="fa fa-stopwatch me-2"></i>Réservation rapide</h4>
+        </div>
+        <div class="card-body p-4">
+          {% if messages %}
+            {% for message in messages %}
+              <div class="alert alert-success mt-3">{{ message }}</div>
+            {% endfor %}
+          {% endif %} 
+          <form method="post" action="">
+            {% csrf_token %} 
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="nom" class="form-label fw-bold text-primary">Nom <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-pill" id="nom" name="nom" required placeholder="Votre nom">
+              </div>
+              <div class="col-md-6">
+                <label for="telephone" class="form-label fw-bold text-primary">Téléphone <span class="text-danger">*</span></label> 
+                <input type="tel" class="form-control rounded-pill" id="telephone" name="telephone" required placeholder="Ex: 0700000000">
+              </div>
+              <div class="col-md-6">
+                <label for="depart" class="form-label fw-bold text-primary">Départ <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-pill" id="depart" name="depart" required placeholder="Lieu de prise en charge">
+              </div>
+              <div class="col-md-6">
+                <label for="destination" class="form-label fw-bold text-primary">Destination <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-pill" id="destination" name="destination" required placeholder="Votre destination">
+              </div>
+              <div class="col-md-6">
+                <label for="nombre_personnes" class="form-label fw-bold text-primary">Personnes</label>
+                <input type="number" class="form-control rounded-pill" id="nombre_personnes" name="nombre_personnes" min="1" value="1">
+              </div>
+              <div class="col-md-6">
+                <label for="heure" class="form-label fw-bold text-primary">Heure souhaitée</label>
+                <input type="time" class="form-control rounded-pill" id="heure" name="heure">
+              </div>
+              <div class="col-12">
+                <label for="commentaire" class="form-label fw-bold text-primary">Commentaire</label>
+                <textarea class="form-control rounded-4" id="commentaire" name="commentaire" rows="2" placeholder="Infos complémentaires (optionnel)"></textarea>
+              </div>
+            </div> 
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow-sm">
+                <i class="fa fa-bolt me-2"></i>Réserver maintenant
+              </button>
+            </div>
+          </form> 
+      </div>
+      </div> 
+      <!-- Bloc formulaire de contact rapide -->
+      <div class="card shadow border-0">
+        <div class="card-header bg-secondary text-white text-center">
+          <h5 class="mb-0"><i class="fa fa-envelope me-2"></i>Contact express</h5>
+        </div> 
+        <div class="card-body p-4">
+         <h2> {{erreur}} </h2>
+          <!-- DEBUT DU FORMULAIRE -->
+          <form method="POST" action="{% url 'envoyer_whatsapp' %}">
+            <!-- Section champs contact express, à compléter avec action dans la vue Django -->
+            {% csrf_token %}
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="contact_nom" class="form-label fw-bold text-secondary">Nom</label>
+                <input type="text" class="form-control rounded-pill" id="contact_nom" name="contact_nom" >
+              </div>
+              <div class="col-md-6">
+                <label for="contact_email" class="form-label fw-bold text-secondary">Email</label>
+                <input type="email" class="form-control rounded-pill" id="contact_email" name="contact_email" >
+              </div>
+              <div class="col-md-6">
+                <label for="contact_whatsapp" class="form-label fw-bold text-success">Numéro WhatsApp</label>
+                <input type="tel" class="form-control rounded-pill" id="contact_whatsapp" name="contact_whatsapp" placeholder="Ex: 0341234567">
+              </div>
+              <div class="col-12">
+                <label for="contact_message" class="form-label fw-bold text-secondary">Votre message</label>
+                <textarea class="form-control rounded-4" id="contact_message" name="contact_message" rows="2"placeholder="Votre question ou demande spéciale..."></textarea>
+              </div>
+            </div>
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-secondary btn-lg rounded-pill shadow-sm">
+                <i class="fa fa-paper-plane me-2"></i>Envoyer
+              </button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<style>
+  .card-header.bg-gradient-primary {
+    background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%) !important;
+  }
+  .form-label {
+    margin-bottom: 0.3rem;
+  }
+  .form-control:focus, .form-select:focus {
+    box-shadow: 0 0 0 0.2rem rgba(0,123,255,.15);
+    border-color: #007bff;
+  }
+  @media (max-width: 991.98px) {
+    .col-lg-5 {
+      display: none !important;
+    }
+  }
+</style>
+{% endblock 'contenu' %}

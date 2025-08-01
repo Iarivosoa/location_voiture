@@ -1,0 +1,189 @@
+{% extends "layouts/master.html" %}
+{% load i18n %}
+{% load static %}
+
+{% block 'contenu' %}
+<head>
+     <link rel="stylesheet" href="{% static 'aos/aos.css' %}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+
+<!-- Section Présentation dynamique -->
+<section class="container-fluid bg-light" data-aos="fade-up" data-aos-delay="100" data-aos-delay="100" style="padding-top: 100px;">
+  <div class="row align-items-center justify-content-center" data-aos="fade-up" data-aos-delay="100">
+    <div class="col-lg-6 text-center mb-4 mb-lg-0" data-aos="up">
+      <img src="{% static 'image/tax1_ivato_no_bg_VrQNQES.png' %}" alt="Taxi Express Madagascar" class="img-fluid rounded shadow-lg" style="max-height: 320px; object-fit: contain;">
+    </div>
+    <div class="col-lg-6" data-aos="fade-up" data-aos-delay="100">
+      <h1 class="display-5 fw-bold text-primary mb-3">TAXI OFFICIEL À L’AÉROPORT INTERNATIONAL D’IVATO<span class="text-warning">TAXI EXPRESS</span></h1>
+      <p class="lead">{% trans "Découvrez la nouvelle plateforme web qui révolutionne la réservation de taxis à Madagascar ! Notre application vous permet de réserver un taxi en quelques clics, de comparer les offres, de suivre votre chauffeur en temps réel et de profiter d’un service sécurisé et professionnel." %}</p>
+      <ul class="list-unstyled mt-4">
+        <li class="mb-2"><i class="fa fa-check-circle text-success me-2"></i>{% trans "servive disponible 24h/7" %}</li>
+        <li class="mb-2"><i class="fa fa-check-circle text-success me-2"></i>{% trans "Réservation rapide et confirmation instantanée" %}</li>
+        <li class="mb-2"><i class="fa fa-check-circle text-success me-2"></i>{% trans "Suivi du taxi en temps réel et contact direct avec le chauffeur" %}</li>
+        <li class="mb-2"><i class="fa fa-check-circle text-success me-2"></i>{% trans "Tarifs transparents et compétitifs" %}</li>
+        <li class="mb-2"><i class="fa fa-check-circle text-success me-2"></i>{% trans "Support client disponible 24h/24" %}</li>
+      </ul>
+      <a href="#" class="btn btn-warning btn-lg rounded-pill mt-3 shadow" data-aos="up"><i class="fa fa-taxi me-2"></i>{% trans "Réserver maintenant" %}</a>
+    </div>
+  </div>
+</section>
+
+<!-- Section Accueil interactive -->
+<section class="container py-5" data-aos="fade-up" data-aos-delay="100">
+  <div class="row g-5 align-items-center">
+    <div class="col-lg-6 order-lg-2 text-center" data-aos="fade-up" data-aos-delay="100">
+      <div class="p-4 bg-white rounded shadow-lg">
+        <h2 class="fw-bold text-primary mb-3">{% trans "Pourquoi choisir TAXI EXPRESS ?" %}</h2>
+        <p class="mb-4">{% trans "Notre application web vous garantit une expérience utilisateur optimale : navigation fluide, accès rapide à toutes les fonctionnalités, et adaptation parfaite à tous les écrans (ordinateur, tablette, mobile)." %}</p>
+        <div class="d-flex flex-wrap justify-content-center gap-3">
+          <div class="feature-box p-3 rounded bg-light shadow-sm" data-aos="up">
+            <i class="fa fa-mobile-alt fa-2x text-warning mb-2"></i>
+            <h5 class="fw-bold">{% trans "Contactez-nous directement en whatsapp" %}</h5>
+            <p class="small">{% trans "Nous vous répondrons de suite pour organiser votre voyages" %}</p>
+          </div>
+          <div class="feature-box p-3 rounded bg-light shadow-sm" data-aos="up">
+            <i class="fa fa-bolt fa-2x text-primary mb-2"></i>
+            <h5 class="fw-bold">{% trans "Ultra rapide" %}</h5>
+            <p class="small">{% trans "Réservation en moins de 30 secondes" %}</p>
+          </div>
+          <div class="feature-box p-3 rounded bg-light shadow-sm" data-aos="up">
+            <i class="fa fa-shield-alt fa-2x text-success mb-2"></i>
+            <h5 class="fw-bold">{% trans "Sécurisé" %}</h5>
+            <p class="small">{% trans "Paiement et données protégés" %}</p>
+          </div>
+        </div>
+      </div>
+    </div>
+    <div class="col-lg-6 order-lg-1" data-aos="up">
+      <div class="p-4 bg-white rounded shadow-lg">
+        <h2 class="fw-bold text-warning mb-3">{% trans "Une équipe à votre écoute" %}</h2>
+        <p>{% trans "Notre équipe de professionnels est disponible pour vous accompagner à chaque étape : conseils, assistance, gestion des réservations et suivi personnalisé. Nous mettons tout en œuvre pour garantir votre satisfaction et votre sécurité." %}</p>
+        <ul class="list-unstyled">
+          <li class="mb-2"><i class="fa fa-users text-primary me-2"></i>{% trans "Chauffeurs expérimentés et courtois" %}</li>
+          <li class="mb-2"><i class="fa fa-star text-warning me-2"></i>{% trans "Service client réactif" %}</li>
+          <li class="mb-2"><i class="fa fa-map-marker-alt text-success me-2"></i>{% trans "Couverture Antananarivo et environs" %}</li>
+        </ul>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Section Nos Taxis -->
+<section class="py-1">
+    <div class="container">
+        <div class="owl-carousel owl-theme card-carousel">
+            {% for voiture in tous_prod %}
+                {% if voiture.types|lower == "taxi" %}
+                <div class="card image_taxi">
+                    <img src="{{voiture.photo.url}}" class="card-img-top" alt="Taxi Standard">
+                    <div class="card-body">
+                        <h5 class="card-title text-center">{{voiture.nom}}</h5>
+                        <p class="card-text">{{voiture.description}}</p>
+                        <p>25 Ar <span>Pour vos déplacements en ville</span></p>
+                        <a href="{% url 'detail' voiture.id %}" class="btn btn-warning">Voir détail</a>
+                        {% if request.session.client %}
+                            <a href="" class="btn btn-warning" id="btn_taxi">Réserver</a>
+                        {% endif %}
+                    </div>
+                </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </div>
+</section>
+
+<!-- Section Nos Engagements -->
+<div class="fast-booking">
+    <div class="calc_boukin">
+        <h1 class="fast-hading">{% trans "Nos engagements" %}</h1>
+        <h2>{% trans "Pour votre satisfaction" %}</h2>
+        <div class="container">
+            <div class="row mx-5">
+                <div class="col-lg-6 mb-3 col-sm-6">
+                    <div class="inner-fast">
+                        <div class="booking-content">
+                            <div class="icon-fast">
+                                <span><i class="fas fa-star"></i></span>
+                            </div>
+                            <div class="inner-fast-text">
+                                <h1>{% trans "Réservation rapide" %}</h1>
+                                <p>{% trans "Réservez votre taxi en quelques clics, à tout moment et où que vous soyez à Madagascar." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3 col-sm-6">
+                    <div class="inner-fast">
+                        <div class="booking-content">
+                            <div class="icon-fast">
+                                <span><i class="fas fa-user-shield"></i></span>
+                            </div>
+                            <div class="inner-fast-text">
+                                <h1>{% trans "Sécurité garantie" %}</h1>
+                                <p>{% trans "Nos chauffeurs sont expérimentés et nos véhicules régulièrement contrôlés pour assurer votre sécurité." %}</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3 col-sm-6">
+                    <div class="booking-content">
+                        <div class="icon-fast">
+                            <span><i class="fas fa-map-marker-alt"></i></span>
+                        </div>
+                        <div class="inner-fast-text">
+                            <h1>{% trans "Couverture étendue" %}</h1>
+                            <p>{% trans "nous desservons Antananarivo et ses environs, pour tous vos besoins de déplacement." %}</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-lg-6 mb-3 col-sm-6">
+                    <div class="booking-content">
+                        <div class="icon-fast">
+                            <span><i class="fas fa-clock"></i></span>
+                        </div>
+                        <div class="inner-fast-text">
+                            <h1>{% trans "Disponibilité 24h/24" %}</h1>
+                            <p>{% trans "Notre service est disponible à toute heure, pour répondre à vos urgences et vos besoins quotidiens." %}</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Section Témoignages -->
+<div class="testimonials" data-aos="fade-up" data-aos-delay="100">
+    <h1 class="heading-test">{% trans "Ils nous font confiance" %}</h1>
+    <div class="main-testimonials">
+        <div class="inner-test">
+            <p>
+                {% trans "Grâce à TAXI EXPRESS, je peux réserver un taxi en quelques secondes, même tard le soir. Le service est toujours fiable et les chauffeurs sont très courtois. Je recommande à tous ceux qui cherchent un moyen de transport sûr à Antananarivo !" %}
+            </p>
+            <div class="clients">
+                <!-- <img src="{% static 'images/jhon.png' %}" alt="Client satisfait"> -->
+            </div>
+        </div>
+        <div class="inner-test">
+            <p>{% trans "J’utilise cette application pour mes déplacements professionnels et personnels. Les véhicules sont propres, le système de réservation est simple et rapide, et je me sens toujours en sécurité. Merci à toute l’équipe TAXI EXPRESS !" %}
+            </p>
+            <div class="clients">
+           
+            </div>
+        </div>
+    </div>
+</div>
+
+<script src="{% static 'aos/aos.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        once: true, // Animation only happens once
+        mirror: false, // Whether elements should animate out while scrolling past them
+    });
+</script>
+</body>
+</html>
+{% endblock 'contenu' %}

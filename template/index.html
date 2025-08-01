@@ -1,0 +1,497 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+{% load i18n %}
+
+{% block 'contenu' %}
+<head>
+    <link rel="stylesheet" href="{% static 'aos/aos.css' %}">
+</head>
+
+
+<!-- debu accueil -->
+<section class="affiche_accueil">
+    <div class="drops" style="opacity: 1;">
+       <ul class="drop-list">
+           <li class="drop-item"> 
+               <span class="drop_titre">{% trans "Location" %}</span>
+               <div class="dropdowns">
+                   <a href="{% url 'tarif' %}">{% trans "tarif" %}</a>
+                   <a href="{% url 'serviceRapide' %}">{% trans "réserver un véhicule" %}</a>
+               </div>
+           </li>
+   
+           <li class="drop-item"> 
+               <span class="drop_titre">{% trans "Taxi ville" %}</span>
+               <div class="dropdowns">
+                   <a href="{% url 'serviceRapide' %}">{% trans "service rapide" %}</a>
+                   <a href="{% url 'tousVoiture' %}">{% trans "TAXI DISPONIBLE" %}</a>
+              
+               </div>
+           </li>
+   
+           <li class="drop-item"> 
+               <span class="drop_titre">{% trans "Voyages" %}</span>
+               <div class="dropdowns">
+                   <a href="{% url 'offre_site' %}">{% trans "Offres disponibles" %}</a>
+                   <a href="{% url 'contacte_admin' %}">{% trans "conséils" %}</a>
+               </div>
+           </li>
+<!--    
+           <li class="drop-item"> 
+               <span class="drop_titre">Offre spéciale</span>
+               <div class="dropdowns">
+                   <a href="">tarif</a>
+                   <a href="">Séjours familles</a>
+                   <a href="">en savoir plus</a>
+               </div>
+           </li> -->
+       </ul>
+    </div>
+    <!-- phrase -->
+  <div class="apropos" id="apropos-text"  data-aos="fade-up" data-aos-delay="100">
+    <h1 style="color: coral; font-weight: 600;" data-aos="fade-right" data-aos-delay="100">{% trans "Bienvenue chez Taxi Express de Madagascar" %}</h1>
+    <p  data-aos="fade-left" data-aos-delay="100" style="text-transform:initial;">
+     TAXI OFFICIEL À L’AÉROPORT INTERNATIONAL D’IVATO <br>
+    </p>
+            {% if request.session.client %}
+              <a href="{% url 'reserver'%}" class="btn_reserve"  data-aos="fade-up" data-aos-delay="100" >{% trans "Réserver un taxi" %}</a>
+            {% else %}
+                <a href="{% url 'page_connexion' %}" class="btn_reserve"  data-aos="fade-up" data-aos-delay="100">{% trans "Réserver un taxi" %}</a>
+            {% endif %}
+    <a href="" ></a>
+  </div>
+    <!--  -->
+    
+    <div class="image_accueil">
+        
+        <img src="{% static 'image/site_voyage/Nosy_be_espace.jpg' %}" alt="" class="active">
+
+        <img src="{% static 'image/voiture_Ivato.jpg' %}" alt="">
+
+        <img src="{% static 'image/tax1_ivato.jpg' %}" alt="">
+
+        <img src="{% static 'image/site_voyage/Lemur1.jpeg' %}">
+
+        <img src="{% static 'image/site_voyage/Lemur3_fVln9QM.jpg' %}">
+
+        <img src="{% static 'image/voiture_Ivato.jpg' %}" alt="">
+
+    </div>
+    <!--  -->
+    <div class="icone_accueil">
+        <a href="https://www.facebook.com/profile.php?id=61578188190799"><i class="fab fa-facebook" style="color: blue;"></i></a>
+        <a href="https://wa.me/+261386787320"><i class="fab fa-whatsapp" style="color: green; padding: 3px; border-radius: 4px;font-weight: bolder;"></i></a>
+        <a href="{% url 'contacte_admin' %}"><i class="far fa-envelope" style="color:red;width: 40px; height: 40px;justify-content: center;align-items: center;"></i></a>
+    </div>
+ </section>
+
+
+
+<!-- fin accueil -->
+
+<!-- caroussel --> 
+
+ <!--  -->
+ 
+
+     <!-- arrows -->
+
+ <!-- </div> -->
+
+ <script>
+
+    const images = document.querySelectorAll('.carousel img');
+    const apropos = document.getElementById('apropos-text');
+    let current = 0;
+    const textes = [
+      `<h1>Location de Voitures</h1><p>Roulez en toute liberté avec notre large gamme de véhicules récents et confortables, adaptés à tous vos besoins de déplacement.</p>`,
+      `<h1>Agence de Voyage</h1><p>Confiez-nous l'organisation de vos séjours et profitez de conseils personnalisés pour des voyages inoubliables partout dans le monde.</p>`,
+      `<h1>Vacances de Rêve</h1><p>Découvrez nos offres spéciales pour partir en vacances en famille ou entre amis, et vivez des moments uniques dans des destinations de rêve.</p>`
+    ];
+    function changeApropos(idx) {
+      apropos.style.opacity = 0;
+      setTimeout(() => {
+        apropos.innerHTML = textes[idx];
+        apropos.style.opacity = 1;
+      }, 600);
+    }
+    setInterval(() => {
+      images[current].classList.remove('active');
+      current = (current + 1) % images.length;
+      images[current].classList.add('active');
+      changeApropos(current);
+    }, 3000);
+    // Scroll doux vers la section
+    document.querySelectorAll('.dropdown a').forEach(link => {
+      link.addEventListener('click', function(e) {
+        e.preventDefault();
+        const target = document.querySelector(this.getAttribute('href'));
+        if(target) {
+          window.scrollTo({
+            top: target.offsetTop,
+            behavior: 'smooth'
+          });
+        }
+      });
+    });
+    // 
+
+    // 
+
+    const slide_accuei = document.querySelectorAll(".image_accueil img")
+    let opace = 0
+
+    
+    setInterval(()=>{
+        slide_accuei[opace].classList.remove("active");
+        opace = (opace + 1)%slide_accuei.length;
+
+         slide_accuei[opace].classList.add("active");
+    },3000)
+
+
+
+        var menus = document.querySelector(".sidebar")
+        function menu(){
+            menus.classList.toggle("menuActive")
+        }
+
+    // début du carousel 
+    let nextDom = document.getElementById("next")
+    let prevDom = document.getElementById("prev")
+    let carouselDom = document.querySelector(".carousel")
+    let listItemDom = document.querySelector(".carousel .list")
+    let thumbnailDom = document.querySelector(".carousel .thumbnail")
+
+    // pour le next
+    nextDom.onclick = function(){
+        showSlider('next');
+    }
+    // pour le prev
+    prevDom.onclick = function(){
+        showSlider('prev');
+    }
+    // 
+    let timeRunning = 5000;
+    let runTimeOut;
+
+    let timeAutonext = 6000;
+    let runAutoRun;
+
+    function showSlider(type){
+            let itemSlider = document.querySelectorAll('.carousel .list .item')
+            let itemThumbnail = document.querySelectorAll('.carousel .thumbnail .item')
+
+            if (type === 'next') {
+                listItemDom.appendChild(itemSlider[0]);
+                thumbnailDom.appendChild(itemThumbnail[0]);
+                carouselDom.classList.add('next')
+            }else{
+                let positionLastItem = itemSlider.length - 1;
+                listItemDom.prepend(itemSlider[positionLastItem]);
+                thumbnailDom.prepend(itemThumbnail[positionLastItem]);
+                carouselDom.classList.add('prev');
+            }
+            clearTimeout(runTimeOut);
+            runTimeOut = setTimeout(()=>{
+                carouselDom.classList.remove('next');
+                carouselDom.classList.remove('prev');
+            },timeRunning)
+
+            clearTimeout(runAutoRun);
+            runAutoRun = setTimeout(()=>{
+                nextDom.click()
+            },timeAutonext)
+        }
+
+
+        let searhs = document.querySelector('.search-box')
+        // let icon_search = document.getElementById("loupe")
+        document.querySelector("#loupe").onclick = ()=>{
+            searhs.classList.toggle("active");
+        }
+
+
+
+
+ </script>
+ <!-- PRESENTATION DES SERVICES EN SLIDER -->
+<!-- BLOGS -->
+  <section class="service-slide">
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+          <div class="row mb-5">
+              <div class="col-md-8 mx-auto text-center">
+                  <h2>{% trans "NOS OPTIONS" %}</h2>
+                  <p>{% trans "Inscrivez_vous et choisir votre option pour vos voyages et circulation en ville avec nous" %}</p>
+              </div>
+          </div>
+          
+<div class="">
+    <div class="plan-arriere">
+        <div class="">
+            <div class="owl-carousel owl-theme p-1 slide_service">
+             
+            <div class="item">
+                   
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/inscription.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Souscription" %}</h5>
+                        <p class="card-text">{% trans "Inscrive-vous  ou connecté sur votre compte pour bien valider votre réservation" %}</p>
+                        <a href="{% url 'page_souscription' %}" class="btn btn-primary" id="btn_scrolle">{% trans "S'inscrire" %}</a>
+                    </div>
+                </div>
+            </div>
+            <div class="item mx-12">
+                 
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/historique.png' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">{% trans "Ma réservation" %}</h5>
+                <p class="card-text">{% trans "Consulter mes historiques de réservation ou voir les détails des mes réserations en ligne" %}</p>
+                <a href="#" class="btn btn-primary" id="btn_scrolle">{% trans "MES RESERVATIONS" %}</a>
+                </div>
+                </div>
+            </div>
+
+            <div class="item mx-12">
+                 
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/site_voyage/Nosy_be.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">{% trans "Voyages" %}</h5>
+                <p class="card-text">{% trans "Nous organisons vos voyages à tous les SITES Touristiques de Madagascar avec un prix très attractifs" %}</p>
+                <a href="{% url 'offre_site' %}" class="btn btn-primary" id="btn_scrolle">{% trans "Voyages" %}</a>
+                </div>
+                </div>
+            </div>
+               <div class="item">
+                   
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/conseillere.png' %}" class="card-img-top" alt="...">
+                    <div class="card-body">
+                        <h5 class="card-title">{% trans "Contacte" %}</h5>
+                        <p class="card-text">{% trans "Pour plus d'information, veuillez nous contater en cliquant sur ce boutton" %}</p>
+                        <a href="{% url 'contacte_admin' %}" class="btn btn-primary" id="btn_scrolle">{% trans "Avoir une conséillère" %}</a>
+                    </div>
+                </div>
+            </div>
+
+            <div class="item mx-12">
+                 
+              <div class="card" style="width: 18rem;">
+                <img src="{% static 'image/tax1_ivato.jpg' %}" class="card-img-top" alt="...">
+                <div class="card-body">
+                <h5 class="card-title">{% trans "OFFRES" %}</h5>
+                <p class="card-text">{% trans "Cliquez ici pour voir les offres disponibles ou faire une demande d'offre" %}</p>
+                <a href="{% url 'offre_site' %}" class="btn btn-primary" id="btn_scrolle">{% trans "Voir les offres" %}</a>
+                </div>
+                </div>
+            </div>
+                
+
+            </div>
+        </div>
+    </div>
+</div>
+  </section>
+  <!-- BLOGS -->
+  <!-- section presenation servcie -->
+       <section class="container-fluid  py-0" >
+    <div class="row w-100">
+        <div class="col-lg-6 col-img ml-3" data-aos="fade-right" data-aos-delay="100">
+            <!-- <img src="{% static 'image/campagne.jpg' %}" alt="" style="width: 100%;"> -->
+             <video src="{% static 'image/video2.mp4' %}" autoplay loop muted  style="width: 100%; height: 100%; border-radius: 8px;"></video>
+        </div>
+        <div class="col-lg-6 py-2">
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-10 offset-md-1" data-aos="fade-left" data-aos-delay="100">
+                        <h6 class="text-primary">{% trans "SITE IDEAL POUR UNE LOCATION DE VOITURE" %}</h6>
+                        <h1>{% trans "Service Taxi ville et location de voiture de Madagascar" %}</h1>
+                        <p> <b>TEAM EXPRESS </b>{% trans "est la prémière plateforme complète à Madagascar  dédiée aux déplacements touristiques et urbains. Basée à Antananarivo à l'Aéroport Intérnationale d'Ivato, elle propose une" %} <a href="">{% trans "service de taxi ville rapide et fiable" %}</a> {% trans "pour tous vos circulations, des" %} <a href="">{% trans "locations et transfert de tous types de voitures" %}</a> {% trans "au meilleur prix pour les visiteurs, Ainsi que l'organisation de" %} <a href="">{% trans "voyage vers les plus beaux sites touristiques de l'îles" %}</a>. {% trans "Ques vous rend vos déplacements simples , économiques et inoubliables." %} </p>
+
+                        <div class="feature d-flex mt-2">
+                           
+                            <div>
+                                <h5>{% trans "Teams express" %}</h5>
+                                <p>{% trans "Service taxi ville d'Antananarivo, disponible 24h/24 et 7j/7" %}</p>
+                            </div>
+                        </div>
+                        <div class="feature d-flex">
+                            
+                            <div>
+                                <h5>{% trans "Location de voiture et transfert pendant votre visite de Madagascar" %}</h5>
+                                <p>{% trans "Créer un compte sur notre site et faites vos reservation en ligne" %}</p>
+                            </div>
+                        </div>
+                        <div class="feature d-flex">
+                           
+                            <div>
+                                <h5>{% trans "Voyages dans sur tous les top 10 site tourstique de l'île" %}</h5>
+                                <p>{% trans "Nous organisons des voyages dans les plus beaux sites touristiques de Madagascar" %}</p>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    </section><br><br>
+    <!-- section fi -->
+<div class="container">
+    <div class="row mb-2">
+        <div class="col-md-8 mx-auto text-center">
+            <h1>{% trans "TAXI EXPRESS de Madagascar" %}</h1>
+            <p>{% trans "Voici les taxis disponibles" %}</p>
+        </div>
+    </div>
+</div>
+
+ <!-- SUITE DU CODE APRES LE CAROUSEL pour AFFICHER ET RESERVER LES TAXI-->
+
+   <section class="py-1">
+    <div class="container">
+      <div class="owl-carousel owl-theme card-carousel" data-aos="fade-up" data-aos-delay="100" >
+        {% for voiture in tous_prod %}
+            {% if voiture.types|lower == "taxi" %}
+
+        <div class="card image_taxi">
+          <img src="{{voiture.photo.url}}" class="card-img-top" alt="Taxi Standard">
+          <div class="card-body">
+            <h5 class="card-title text-center"> {{voiture.nom}} </h5>
+            <!-- <p class="card-text"> {{voiture.description}} </p> -->
+            <!-- <a href="{% url 'detail' voiture.id %}" class="btn btn-warning" >Voir détail</a> -->
+            
+            {% if request.session.client %}
+              <a href="{% url 'reservation' voiture.id %}" class="btn btn-warning" >{% trans "Réserver" %}</a>
+            {% else %}
+                <a href="{% url 'page_connexion' %}" class="btn btn-warning" >{% trans "Réserver" %}</a>
+            {% endif %}
+          
+
+          </div>
+        </div>
+          {% endif %}
+        {% endfor %}
+
+
+      
+      </div>
+    </div>
+
+  </section>
+
+<!-- PARTIE POUR AFFICHER LES NOUVEAU MODEL OU NOUVELLE ARRIVAGES -->
+
+<section id="portfolio">
+        <div class="container-fluid">
+            <div class="row mb-5">
+                <div class="col-md-8 mx-auto text-center" data-aos="fade-up" data-aos-delay="100">
+                    <h6 class="text-primary">{% trans "Transfert" %}</h6>
+                    <h1>{% trans "LOUER ET VOYAGER A TOUS MOMENT" %}</h1>
+                    <p>{% trans "Nos véhicules sont disponibles aussi bien en" %} <a href="">{% trans "Service taxi ville" %}</a> {% trans "et en" %} <a href="">{% trans "Transfert privé" %}</a> {% trans "pour tous vos déplacements" %}</p>
+                </div>
+            </div>
+            <div class="row g-3" data-aos="fade-up" data-aos-delay="100">
+                 {% for prod in produit %}
+                     <div class="col-lg-4 col-sm-6">
+                    <div class="project">
+                        <img src="{{prod.photo2.url}}" alt="" width="350px" height="330px">
+                        <div class="overlay">
+                            <div>
+                                <h4>{{prod.nom}}</h4>
+                                 <h6> {{prod.types}} </h6>
+                        
+                                  <a href="{% url 'detail' prod.id %}" class="btn btn-primary">{% trans "Voir détail" %}</a>
+                                  
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                {% endfor %}
+            </div> 
+    </section>
+    <!-- caroussel après les voitures en location -->
+
+    <!-- </section>/Call To Action Section -->
+
+    <section id="call-to-action" class="call-to-action section dark-background mt-5">
+        <div class="container-fluid call_action">
+        <div class="row justify-content-center" data-aos="zoom-in" data-aos-delay="100">
+          <div class="col-xl-10">
+            <div class="text-center py-5">
+              <h3>{% trans "TEAMS EXPRESS, votre taxi fiable et qualité" %}</h3>
+              <p>{% trans "Profitez du meilleur rapport qualité-prix pour vos circulation en ville depuis ou vers l'aéroport. Ponctuels, sécurisé et toujours disponibles, nos chauffeurs vous accueillent avec le sourire. Réservez dès maintenant avec Teams Express" %}</p>
+            </div>
+          </div>
+        </div>
+        </div>
+    </section>
+<!-- </section>/Call To Action Section -->
+
+<style>
+.affiche_accueil .drops {
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 2rem;
+}
+
+.affiche_accueil .drop-list {
+    display: flex;
+    gap: 2rem;
+    list-style: none;
+    padding: 0;
+    margin: 0;
+}
+
+.affiche_accueil .drop-item {
+    position: relative;
+}
+
+.affiche_accueil .dropdowns {
+    display: none;
+    /* position: absolute; */
+    background: #fff;
+    box-shadow: 0 2px 8px rgba(0,0,0,0.1);
+    min-width: 150px;
+    z-index: 10;
+}
+
+.affiche_accueil .drop-item:hover .dropdowns {
+    display: flex;
+    background: rgba(4, 4, 4, 0.801);
+    border-radius: 10px;
+    color: white;
+    text-align: center;
+}
+.affiche_accueil a{
+    color: white;
+    text-decoration: none;
+    padding: 8px;
+    margin: 5px;
+}
+.affiche_accueil a:hover{
+    background-color: blue;
+    border-radius: 10px;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+    .affiche_accueil .drops {
+        display: none;
+    }
+
+}
+</style>
+<script src="{% static 'aos/aos.js' %}"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        once: true, // Animation only happens once
+        mirror: false, // Whether elements should animate out while scrolling past them
+    });
+</script>
+{% endblock 'contenu' %}

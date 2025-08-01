@@ -1,0 +1,657 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) YEAR THE PACKAGE'S COPYRIGHT HOLDER
+# This file is distributed under the same license as the PACKAGE package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: PACKAGE VERSION\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2025-07-25 11:36+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"Language: en\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: .\template\appropos.html:19
+msgid ""
+"Découvrez la nouvelle plateforme web qui révolutionne la réservation de "
+"taxis à Madagascar ! Notre application vous permet de réserver un taxi en "
+"quelques clics, de comparer les offres, de suivre votre chauffeur en temps "
+"réel et de profiter d’un service sécurisé et professionnel."
+msgstr ""
+"Discover the new web platform that's revolutionizing taxi booking in "
+"Madagascar! Our app lets you book a taxi in just a few clicks, compare "
+"offers, track your driver in real time, and enjoy a secure and professional "
+"service."
+
+#: .\template\appropos.html:21
+msgid "servive disponible 24h/7"
+msgstr "24/7 service available"
+
+#: .\template\appropos.html:22
+msgid "Réservation rapide et confirmation instantanée"
+msgstr "Fast booking and instant confirmation"
+
+#: .\template\appropos.html:23
+msgid "Suivi du taxi en temps réel et contact direct avec le chauffeur"
+msgstr "Real-time taxi tracking and direct contact with the driver"
+
+#: .\template\appropos.html:24
+msgid "Tarifs transparents et compétitifs"
+msgstr "Transparent and competitive rates"
+
+#: .\template\appropos.html:25
+msgid "Support client disponible 24h/24"
+msgstr "24/7 Customer Support"
+
+#: .\template\appropos.html:27
+msgid "Réserver maintenant"
+msgstr "Book now"
+
+#: .\template\appropos.html:37
+msgid "Pourquoi choisir TAXI EXPRESS ?"
+msgstr "Why choose TAXI EXPRESS?"
+
+#: .\template\appropos.html:38
+msgid ""
+"Notre application web vous garantit une expérience utilisateur optimale : "
+"navigation fluide, accès rapide à toutes les fonctionnalités, et adaptation "
+"parfaite à tous les écrans (ordinateur, tablette, mobile)."
+msgstr ""
+"Our web application guarantees you an optimal user experience: smooth "
+"navigation, quick access to all features, and perfect adaptation to all "
+"screens (computer, tablet, mobile)."
+
+#: .\template\appropos.html:42
+msgid "Contactez-nous directement en whatsapp"
+msgstr "Contact us directly by WhatsApp"
+
+#: .\template\appropos.html:43
+msgid "Nous vous répondrons de suite pour organiser votre voyages"
+msgstr "We will get back to you immediately to organize your trip."
+
+#: .\template\appropos.html:47
+msgid "Ultra rapide"
+msgstr "Ultra fast"
+
+#: .\template\appropos.html:48
+msgid "Réservation en moins de 30 secondes"
+msgstr "Book in less than 30 seconds"
+
+#: .\template\appropos.html:52
+msgid "Sécurisé"
+msgstr "Secure"
+
+#: .\template\appropos.html:53
+msgid "Paiement et données protégés"
+msgstr "Payment and data protected"
+
+#: .\template\appropos.html:60
+msgid "Une équipe à votre écoute"
+msgstr "A team at your service"
+
+#: .\template\appropos.html:61
+msgid ""
+"Notre équipe de professionnels est disponible pour vous accompagner à chaque "
+"étape : conseils, assistance, gestion des réservations et suivi "
+"personnalisé. Nous mettons tout en œuvre pour garantir votre satisfaction et "
+"votre sécurité."
+msgstr ""
+"Our team of professionals is available to assist you every step of the way: "
+"advice, assistance, booking management, and personalized follow-up. We make "
+"every effort to guarantee your satisfaction and safety."
+
+#: .\template\appropos.html:63
+msgid "Chauffeurs expérimentés et courtois"
+msgstr ""
+
+#: .\template\appropos.html:64
+msgid "Service client réactif"
+msgstr "Responsive customer service"
+
+#: .\template\appropos.html:65
+msgid "Couverture Antananarivo et environs"
+msgstr "Coverage of Antananarivo and surrounding areas"
+
+#: .\template\appropos.html:99
+msgid "Nos engagements"
+msgstr "Our commitments"
+
+#: .\template\appropos.html:100
+msgid "Pour votre satisfaction"
+msgstr "For your satisfaction"
+
+#: .\template\appropos.html:110
+msgid "Réservation rapide"
+msgstr "Quick booking"
+
+#: .\template\appropos.html:111
+msgid ""
+"Réservez votre taxi en quelques clics, à tout moment et où que vous soyez à "
+"Madagascar."
+msgstr "Book your taxi in just a few clicks, anytime, anywhere in Madagascar."
+
+#: .\template\appropos.html:123
+msgid "Sécurité garantie"
+msgstr "Security guaranteed"
+
+#: .\template\appropos.html:124
+msgid ""
+"Nos chauffeurs sont expérimentés et nos véhicules régulièrement contrôlés "
+"pour assurer votre sécurité."
+msgstr ""
+"Our drivers are experienced and our vehicles are regularly checked to ensure "
+"your safety."
+
+#: .\template\appropos.html:135
+msgid "Couverture étendue"
+msgstr "Extended coverage"
+
+#: .\template\appropos.html:136
+msgid ""
+"nous desservons Antananarivo et ses environs, pour tous vos besoins de "
+"déplacement."
+msgstr ""
+"We serve Antananarivo and its surrounding areas, for all your travel needs."
+
+#: .\template\appropos.html:146
+msgid "Disponibilité 24h/24"
+msgstr "24/7 availability"
+
+#: .\template\appropos.html:147
+msgid ""
+"Notre service est disponible à toute heure, pour répondre à vos urgences et "
+"vos besoins quotidiens."
+msgstr ""
+"Our service is available around the clock to meet your emergencies and daily "
+"needs."
+
+#: .\template\appropos.html:158
+msgid "Ils nous font confiance"
+msgstr "They trust us"
+
+#: .\template\appropos.html:162
+msgid ""
+"Grâce à TAXI EXPRESS, je peux réserver un taxi en quelques secondes, même "
+"tard le soir. Le service est toujours fiable et les chauffeurs sont très "
+"courtois. Je recommande à tous ceux qui cherchent un moyen de transport sûr "
+"à Antananarivo !"
+msgstr ""
+"Thanks to TAXI EXPRESS, I can book a taxi in seconds, even late at night. "
+"The service is always reliable and the drivers are very courteous. I "
+"recommend it to anyone looking for a safe means of transportation in "
+"Antananarivo!"
+
+
+#: .\template\index.html:16
+msgid "Location"
+msgstr "Car rental"
+
+#: .\template\index.html:18
+msgid "tarif"
+msgstr "Rates"
+
+#: .\template\index.html:19
+msgid "réserver un véhicule"
+msgstr "Book a vehicle"
+
+#: .\template\index.html:24
+msgid "Taxi ville"
+msgstr "City taxi"
+
+#: .\template\index.html:26
+msgid "service rapide"
+msgstr "Fast service"
+
+#: .\template\index.html:27
+msgid "TAXI DISPONIBLE"
+msgstr "AVAILABLE TAXI"
+
+#: .\template\index.html:33 .\template\index.html:262 .\template\index.html:264
+msgid "Voyages"
+msgstr "Trips"
+
+#: .\template\index.html:35
+msgid "Offres disponibles"
+msgstr "Available offers"
+
+#: .\template\index.html:36
+msgid "conséils"
+msgstr ""
+
+#: .\template\index.html:52
+msgid "Bienvenue chez Taxi Express de Madagascar"
+msgstr "Welcome to Taxi Express Madagascar"
+
+#: .\template\index.html:57 .\template\index.html:59
+msgid "Réserver un taxi"
+msgstr "Book a taxi"
+
+#: .\template\index.html:224
+msgid "NOS OPTIONS"
+msgstr "OUR OPTIONS"
+
+#: .\template\index.html:225
+msgid ""
+"Inscrivez_vous et choisir votre option pour vos voyages et circulation en "
+"ville avec nous"
+msgstr "Sign up and choose your option for your trips and city travel with us"
+
+#: .\template\index.html:239
+msgid "Souscription"
+msgstr "Subscription"
+
+#: .\template\index.html:240
+msgid ""
+"Inscrive-vous  ou connecté sur votre compte pour bien valider votre "
+"réservation"
+msgstr "Sign up or log in to your account to validate your reservation"
+
+#: .\template\index.html:241
+msgid "S'inscrire"
+msgstr "Sign up"
+
+#: .\template\index.html:250
+msgid "Ma réservation"
+msgstr "My reservation"
+
+#: .\template\index.html:251
+msgid ""
+"Consulter mes historiques de réservation ou voir les détails des mes "
+"réserations en ligne"
+msgstr "Check my reservation history or see details of my online bookings"
+
+#: .\template\index.html:252
+msgid "MES RESERVATIONS"
+msgstr "MY RESERVATIONS"
+
+#: .\template\index.html:263
+msgid ""
+"Nous organisons vos voyages à tous les SITES Touristiques de Madagascar avec "
+"un prix très attractifs"
+msgstr ""
+"We organize your trips to all tourist sites in Madagascar at very attractive "
+"prices"
+
+#: .\template\index.html:273
+msgid "Contacte"
+msgstr ""
+
+#: .\template\index.html:274
+msgid ""
+"Pour plus d'information, veuillez nous contater en cliquant sur ce boutton"
+msgstr "For more information, please contact us by clicking this button"
+
+#: .\template\index.html:275
+msgid "Avoir une conséillère"
+msgstr "Get advice"
+
+#: .\template\index.html:285
+msgid "OFFRES"
+msgstr "OFFERS"
+
+#: .\template\index.html:286
+msgid ""
+"Cliquez ici pour voir les offres disponibles ou faire une demande d'offre"
+msgstr "Click here to see available offers or make a request"
+
+#: .\template\index.html:287
+msgid "Voir les offres"
+msgstr "See offers"
+
+#: .\template\index.html:310
+msgid "SITE IDEAL POUR UNE LOCATION DE VOITURE"
+msgstr "IDEAL SITE FOR CAR RENTAL"
+
+#: .\template\index.html:311
+msgid "Service Taxi ville et location de voiture de Madagascar"
+msgstr "City taxi and car rental service in Madagascar"
+
+#: .\template\index.html:312
+#, fuzzy
+#| msgid ""
+#| "est la prémière plateforme complète à Madagascar  dédiée aux déplacements "
+#| "touristiques et urbains. Basée à Antananarivo dans l'Aéroport "
+#| "Intérnationale d'Ivato, elle propose une"
+msgid ""
+"est la prémière plateforme complète à Madagascar  dédiée aux déplacements "
+"touristiques et urbains. Basée à Antananarivo à l'Aéroport Intérnationale "
+"d'Ivato, elle propose une"
+msgstr ""
+"is the first complete platform in Madagascar dedicated to tourist and urban "
+"travel. Based in Antananarivo at Ivato International Airport, it offers"
+
+#: .\template\index.html:312
+msgid "service de taxi ville rapide et fiable"
+msgstr "fast and reliable city taxi service"
+
+#: .\template\index.html:312
+msgid "pour tous vos circulations, des"
+msgstr "for all your trips,"
+
+#: .\template\index.html:312
+msgid "locations et transfert de tous types de voitures"
+msgstr "rental and transfer of all types of cars"
+
+#: .\template\index.html:312
+msgid "au meilleur prix pour les visiteurs, Ainsi que l'organisation de"
+msgstr "at the best price for visitors, as well as the organization of"
+
+#: .\template\index.html:312
+msgid "voyage vers les plus beaux sites touristiques de l'îles"
+msgstr "trips to the most beautiful tourist sites of the island"
+
+#: .\template\index.html:312
+msgid "Ques vous rend vos déplacements simples , économiques et inoubliables."
+msgstr "which makes your trips simple, economical and unforgettable."
+
+#: .\template\index.html:317
+msgid "Teams express"
+msgstr "Teams express"
+
+#: .\template\index.html:318
+msgid "Service taxi ville d'Antananarivo, disponible 24h/24 et 7j/7"
+msgstr "City taxi service in Antananarivo, available 24/7"
+
+#: .\template\index.html:324
+msgid "Location de voiture et transfert pendant votre visite de Madagascar"
+msgstr "Car rental and transfer during your visit to Madagascar"
+
+#: .\template\index.html:325
+msgid "Créer un compte sur notre site et faites vos reservation en ligne"
+msgstr "Create an account on our site and make your reservation online"
+
+#: .\template\index.html:331
+msgid "Voyages dans sur tous les top 10 site tourstique de l'île"
+msgstr "Trips to the top 10 tourist sites of the island"
+
+#: .\template\index.html:332
+msgid ""
+"Nous organisons des voyages dans les plus beaux sites touristiques de "
+"Madagascar"
+msgstr "We organize trips to the most beautiful tourist sites in Madagascar"
+
+#: .\template\index.html:346
+msgid "TAXI EXPRESS de Madagascar"
+msgstr "TAXI EXPRESS of Madagascar"
+
+#: .\template\index.html:347
+msgid "Voici les taxis disponibles"
+msgstr "Here are the available taxis"
+
+#: .\template\index.html:368 .\template\index.html:370
+msgid "Réserver"
+msgstr "Book"
+
+#: .\template\index.html:392
+msgid "Transfert"
+msgstr "Transfer"
+
+#: .\template\index.html:393
+msgid "LOUER ET VOYAGER A TOUS MOMENT"
+msgstr "RENT AND TRAVEL AT ANY TIME"
+
+#: .\template\index.html:394
+msgid "Nos véhicules sont disponibles aussi bien en"
+msgstr "Our vehicles are available both in"
+
+#: .\template\index.html:394
+msgid "Service taxi ville"
+msgstr "City taxi service"
+
+#: .\template\index.html:394
+msgid "et en"
+msgstr "and in"
+
+#: .\template\index.html:394
+msgid "Transfert privé"
+msgstr "Private transfer"
+
+#: .\template\index.html:394
+msgid "pour tous vos déplacements"
+msgstr "for all your trips"
+
+#: .\template\index.html:407
+msgid "Voir détail"
+msgstr "See details"
+
+#: .\template\index.html:425
+msgid "TEAMS EXPRESS, votre taxi fiable et qualité"
+msgstr "TEAMS EXPRESS, your reliable and quality taxi"
+
+#: .\template\index.html:426
+msgid ""
+"Profitez du meilleur rapport qualité-prix pour vos circulation en ville "
+"depuis ou vers l'aéroport. Ponctuels, sécurisé et toujours disponibles, nos "
+"chauffeurs vous accueillent avec le sourire. Réservez dès maintenant avec "
+"Teams Express"
+msgstr ""
+"Enjoy the best value for your city trips to or from the airport. Punctual, "
+"safe and always available, our drivers welcome you with a smile. Book now "
+"with Teams Express"
+
+
+
+#: .\template\layouts\footer.html:23
+msgid "Politique de confidentialité"
+msgstr "Politique de confidentialité"
+
+#: .\template\layouts\header.html:22 .\template\layouts\header.html:53
+msgid "ACCUEIL"
+msgstr "HOME"
+
+#: .\template\layouts\header.html:23 .\template\layouts\header.html:54
+msgid "SERVICE"
+msgstr "SERVICE"
+
+#: .\template\layouts\header.html:24
+msgid "RESERVER"
+msgstr "BOOK"
+
+#: .\template\layouts\header.html:29 .\template\layouts\header.html:60
+msgid "Langue"
+msgstr "Language"
+
+#: .\template\layouts\header.html:36
+msgid "MENU"
+msgstr "MENU"
+
+#: .\template\layouts\header.html:55
+#, fuzzy
+#| msgid "A PROPOS"
+msgid "APPROPOS"
+msgstr "ABOUT"
+
+#: .\template\layouts\header.html:66
+msgid "CONNEXION"
+msgstr "LOGIN"
+
+#: .\template\service.html:11
+msgid "Taxi ville de Madagascar"
+msgstr "City taxi of Madagascar"
+
+#: .\template\service.html:12
+msgid "Service express et fiable"
+msgstr "Express and reliable service"
+
+#: .\template\service.html:53
+msgid "NOS SERVICES DISPONIBLES 24h/7J"
+msgstr "OUR SERVICES AVAILABLE 24/7"
+
+#: .\template\service.html:54
+msgid ""
+"Nous mettons à votre disposition des services de TRANSFERT de l'aéroport en "
+"ville et aux alentours, de votre Hôtel à l'aéroport. Nous organisons <a "
+"href=''>des transferts et voyages dans tout Madagascar</a> et <a "
+"href=''>proposons des voitures de Location </a> répondant aux besoins de "
+"votre itinéraire. <br> <span>Nous veillons à vous offrir des services de "
+"qualité accompagné des Chauffeurs professionnels et des voitures en "
+"parfaites état.</span>  L'éfficacité , la ponctuaité sont nos maitre mots"
+msgstr ""
+"We provide you with TRANSFER services from the airport to the city and "
+"surroundings, and from your hotel to the airport. We organize <a "
+"href=''>transfers and trips throughout Madagascar</a> and <a href=''>offer "
+"rental cars</a> to meet the needs of your itinerary.<br><span>We strive to "
+"offer you quality services with professional drivers and cars in perfect "
+"condition.</span> Efficiency and punctuality are our key words."
+
+#: .\template\service.html:64
+msgid "Teams Express, les taxis de confiance à Madagascar !"
+msgstr "Teams Express, the trusted taxis in Madagascar!"
+
+#: .\template\service.html:66
+msgid ""
+"Disponible 24h/24 et 7j/7, notre service de taxi vous accompagne à toute "
+"heure pour vos déplacements en ville ou vos transferts aéroport. Avec des "
+"véhicules confortables et bien entretenus, nous mettons un point d’honneur à "
+"vous offrir sécurité, ponctualité et qualité. Pour un accueil sans stress "
+"dès votre arrivée, créez dès maintenant votre compte et réservez en ligne "
+"votre trajet : une solution simple, rapide et fiable pour commencer votre "
+"séjour en toute sérénité."
+msgstr ""
+"Available 24/7, our taxi service accompanies you at any time for your city "
+"trips or airport transfers. With comfortable and well-maintained vehicles, "
+"we are committed to offering you safety, punctuality, and quality. For a "
+"stress-free welcome upon your arrival, create your account now and book your "
+"trip online: a simple, fast, and reliable solution to start your stay with "
+"complete peace of mind."
+
+#: .\template\service.html:75
+msgid "Service Chauffeur Privé"
+msgstr "Private Chauffeur Service"
+
+#: .\template\service.html:76
+msgid ""
+"Chez Teams Express, votre chauffeur est bien plus qu’un simple conducteur : "
+"il sera aussi votre guide personnel tout au long de votre séjour. Grâce à sa "
+"parfaite connaissance de Madagascar, il saura vous faire découvrir "
+"l’histoire fascinante du pays, ses parcs nationaux, ses paysages uniques et "
+"ses lieux culturels incontournables. Chaque trajet devient une occasion "
+"d’exploration et d’échange. Avec Teams Express, voyagez en toute sérénité, "
+"accompagné d’un chauffeur-guide passionné et dévoué."
+msgstr ""
+"At Teams Express, your driver is much more than just a driver: they will "
+"also be your personal guide throughout your stay. Thanks to their in-depth "
+"knowledge of Madagascar, they will help you discover the country's "
+"fascinating history, its national parks, unique landscapes, and must-see "
+"cultural sites. Every journey becomes an opportunity for exploration and "
+"exchange. With Teams Express, travel with complete peace of mind, "
+"accompanied by a passionate and dedicated driver-guide."
+
+#: .\template\service.html:84
+msgid "TOUR DE VILLE Antananarivo"
+msgstr "Antananarivo City Tour"
+
+#: .\template\service.html:94
+msgid "VISITE DES PARCS"
+msgstr ""
+
+#: .\template\service.html:95
+msgid ""
+"Explorer les parcs nationaux les plus emblématiques de l'île rouge, tels que "
+"le parc d'Andasibe, célèbre pour ses lémuriens et sa forêt luxuriante et "
+"tous les autres parcs de votre choix. <br> Que vous soyez amoreux de la "
+"nature, passionné de randonné ou en quête d'avanture, Nos circuits "
+"personnalisés s'adaptent à vos envies. Grâce à notre application web, "
+"contacter nous en WatsApp +261 38 67 873 20 ou faite vos réservation en ligne"
+msgstr ""
+"Explore the most iconic national parks of the Red Island, such as Andasibe "
+"Park, famous for its lemurs and lush forest, and any other park of your "
+"choice. <br> Whether you are a nature lover, a hiking enthusiast, or looking "
+"for adventure, our personalized tours adapt to your desires. Thanks to our "
+"web application, contact us on WhatsApp +261 38 67 873 20 or make your "
+"reservations online"
+
+#: .\template\service.html:103
+msgid "Voyage organisé"
+msgstr "Organized trip"
+
+#: .\template\service.html:104
+msgid ""
+"Partez à l'avanture à travers une île d'exception grâce à nos voyages "
+"organisé tous compris. <br>Contacter nous en WatsApp +261 38 67 873 20  Des "
+"plages paradisiaques de Nosy be, haute terre d'Antsirabe, en passant par les "
+"allées de Baobabs et les villages authentiques, chaque iténeraire est pensé "
+"pour vous offrir une immersion totale dans la culture, la nature et la "
+"beauté unique de Madagascar. Transport sécurisé, accompagnement de votre "
+"chauffeur qui est votre guides passionné. Teams Express transforme votre "
+"voyages en inoubliables"
+msgstr ""
+"Embark on an adventure across an exceptional island thanks to our all-"
+"inclusive organized trips. <br>Contact us on WhatsApp +261 38 67 873 20 From "
+"the heavenly beaches of Nosy Be, the highlands of Antsirabe, passing through "
+"the avenues of Baobabs and authentic villages, each itinerary is designed to "
+"offer you a total immersion in the culture, nature and unique beauty of "
+"Madagascar. Secure transport, accompanied by your driver who is your "
+"passionate guide. Teams Express transforms your trips into unforgettable ones"
+
+#: .\template\service.html:112
+msgid "Séjours Familliale"
+msgstr "Family Stays"
+
+#: .\template\service.html:113
+msgid ""
+"Offrer à votre famille un séjour inoubliable au coeur de Madagascar avec "
+"Teams Express <br> Des vacances pensées pour petit et grands: plages "
+"tranquilles, visite ludiques de parcs animaliers, rencotres culturelles et "
+"activités adaptées à tous les âges. Nos séjours familliaux combinent "
+"détente , avanture et sécurié, avec des hébérgement fonfortables et des "
+"circuits sans stress. Profitez de moment de complicité en explorant la "
+"richesse naturelle et culturel de l'îles avec Teams Express. contacter nous "
+"en WatsApp +261 38 67 873 20"
+msgstr ""
+"Treat your family to an unforgettable stay in the heart of Madagascar with "
+"Teams Express <br> Holidays designed for young and old: peaceful beaches, "
+"fun visits to animal parks, cultural encounters and activities suitable for "
+"all ages. Our family holidays combine relaxation, adventure and security, "
+"with comfortable accommodation and stress-free tours. Enjoy moments of "
+"complicity by exploring the natural and cultural wealth of the islands with "
+"Teams Express. Contact us on WhatsApp +261 38 67 873 20"
+
+#~ msgid "À propos de l’application "
+#~ msgstr "About the"
+
+#~ msgid "Votre service de voyage à Madagascar"
+#~ msgstr "Your travel service in Madagascar"
+
+#~ msgid "déstination"
+#~ msgstr "Destination"
+
+#, fuzzy
+#~| msgid "Créer un compte sur notre site et faites vos reservation en ligne"
+#~ msgid "ou faite vos réservation en ligne"
+#~ msgstr "Create an account on our site and make your reservation online"
+
+#~ msgid ""
+#~ "La ville de Madagascar offre une charme unique avec ses maisons en brique "
+#~ "rouges et ses toits en tuiles. C'est la ville où l'histoire de Madagascar "
+#~ "s'est acccumulée sous forme de stèles et de monuments historiques. Notre "
+#~ "service de tour de ville vous permet de découvrir les sites emblématiques "
+#~ "tels que le PALAIS DE LA REINE et de la CATHEDRALE CATHOLIQUE jusqu'aux "
+#~ "ESCALIERS JUMELES opposé et l'AVENUE de L'INDEPENDANCE, le marché "
+#~ "d'Analakely et bien plus encore."
+#~ msgstr ""
+#~ "Madagascar City offers a unique charm with its red brick houses and tiled "
+#~ "roofs. It is the city where Madagascar's history is recorded in the form "
+#~ "of steles and historical monuments. Our city tour service allows you to "
+#~ "discover iconic sites such as the QUEEN'S PALACE and the CATHOLIC "
+#~ "CATHEDRAL, as well as the TWIN STAIRS opposite and INDEPENDENCE AVENUE, "
+#~ "the Analakely Market, and much more."
+
+
+msgid "J’utilise cette application pour mes déplacements professionnels et personnels. Les véhicules sont propres, le système de réservation est simple et rapide, et je me sens toujours en sécurité. Merci à toute l’équipe TAXI EXPRESS !"
+
+msgstr "I use this app for both my business and personal travel. The vehicles are clean, the booking system is simple and fast, and I always feel safe. Thank you to the entire TAXI EXPRESS team!"
+
+msgid "Service de réservation de taxi fiable et rapide à Madagascar. Disponible 7j/7."
+msgstr "Reliable and fast taxi booking service in Madagascar. Available 7 days a week."
+
+
+msgid "Notre équipe"
+msgstr "Our team"

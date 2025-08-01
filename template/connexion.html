@@ -1,0 +1,87 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+{% block 'contenu' %} 
+
+<div class="page-connex" >
+   <div class="container py-5">
+    {% if request.method == "POST" %}
+        {% if erreur %}
+          {{erreur}}
+        {% endif %}
+      
+    {% endif %}
+     <div class="row">
+        <div class="col-md-7 texte_co">
+            <h1 class="text-left">Bienvenu sur taxiMadagascar</h1>
+            <p class="text-left">Cliquer sur le Bouton créer un compte si vous en avez pas encore sinon entrer votre email et votre mot de passe pour faire la réservation</p>
+        </div>
+        <!-- formulaire -->
+        <div class="col-md-5" id="form-connexion">
+            {% if messages %}
+                {% for message in messages %}
+                  <p style="color:white;font-size: 2vw;text-transform: lowercase;">{{message}}</p>
+                {% endfor %}
+              
+            {% endif %}
+            <form action="{% url 'connexion_membre' %}" method="POST" enctype="multipart/form-data">
+                {% csrf_token %}
+                {% if request.method == "POST" %}
+                    {% if erreur %}
+                        <p> {{erreur}} </p>
+                      
+                    {% endif %}
+                  
+                {% endif %}
+                <div class="row">
+                <div class="col-md-6">
+                    <h3 class="text-left">Connexion</h3>
+                </div>
+                <div class="col-md-6">
+                    <span></span>
+                </div>
+                <hr>
+                <!--  -->
+                <div class="row">
+                    <label for="" class="label col-md-2 control-label">E-mail : </label> 
+                    <div class="col-md-10">
+                        <input type="email" class="form-control input-conex" placeholder="E-mail" id="" autocomplete="off" name="email">
+                    </div>
+                </div>
+
+                <div class="row">
+                    <label for="" class="label col-md-2 control-label">mot de passe : </label> 
+                    <div class="col-md-10 icone-mdp">
+                        <input type="password" class="form-control input-conex" placeholder="mot de passe" id="katsaka" autocomplete="off" name="mot_de_passe">
+                        <i class="far fa-eye-slash mdphide" onclick="affiche_mdp()" id="maso"></i>
+                    </div>
+                </div>
+
+                <div class="col-md-2">
+                    <button class="btn-primary" id="bouton-connexion" type="submit">Connexion</button>
+                </div>
+                <div class="création">
+                    <a href="{% url 'page_souscription' %}">Créer un Compte</a>
+                    <a href="{% url 'reset_password' %}">Mot de passe oublié</a>
+                </div>
+            </div>
+            </form>
+        </div>
+    </div>
+   </div>
+</div>
+<br>
+
+    <script>
+          function affiche_mdp(){
+            var codes = document.getElementById("katsaka")
+            var maso = document.getElementById("maso")
+
+            if(codes.type ==="password"){
+                codes.type="text"
+                maso.classList.replace("fa-eye-slash","fa-eye")
+            }
+
+          }
+            
+    </script>
+<!-- {% endblock 'contenu' %} -->

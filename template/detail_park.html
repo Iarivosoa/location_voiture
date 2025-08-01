@@ -1,0 +1,128 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+
+{% block 'contenu' %}
+<head>
+     <link rel="stylesheet" href="{% static 'aos/aos.css' %}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<!--DEBUT DU CODE  -->
+
+    <!-- Blog Hero Section -->
+    <section id="blog-hero" class="blog-hero section py-5" >
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="blog-grid" style="margin-top:10vh">
+
+          <!-- Featured Post (Large) -->
+          <article class="blog-item featured" data-aos="fade-up">
+            <img src="{{details.photo1.url}}" alt="Blog Image" class="img-fluid" style="object-fit: cover; object-position: center;">
+            <div class="blog-content">
+              <div class="post-meta">
+                <span class="category" style="color: white;"> {{details.legende_park }} </span>
+              </div>
+              <h2 class="post-title">
+                <span class="category" style="color: white;"> {{details.legende_park }} </span>
+              </h2>
+            </div>
+          </article><!-- End Featured Post -->
+
+          <!-- Regular Posts -->
+           <section style="position: relative;">
+          <img src="{{details.photo1.url}}" alt="Blog Image" class="img-fluid">
+            <div class="">
+                <p style="display: inline-block; width: 350px"> {{details.description_park}} </p>
+
+            </div>
+           </section><!-- End Blog Item -->
+
+          <article class="blog-item" data-aos="fade-up" data-aos-delay="200">
+            <img src="{{details.photo2.url}}" alt="Blog Image" class="img-fluid">
+
+          </article><!-- End Blog Item -->
+
+          <article class="blog-item" data-aos="fade-up" data-aos-delay="300">
+           <img src="{{details.photo3.url}}" alt="Blog Image" class="img-fluid">
+        
+          </article><!-- End Blog Item -->
+
+          <article class="blog-item" data-aos="fade-up" data-aos-delay="400">
+            <img src="{{details.photo4.url}}" alt="Blog Image" class="img-fluid">
+            <!-- <div class="blog-content">
+              <div class="post-meta">
+                <span class="date">Apr. 14th, 2025</span>
+                <span class="category">Programming</span>
+              </div>
+              <h3 class="post-title">
+                <a href="blog-details.html" title="Excepteur sint occaecat cupidatat non proident">Excepteur sint occaecat cupidatat non proident</a>
+              </h3>
+            </div> -->
+          </article><!-- End Blog Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Blog Hero Section -->
+
+    <!--  -->
+
+        <section id="featured-posts" class="featured-posts section">
+                  <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Découvrez tous nos sites disponibles dès votre arrivée à l’aéroport </h2>
+        <div><span>Nous vous emmenons en balade </span> <span class="description-title"> pour un tour dans les parcs et les plus beaux endroits de la région.</span></div>
+      </div><!-- End Section Title -->
+                <div class="container">
+                    <div class="owl-carousel owl-theme card-carousel" data-aos="fade-up" data-aos-delay="100" >
+                        <!-- debut card -->
+                            {% for park in parks %}
+                                                      <div class="card image_taxi swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="blog-post-item">
+                                    <img src="{{park.photo1.url}}" alt="Blog Image">
+                                        <!-- <div class="blog-post-content" >
+                      
+                                            <h2><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</a></h2>
+                                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce porttitor metus eget lectus consequat, sit amet feugiat magna vulputate.</p>
+                                            <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                                        </div> -->
+                                </div>
+                            </div><!-- End slide item -->
+
+                        </div> 
+                            {% endfor %}
+
+
+                    </div>
+                </div>
+        </section>
+    <!--  -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                    <p>Découvrez nos services de voyage sur mesure, adaptés à toutes vos envies et besoins ! Que ce soit pour un trajet rapide, un transfert à l’aéroport ou une excursion personnalisée, nous sommes à votre écoute 24h/24. Pour une réservation simple et rapide, contactez-nous directement sur WhatsApp — notre équipe est prête à répondre à toutes vos questions et à organiser votre voyage en un clic !
+                    Suivez-nous aussi sur notre page Facebook pour rester informé(e) de nos offres et nouveautés :
+                    <a href="" target="_blank" rel="noopener noreferrer">Notre page Facebook</a></p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                    <img src="{% static 'image/IMG-20250616-WA0025.jpg' %}" alt="" width="100%" height="400px" style="border-radius: 10px;object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!--FIN DU CODE  -->
+<script src="{% static 'aos/aos.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        once: true, // Animation only happens once
+        mirror: false, // Whether elements should animate out while scrolling past them
+    });
+</script>
+{% endblock 'contenu' %}

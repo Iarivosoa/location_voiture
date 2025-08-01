@@ -1,0 +1,210 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+
+{% block 'contenu' %}
+<head>
+     <link rel="stylesheet" href="{% static 'aos/aos.css' %}">
+     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
+</head>
+<!--DEBUT DU CODE  -->
+
+    <!-- Blog Hero Section -->
+    <section id="blog-hero" class="blog-hero section py-5" >
+
+      <div class="container" data-aos="fade-up" data-aos-delay="100">
+
+        <div class="blog-grid" style="margin-top:10vh">
+
+          <!-- Featured Post (Large) -->
+          <article class="blog-item featured" data-aos="fade-up">
+            <img src="{% static 'image/baobab1.png' %}" alt="Blog Image" class="img-fluid">
+            <div class="blog-content">
+              <div class="post-meta">
+                <span class="date">Apr. 14th, 2025</span>
+                <span class="category">Technology</span>
+              </div>
+              <h2 class="post-title">
+                <a href="blog-details.html" title="Lorem ipsum dolor sit amet, consectetur adipiscing elit">Lorem ipsum dolor sit amet, consectetur adipiscing elit</a>
+              </h2>
+            </div>
+          </article><!-- End Featured Post -->
+
+          <!-- Regular Posts -->
+           <article>
+          <img src="{% static 'image/baobab1.png' %}" alt="Blog Image" class="img-fluid">
+            <div class="blog-content">
+              <div class="post-meta">
+                <span class="date">Apr. 14th, 2025</span>
+                <span class="category">Security</span>
+              </div>
+              <h3 class="post-title">
+                <a href="blog-details.html" title="Sed do eiusmod tempor incididunt ut labore">Sed do eiusmod tempor incididunt ut labore</a>
+              </h3>
+            </div>
+          </article><!-- End Blog Item -->
+
+          <article class="blog-item" data-aos="fade-up" data-aos-delay="200">
+            <img src="{% static 'image/baobab1.png' %}" alt="Blog Image" class="img-fluid">
+            <div class="blog-content">
+              <div class="post-meta">
+                <span class="date">Apr. 14th, 2025</span>
+                <span class="category">Career</span>
+              </div>
+              <h3 class="post-title">
+                <a href="blog-details.html" title="Ut enim ad minim veniam, quis nostrud exercitation">Ut enim ad minim veniam, quis nostrud exercitation</a>
+              </h3>
+            </div>
+          </article><!-- End Blog Item -->
+
+          <article class="blog-item" data-aos="fade-up" data-aos-delay="300">
+           <img src="{% static 'image/baobab1.png' %}" alt="Blog Image" class="img-fluid">
+            <div class="blog-content">
+              <div class="post-meta">
+                <span class="date">Apr. 14th, 2025</span>
+                <span class="category">Cloud</span>
+              </div>
+              <h3 class="post-title">
+                <a href="blog-details.html" title="Adipiscing elit, sed do eiusmod tempor incididunt">Adipiscing elit, sed do eiusmod tempor incididunt</a>
+              </h3>
+            </div>
+          </article><!-- End Blog Item -->
+
+          <article class="blog-item" data-aos="fade-up" data-aos-delay="400">
+            <img src="{% static 'image/baobab1.png' %}" alt="Blog Image" class="img-fluid">
+            <div class="blog-content">
+              <div class="post-meta">
+                <span class="date">Apr. 14th, 2025</span>
+                <span class="category">Programming</span>
+              </div>
+              <h3 class="post-title">
+                <a href="blog-details.html" title="Excepteur sint occaecat cupidatat non proident">Excepteur sint occaecat cupidatat non proident</a>
+              </h3>
+            </div>
+          </article><!-- End Blog Item -->
+
+        </div>
+
+      </div>
+
+    </section><!-- /Blog Hero Section -->
+
+    <!--  -->
+
+        <section id="featured-posts" class="featured-posts section">
+                  <!-- Section Title -->
+      <div class="container section-title" data-aos="fade-up">
+        <h2>Featured Posts</h2>
+        <div><span>Check Our</span> <span class="description-title">Featured Posts</span></div>
+      </div><!-- End Section Title -->
+                <div class="container">
+                    <div class="owl-carousel owl-theme card-carousel" data-aos="fade-up" data-aos-delay="100" >
+                        <!-- debut card -->
+                        <div class="card image_taxi swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="blog-post-item">
+                                    <img src="{% static 'image/IMG-20250616-WA0016.jpg' %}" alt="Blog Image">
+                                        <div class="blog-post-content" >
+                                            <div class="post-meta">
+                                                <span><i class="bi bi-person"></i> Julia Parker</span>
+                                                <span><i class="bi bi-clock"></i> Jan 15, 2025</span>
+                                                <span><i class="bi bi-chat-dots"></i> 6 Comments</span>
+                                            </div>
+                                            <h2><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</a></h2>
+                                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce porttitor metus eget lectus consequat, sit amet feugiat magna vulputate.</p>
+                                            <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                                        </div>
+                                </div>
+                            </div><!-- End slide item -->
+
+                        </div> 
+                        <!-- fin card -->
+                           <!-- debut card -->
+                        <div class="card image_taxi swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="blog-post-item">
+                                    <img src="{% static 'image/tour_ville.jpg' %}" alt="Blog Image">
+                                        <div class="blog-post-content" >
+                                            <div class="post-meta">
+                                                <span><i class="bi bi-person"></i> Julia Parker</span>
+                                                <span><i class="bi bi-clock"></i> Jan 15, 2025</span>
+                                                <span><i class="bi bi-chat-dots"></i> 6 Comments</span>
+                                            </div>
+                                            <h2><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</a></h2>
+                                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce porttitor metus eget lectus consequat, sit amet feugiat magna vulputate.</p>
+                                            <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                                        </div>
+                                </div>
+                            </div><!-- End slide item -->
+
+                        </div> 
+                        <!-- fin card -->
+                                  <!-- debut card -->
+                        <div class="card image_taxi swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="blog-post-item">
+                                    <img src="{% static 'image/IMG-20250616-WA0020.jpg' %}" alt="Blog Image">
+                                        <div class="blog-post-content" >
+                                            <div class="post-meta">
+                                                <span><i class="bi bi-person"></i> Julia Parker</span>
+                                                <span><i class="bi bi-clock"></i> Jan 15, 2025</span>
+                                                <span><i class="bi bi-chat-dots"></i> 6 Comments</span>
+                                            </div>
+                                            <h2><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</a></h2>
+                                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce porttitor metus eget lectus consequat, sit amet feugiat magna vulputate.</p>
+                                            <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                                        </div>
+                                </div>
+                            </div><!-- End slide item -->
+
+                        </div> 
+                        <!-- fin card -->
+                         
+                                                          <!-- debut card -->
+                        <div class="card image_taxi swiper-wrapper">
+                            <div class="swiper-slide">
+                                <div class="blog-post-item">
+                                    <img src="{% static 'image/IMG-20250616-WA0022.jpg' %}" alt="Blog Image">
+                                        <div class="blog-post-content" >
+                                            <div class="post-meta">
+                                                <span><i class="bi bi-person"></i> Julia Parker</span>
+                                                <span><i class="bi bi-clock"></i> Jan 15, 2025</span>
+                                                <span><i class="bi bi-chat-dots"></i> 6 Comments</span>
+                                            </div>
+                                            <h2><a href="#">Neque porro quisquam est qui dolorem ipsum quia dolor sit amet</a></h2>
+                                            <p>Vestibulum ante ipsum primis in faucibus orci luctus et ultrices posuere cubilia Curae; Fusce porttitor metus eget lectus consequat, sit amet feugiat magna vulputate.</p>
+                                            <a href="#" class="read-more">Read More <i class="bi bi-arrow-right"></i></a>
+                                        </div>
+                                </div>
+                            </div><!-- End slide item -->
+
+                        </div> 
+                        <!-- fin card -->
+                    </div>
+                </div>
+        </section>
+    <!--  -->
+    <section>
+        <div class="container">
+            <div class="row">
+                <div class="col-lg-6" data-aos="fade-right" data-aos-delay="100">
+                    <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Facilis molestiae totam quis?</p>
+                </div>
+                <div class="col-lg-6" data-aos="fade-left" data-aos-delay="100">
+                    <img src="{% static 'image/IMG-20250616-WA0025.jpg' %}" alt="" width="100%" height="400px" style="border-radius: 10px;object-fit: cover;">
+                </div>
+            </div>
+        </div>
+    </section>
+
+
+<!--FIN DU CODE  -->
+<script src="{% static 'aos/aos.js' %}"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+<script>
+    AOS.init({
+        duration: 1200,
+        once: true, // Animation only happens once
+        mirror: false, // Whether elements should animate out while scrolling past them
+    });
+</script>
+{% endblock 'contenu' %}
