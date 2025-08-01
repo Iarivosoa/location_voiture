@@ -1,4 +1,8 @@
 {% extends "layouts/master.html" %}
+<<<<<<< HEAD
+=======
+{% load i18n %}
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 {% load static %}
 
 {% block 'contenu' %}
@@ -8,15 +12,24 @@
     <div class="col-lg-5 d-flex flex-column justify-content-center py-1 mb-lg-0">
       <img src="{% static 'image/tax1_ivato.jpg' %}" alt="Taxi Service Rapide" class="img-fluid rounded shadow mb-3" style="max-height: 320px; object-fit: cover;">
       <div class="bg-primary text-white rounded-3 p-3 shadow-sm">
+<<<<<<< HEAD
         <h3 class="mb-2"><i class="fa fa-bolt me-2"></i>Service Rapide TEAMS EXPRESS</h3>
         <p class="mb-0">Besoin d’un taxi <b>immédiatement</b> ? Profitez de notre service express : <span class="fw-bold">réservation ultra-rapide</span>, réponse instantanée, <span class="text-warning">prix compétitifs</span> et <span class="text-warning">chauffeurs professionnels</span> partout à Antananarivo !</p>
+=======
+        <h3 class="mb-2"><i class="fa fa-bolt me-2"></i>{% trans "Service Rapide TEAMS EXPRESS" %}</h3>
+        <p class="mb-0">{% trans "Besoin d’un taxi " %}  <b>{% trans "immédiatement" %}</b>{% trans " ? Profitez de notre service express : " %}<span class="fw-bold">{% trans "réservation ultra-rapide" %}</span>{% trans ", réponse instantanée, " %}<span class="text-warning">{% trans "prix compétitifs" %}</span> et <span class="text-warning">{% trans "chauffeurs professionnels" %}</span> {% trans "partout à Antananarivo !" %}</p>
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
       </div>
     </div>
     <!-- Bloc formulaire réservation rapide -->
     <div class="col-lg-7">
       <div class="card shadow-lg border-0 mb-4" style="margin-top: 30px;">
          <div class="card-header bg-gradient-primary text-white text-center" style="background: linear-gradient(90deg, #007bff 0%, #00c6ff 100%);">
+<<<<<<< HEAD
           <h4 class="mb-0"><i class="fa fa-stopwatch me-2"></i>Réservation rapide</h4>
+=======
+          <h4 class="mb-0"><i class="fa fa-stopwatch me-2"></i>{% trans "Réservation rapide" %}</h4>
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
         </div>
         <div class="card-body p-4">
           {% if messages %}
@@ -28,6 +41,7 @@
             {% csrf_token %} 
             <div class="row g-3">
               <div class="col-md-6">
+<<<<<<< HEAD
                 <label for="nom" class="form-label fw-bold text-primary">Nom <span class="text-danger">*</span></label>
                 <input type="text" class="form-control rounded-pill" id="nom" name="nom" required placeholder="Votre nom">
               </div>
@@ -53,12 +67,43 @@
               </div>
               <div class="col-12">
                 <label for="commentaire" class="form-label fw-bold text-primary">Commentaire</label>
+=======
+                <label for="nom" class="form-label fw-bold text-primary">{% trans "Nom" %} <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-pill" id="nom" name="nom" required placeholder="Votre nom">
+              </div>
+              <div class="col-md-6">
+                <label for="telephone" class="form-label fw-bold text-primary">{% trans "Téléphone" %} <span class="text-danger">*</span></label> 
+                <input type="tel" class="form-control rounded-pill" id="telephone" name="telephone" required placeholder="Ex: 0700000000">
+              </div>
+              <div class="col-md-6">
+                <label for="depart" class="form-label fw-bold text-primary">{% trans "Départ" %} <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-pill" id="depart" name="depart" required placeholder="Lieu de prise en charge">
+              </div>
+              <div class="col-md-6">
+                <label for="destination" class="form-label fw-bold text-primary">{% trans "Destination" %} <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-pill" id="destination" name="destination" required placeholder="Votre destination">
+              </div>
+              <div class="col-md-6">
+                <label for="nombre_personnes" class="form-label fw-bold text-primary">{% trans "Nombre de personne" %}</label>
+                <input type="number" class="form-control rounded-pill" id="nombre_personnes" name="nombre_personnes" min="1" value="1">
+              </div>
+              <div class="col-md-6">
+                <label for="heure" class="form-label fw-bold text-primary">{% trans "Heure souhaitée" %}</label>
+                <input type="time" class="form-control rounded-pill" id="heure" name="heure">
+              </div>
+              <div class="col-12">
+                <label for="commentaire" class="form-label fw-bold text-primary">{% trans "Commentaire" %}</label>
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
                 <textarea class="form-control rounded-4" id="commentaire" name="commentaire" rows="2" placeholder="Infos complémentaires (optionnel)"></textarea>
               </div>
             </div> 
             <div class="d-grid mt-4">
               <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow-sm">
+<<<<<<< HEAD
                 <i class="fa fa-bolt me-2"></i>Réserver maintenant
+=======
+                <i class="fa fa-bolt me-2"></i>{% trans "Réserver maintenant" %}
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
               </button>
             </div>
           </form> 
@@ -77,7 +122,11 @@
             {% csrf_token %}
             <div class="row g-3">
               <div class="col-md-6">
+<<<<<<< HEAD
                 <label for="contact_nom" class="form-label fw-bold text-secondary">Nom</label>
+=======
+                <label for="contact_nom" class="form-label fw-bold text-secondary">{% trans "Nom" %}</label>
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
                 <input type="text" class="form-control rounded-pill" id="contact_nom" name="contact_nom" >
               </div>
               <div class="col-md-6">
@@ -85,17 +134,29 @@
                 <input type="email" class="form-control rounded-pill" id="contact_email" name="contact_email" >
               </div>
               <div class="col-md-6">
+<<<<<<< HEAD
                 <label for="contact_whatsapp" class="form-label fw-bold text-success">Numéro WhatsApp</label>
                 <input type="tel" class="form-control rounded-pill" id="contact_whatsapp" name="contact_whatsapp" placeholder="Ex: 0341234567">
               </div>
               <div class="col-12">
                 <label for="contact_message" class="form-label fw-bold text-secondary">Votre message</label>
+=======
+                <label for="contact_whatsapp" class="form-label fw-bold text-success">{% trans "Numéro WhatsApp" %}</label>
+                <input type="tel" class="form-control rounded-pill" id="contact_whatsapp" name="contact_whatsapp" placeholder="Ex: 0341234567">
+              </div>
+              <div class="col-12">
+                <label for="contact_message" class="form-label fw-bold text-secondary">{% trans "Votre message" %}</label>
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
                 <textarea class="form-control rounded-4" id="contact_message" name="contact_message" rows="2"placeholder="Votre question ou demande spéciale..."></textarea>
               </div>
             </div>
             <div class="d-grid mt-4">
               <button type="submit" class="btn btn-secondary btn-lg rounded-pill shadow-sm">
+<<<<<<< HEAD
                 <i class="fa fa-paper-plane me-2"></i>Envoyer
+=======
+                <i class="fa fa-paper-plane me-2"></i>{% trans "Envoyer" %}
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
               </button>
             </div>
           </form>

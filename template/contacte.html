@@ -1,0 +1,42 @@
+{% extends "layouts/master.html" %}
+{% load i18n %}
+
+{% load static %}
+
+{% block 'contenu' %}
+            
+<div class="container">
+    <h2 class="h2 text-center">Veuillez saisir votre message directement dans cet espace.</h2>
+            <div class="card-body p-4">
+         <h2> {{erreur}} </h2>
+          <!-- DEBUT DU FORMULAIRE -->
+          <form method="POST" action="{% url 'envoyer_whatsapp' %}">
+            <!-- Section champs contact express, à compléter avec action dans la vue Django -->
+            {% csrf_token %}
+            <div class="row g-3">
+              <div class="col-md-6">
+                <label for="contact_nom" class="form-label fw-bold text-secondary">{% trans "Nom" %}</label>
+                <input type="text" class="form-control rounded-pill" id="contact_nom" name="contact_nom" >
+              </div>
+              <div class="col-md-6">
+                <label for="contact_email" class="form-label fw-bold text-secondary">Email</label>
+                <input type="email" class="form-control rounded-pill" id="contact_email" name="contact_email" >
+              </div>
+              <div class="col-md-6">
+                <label for="contact_whatsapp" class="form-label fw-bold text-success">{% trans "Votre Numéro WhatsApp" %}</label>
+                <input type="tel" class="form-control rounded-pill" id="contact_whatsapp" name="contact_whatsapp" placeholder="Ex: 0341234567">
+              </div>
+              <div class="col-12">
+                <label for="contact_message" class="form-label fw-bold text-secondary">{% trans "Votre message" %}</label>
+                <textarea class="form-control rounded-4" id="contact_message" name="contact_message" rows="2"placeholder="Votre question ou demande spéciale..."></textarea>
+              </div>
+            </div>
+            <div class="d-grid mt-4">
+              <button type="submit" class="btn btn-secondary btn-lg rounded-pill shadow-sm">
+                <i class="fa fa-paper-plane me-2"></i>{% trans "Envoyer" %}
+              </button>
+            </div>
+          </form>
+        </div>
+</div>
+{% endblock 'contenu' %}

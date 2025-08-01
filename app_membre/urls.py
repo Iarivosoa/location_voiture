@@ -12,8 +12,12 @@ urlpatterns = [
     path("reset_password/",views.PasswordResetView.as_view(template_name="reset_password.html"),name="reset_password"),
     path("reset_password",reset_password,name="reset_password"),
     path("reset_password/<str:token>",page_reset_password,name=""),
+<<<<<<< HEAD
     path("reset_password/<str:token>",page_reset_password,name=""),
     path("profil/",page_profil,name="profil"),
     path("profil",modifier_profil,name="modifier_profil"),
     path("supprimer_profil",supprimer_profil,name="supprimer_profil"),
+=======
+
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 ]

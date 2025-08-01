@@ -626,7 +626,11 @@ input[type="radio"]{
 }
 .création{
     display: flex;
+<<<<<<< HEAD
     gap: 8rem;
+=======
+    gap: 10rem;
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
     margin-bottom: 3rem;
 }
 .création a{
@@ -636,10 +640,16 @@ input[type="radio"]{
     text-transform: uppercase;
     transition: 0.1s;
     color: white;
+<<<<<<< HEAD
     padding: 8px;
 }
 .création a:hover{
     /* border: 1px solid white; */
+=======
+}
+.création a:hover{
+    border: 1px solid white;
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
     padding: 8px;
     text-align: center;
     background: blue;
@@ -1407,7 +1417,11 @@ body{
 .icone_accueil{
       position:absolute;
       right: 32px;
+<<<<<<< HEAD
       bottom: 7vh;
+=======
+      bottom: 24vh;
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
       z-index: 50;
       display: flex;
       flex-direction: column;
@@ -1845,14 +1859,19 @@ body{
     grid-template-columns: repeat(6, 1fr);
   }
 }
+<<<<<<< HEAD
 .btn_offcanvas{
   display: none !important;
 }
+=======
+
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 @media (max-width: 768px) {
   .blog-hero .blog-grid {
     grid-template-columns: 1fr;
     gap: 20px;
   }
+<<<<<<< HEAD
   .navs a{
   color: white;
   font-size: 15px !important;
@@ -1860,6 +1879,8 @@ body{
   .btn_offcanvas{
     display: block !important;
   }
+=======
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 }
 
 .blog-hero .blog-item {

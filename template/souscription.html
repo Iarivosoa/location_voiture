@@ -1,4 +1,8 @@
 {% extends "layouts/master.html" %}
+<<<<<<< HEAD
+=======
+{% load i18n %}
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 {% load static %}
 
    
@@ -8,8 +12,13 @@
      <div class="row">
         <div class="col-md-4 texte_souscrire">
       
+<<<<<<< HEAD
             <h1 class="text-left">Page de Souscription</h1>
             <p class="text-left">Merci de bien remplir le formulaire et d'inserer des informations exactes pour pour pouvoir traiter facilement votre demande</p>
+=======
+            <h1 class="text-left">{% trans "Page de Souscription" %}</h1>
+            <p class="text-left">{% trans "Merci de bien remplir le formulaire et d'inserer des informations exactes pour pour pouvoir traiter facilement votre demande" %}</p>
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
         </div>
         <!-- formulaire -->
         <div class="col-md-5" id="form-connexion">
@@ -23,7 +32,11 @@
                 {% csrf_token %}
                 <div class="row" style="padding: 10px;">
                     <div class="col-md-6">
+<<<<<<< HEAD
                         <h3 class="text-center">Souscription</h3>
+=======
+                        <h3 class="text-center">{% trans "Souscription" %}</h3>
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
                     </div>
                     <hr>
                     <!--  -->
@@ -87,6 +100,7 @@
                         </div>
                     </div>
                     <div class="col-md-2">
+<<<<<<< HEAD
                         <button class="btn-primary" id="bouton-connexion" type="submit">Souscrire</button>
                     </div>
         
@@ -94,6 +108,12 @@
                 <div class="création">
                     <a href="{% url 'page_connexion' %}">Déjà un compte ?</a>
                 </div>
+=======
+                        <button class="btn-primary" id="bouton-connexion" type="submit">{% trans "Souscrire" %}</button>
+                    </div>
+        
+                </div>
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
         </form>
         </div>
     </div>

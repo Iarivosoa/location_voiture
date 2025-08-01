@@ -39,7 +39,11 @@ ALLOWED_HOSTS = [os.environ.get('RENDER_EXTERNAL_HOSTNAME', ''), '.onrender.com'
 
 EMAIL_HOST = "smtp.gmail.com"
 EMAIL_HOST_USER = "fify.dev1706@gmail.com"
+<<<<<<< HEAD
 EMAIL_HOST_PASSWORD = "qqug uoqd trbp dafd"
+=======
+EMAIL_HOST_PASSWORD = "bmes hqmd aqga hkgc"
+>>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 EMAIL_PORT = 587
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_USE_TLS = True
