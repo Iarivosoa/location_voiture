@@ -65,31 +65,70 @@ def reservation(request):
     return render(request, 'reservation.html')
 
 # utilisation de twilio pour envoyer un sms de confirmation
-def envoyer_whatsapp(request):
+# def envoyer_whatsapp(request):
 
-    from twilio.rest import Client
+#     from twilio.rest import Client
 
-    if request.method == "POST":
+#     if request.method == "POST":
 
 
 
-        nom = request.POST.get("contact_nom")
-        whatsapp_client = request.POST.get("contact_whatsapp")
-        message = request.POST.get("contact_message")
+#         nom = request.POST.get("contact_nom")
+#         whatsapp_client = request.POST.get("contact_whatsapp")
+#         message = request.POST.get("contact_message")
 
-        sid = os.getenv('TWILIO_ACCOUNT_SID')
-        token = os.getenv('TWILIO_AUTH_TOKEN')
-        client = Client(sid,token)
+#         sid = os.getenv('TWILIO_ACCOUNT_SID')
+#         token = os.getenv('TWILIO_AUTH_TOKEN')
+#         client = Client(sid,token)
         
-        message = client.messages.create(
-                body=message,
-                from_='whatsapp:+14155238886',  # Numéro WhatsApp de Twilio
-                to=f'whatsapp:+{whatsapp_client}'  # Numéro WhatsApp du client
-            )
-        messages.success(request, "Message envoyé avec succès !")
+#         message = client.messages.create(
+#                 body=message,
+#                 from_='whatsapp:+14155238886',  # Numéro WhatsApp de Twilio
+#                 to=f'whatsapp:+{whatsapp_client}'  # Numéro WhatsApp du client
+#             )
+#         messages.success(request, "Message envoyé avec succès !")
 
-        messages.error(request, "Veuillez remplir tous les champs.")
-        return redirect("serviceRapide")
+#         messages.error(request, "Veuillez remplir tous les champs.")
+#         return redirect("serviceRapide")
 
     # fonction pour la reservation rapide
    
+# VERSION 2
+import os
+from django.contrib import messages
+from django.shortcuts import redirect
+from twilio.rest import Client
+from dotenv import load_dotenv
+
+# Charger .env
+load_dotenv()
+
+def envoyer_whatsapp(request):
+    if request.method == "POST":
+        nom = request.POST.get("contact_nom")
+        whatsapp_client = request.POST.get("contact_whatsapp")
+        message_text = request.POST.get("contact_message")
+
+        if not nom or not whatsapp_client or not message_text:
+            messages.error(request, "Veuillez remplir tous les champs.")
+            return redirect("serviceRapide")
+
+        sid = os.getenv('TWILIO_ACCOUNT_SID')
+        token = os.getenv('TWILIO_AUTH_TOKEN')
+
+        if not sid or not token:
+            messages.error(request, "Identifiants Twilio manquants.")
+            return redirect("serviceRapide")
+
+        try:
+            client = Client(sid, token)
+            client.messages.create(
+                body=message_text,
+                from_='whatsapp:+18575752654',  # Numéro WhatsApp Twilio
+                to=f'whatsapp:{whatsapp_client}'
+            )
+            messages.success(request, "Message envoyé avec succès !")
+        except Exception as e:
+            messages.error(request, f"Erreur lors de l'envoi : {str(e)}")
+
+    return redirect("serviceRapide")

@@ -1,116 +1,74 @@
 {% extends "layouts/master.html" %}
 {% load static %}
-<<<<<<< HEAD
-
-=======
 {% load i18n %}
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 {% block 'contenu' %}
 <head>
      <link rel="stylesheet" href="{% static 'aos/aos.css' %}">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
-    <br><br><br><br><section class="container">
-              <h1 class="h2 text-center">Page de contacte</h1>
-        <div class="row">
-            <div class="col-md-6"  data-aos="fade-right" data-aos-delay="100">
-                <img src="{% static 'image/conseillere.png' %}" alt="">
-            </div>
-            <div class="col-md-6 my-3"  data-aos="fade-left" data-aos-delay="100">
-                <p>
-<<<<<<< HEAD
-                  <h3>  Bienvenue sur la page de contact de Taxi Express Madagascar !</h3>
-Nous sommes ravis de vous offrir un service de transport fiable et professionnel à l'Aéroport International Ivato de Madagascar. Que vous arriviez à l'aéroport ou que vous ayez besoin d'un transport pour vos déplacements dans la capitale et au-delà. Nous mettons à votre disposition plusieurs moyens de communication pour rendre votre expérience avec nous aussi simple et agréable que possible.
-
-<h3>Pour nous contacter rapidement, voici nos coordonnées :</h3>
-
-WhatsApp : <a href="">+261 38 67 873 20</a> – Nous vous recommandons de nous contacter directement via WhatsApp pour une réponse instantanée et un service personnalisé. Notre équipe est disponible pour répondre à vos questions et confirmer votre réservation en quelques minutes. <br>
-
-Email : <a href="">taxiexpress@gmail.com</a> Si vous préférez un échange plus détaillé, vous pouvez nous envoyer un email et nous reviendrons vers vous dans les plus brefs délais. <br>
-Téléphone : <a href="">+261 38 67 873 20</a> –Numéro à Madagascar; Vous pouvez également nous appeler pour toute demande urgente ou pour discuter de vos besoins de transport. <br>
-
-Pourquoi privilégier WhatsApp ?
-
-Réponse instantanée, Il vous suffit d'un simple message pour réserver votre taxi ou obtenir des informations.
-WhatsApp vous permet d'échanger directement avec notre équipe, sans intermédiaires ni risques.
-<h4 class="h4_conseiller">Chez Taxi Express Madagascar, nous mettons un point d'honneur à vous offrir une expérience de transport irréprochable, avec une ponctualité, une sécurité et un confort qui font la différence. Nous vous attendons pour vos prochains trajets à Ivato et ailleurs !</h4>
-=======
-                  <h3> {% trans " Bienvenue sur la page de contact de Taxi Express Madagascar !" %}</h3>
-                    {% trans "Nous sommes ravis de vous offrir un service de transport fiable et professionnel à l'Aéroport International Ivato de Madagascar. Que vous arriviez à l'aéroport ou que vous ayez besoin d'un transport pour vos déplacements dans la capitale et au-delà. Nous mettons à votre disposition plusieurs moyens de communication pour rendre votre expérience avec nous aussi simple et agréable que possible." %}
-
-<h3>{% trans "Pour nous contacter rapidement, voici nos coordonnées :" %}</h3>
-
-WhatsApp : <a href="">+261 38 67 873 20</a> {% trans "– Nous vous recommandons de nous contacter directement via WhatsApp pour une réponse instantanée et un service personnalisé. Notre équipe est disponible pour répondre à vos questions et confirmer votre réservation en quelques minutes. " %}<br>
-
-Email : <a href="">taxiexpress@gmail.com</a>{% trans " Si vous préférez un échange plus détaillé, vous pouvez nous envoyer un email et nous reviendrons vers vous dans les plus brefs délais. " %}<br>
-Téléphone : <a href="">+261 38 67 873 20</a>{% trans " –Numéro à Madagascar; Vous pouvez également nous appeler pour toute demande urgente ou pour discuter de vos besoins de transport. " %}<br>
-
-{% trans "Pourquoi privilégier WhatsApp ?" %}
-
-{% trans "Réponse instantanée, Il vous suffit d'un simple message pour réserver votre taxi ou obtenir des informations." %}
-{% trans "WhatsApp vous permet d'échanger directement avec notre équipe, sans intermédiaires ni risques." %}
-<h4 class="h4_conseiller">{% trans "Chez Taxi Express Madagascar, nous mettons un point d'honneur à vous offrir une expérience de transport irréprochable, avec une ponctualité, une sécurité et un confort qui font la différence. Nous vous attendons pour vos prochains trajets à Ivato et ailleurs !" %}</h4>
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
-
-
-                </p>
-            </div>
+<br><br><br><br>
+<section class="container">
+    <h1 class="h2 text-center">Page de contacte</h1>
+    <div class="row">
+        <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
+            <img src="{% static 'image/conseillere.png' %}" alt="">
         </div>
-    </section>
-    <section class="container page_de_contacte " style="color: black;" data-aos="fade-up" data-aos-delay="100" id="contacte">
-        <div    class="ombre">
-        <div class="container  ">
-<<<<<<< HEAD
-            <legend class="text-center my-3 bg-primary">Ecrivez_nous ici directement</legend>
-=======
-            <legend class="text-center my-3 bg-primary">{% trans "Ecrivez_nous ici directement" %}</legend>
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
-        <form action="" data-aos="fade-up" data-aos-delay="100">
-            <div class="row">
-     
-                <div class="col-lg-6">
+        <div class="col-md-6 my-3" data-aos="fade-left" data-aos-delay="100">
+            <p>
+                <h3>{% trans "Bienvenue sur la page de contact de Taxi Express Madagascar !" %}</h3>
+                {% trans "Nous sommes ravis de vous offrir un service de transport fiable et professionnel à l'Aéroport International Ivato de Madagascar. Que vous arriviez à l'aéroport ou que vous ayez besoin d'un transport pour vos déplacements dans la capitale et au-delà. Nous mettons à votre disposition plusieurs moyens de communication pour rendre votre expérience avec nous aussi simple et agréable que possible." %}
 
-<<<<<<< HEAD
-                    <label for="" class="form-label">votre nom</label>
-                    <input type="text" class="form-control">
+                <h3>{% trans "Pour nous contacter rapidement, voici nos coordonnées :" %}</h3>
 
-                    <label for="" class="form-label">votre email</label>
-                    <input type="email" class="form-control">
+                WhatsApp : <a href="">+261 38 67 873 20</a> {% trans "– Nous vous recommandons de nous contacter directement via WhatsApp pour une réponse instantanée et un service personnalisé. Notre équipe est disponible pour répondre à vos questions et confirmer votre réservation en quelques minutes." %} <br>
 
-                    <label for="" class="form-label">votre WatsApp</label>
-=======
-                    <label for="" class="form-label">{% trans "votre nom" %}</label>
-                    <input type="text" class="form-control">
+                Email : <a href="">taxiexpress@gmail.com</a> {% trans "Si vous préférez un échange plus détaillé, vous pouvez nous envoyer un email et nous reviendrons vers vous dans les plus brefs délais." %} <br>
+                Téléphone : <a href="">+261 38 67 873 20</a> {% trans "– Numéro à Madagascar; Vous pouvez également nous appeler pour toute demande urgente ou pour discuter de vos besoins de transport." %} <br>
 
-                    <label for="" class="form-label">{% trans "votre email" %}</label>
-                    <input type="email" class="form-control">
+                {% trans "Pourquoi privilégier WhatsApp ?" %}
 
-                    <label for="" class="form-label">{% trans "votre WatsApp" %}</label>
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
-                    <input type="number" class="form-control">
+                {% trans "Réponse instantanée, il vous suffit d'un simple message pour réserver votre taxi ou obtenir des informations." %}
+                {% trans "WhatsApp vous permet d'échanger directement avec notre équipe, sans intermédiaires ni risques." %}
+                <h4 class="h4_conseiller">{% trans "Chez Taxi Express Madagascar, nous mettons un point d'honneur à vous offrir une expérience de transport irréprochable, avec une ponctualité, une sécurité et un confort qui font la différence. Nous vous attendons pour vos prochains trajets à Ivato et ailleurs !" %}</h4>
+            </p>
+        </div>
+    </div>
+</section>
 
+<section class="container page_de_contacte" style="color: black;" data-aos="fade-up" data-aos-delay="100" id="contacte">
+    <div class="ombre">
+        <div class="container">
+            <legend class="text-center my-3 bg-primary">{% trans "Ecrivez-nous ici directement" %}</legend>
+            <form action="" data-aos="fade-up" data-aos-delay="100">
+                <div class="row">
+                    <div class="col-lg-6">
+                        <label for="" class="form-label">{% trans "Votre nom" %}</label>
+                        <input type="text" class="form-control">
+
+                        <label for="" class="form-label">{% trans "Votre email" %}</label>
+                        <input type="email" class="form-control">
+
+                        <label for="" class="form-label">{% trans "Votre WhatsApp" %}</label>
+                        <input type="number" class="form-control">
+                    </div>
+                    <div class="col-lg-6 my-5">
+                        <textarea name="" id="" class="form-control" placeholder="{% trans 'Ecrivez votre message ici ...' %}"></textarea>
+                        <button class="btn btn-primary my-4 mx-6" type="submit">{% trans "Envoyer" %}</button>
+                    </div>
                 </div>
-                <div class="col-lg-6 my-5">
-                    <textarea name="" id="" class="form-control" placeholder="Ecrivez Votre message ici ..."></textarea>
-                    <button class="btn btn-primary my-4 mx-6" type="submit">Envoyer</button>
-                </div>
-                
-            </div>
             </form>
         </div>
-        </div>
-    </section>
+    </div>
+</section>
 
-
-    <!--  -->
 <script src="{% static 'aos/aos.js' %}"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
 <script>
     AOS.init({
         duration: 1200,
-        once: true, // Animation only happens once
-        mirror: false, // Whether elements should animate out while scrolling past them
+        once: true,
+        mirror: false,
     });
 </script>
 

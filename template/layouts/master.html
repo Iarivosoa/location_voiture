@@ -1,8 +1,5 @@
 {% load static %}
-<<<<<<< HEAD
 {% load i18n %}
-=======
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 <!DOCTYPE html>
 <html lang="en">
   <head>
@@ -69,7 +66,17 @@
     <link rel="stylesheet" href="fontawesome-free-5.15.3-web/css/all.min.css" />
 
   </head>
-<<<<<<< HEAD
+
+   <body class="" data-bs-spy="scroll" data-bs-target=".navbar">
+    {% include "layouts/header.html" %}
+
+    {% block 'contenu' %}
+      
+    {% endblock 'contenu' %}
+
+    {% include "layouts/footer.html" %}
+   </body>
+
   <style>
     .dropdowns{
       display: flex;
@@ -268,7 +275,6 @@
           
               
           </div>
-=======
 
   <main class="offcanvas offcanvas-end" id="usertoll">
     <div class="offcanvas-header">
@@ -297,18 +303,10 @@
                     <a href="{% url 'deconnexion_membre' %}">Déconnexion</a>
                 </div>
             </div>
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 
     </div>
  </main>
-  <body class="" data-bs-spy="scroll" data-bs-target=".navbar">
-    {% include "layouts/header.html" %} 
-
-    {% block 'contenu' %} 
-
-    {% endblock 'contenu' %} 
-    
-    {% include "layouts/footer.html" %}
+ 
     <script>
       function affiche_mdp() {
         var codes = document.getElementById("katsaka");
@@ -407,7 +405,6 @@
         mirror: false, // Whether elements should animate out while scrolling past them
       });
     </script>
-  </body>
 </html>
 
 <script>
@@ -427,3 +424,5 @@ document.addEventListener('DOMContentLoaded', function() {
     });
 });
 </script>
+
+

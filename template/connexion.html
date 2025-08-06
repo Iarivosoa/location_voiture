@@ -16,13 +16,8 @@
     {% endif %}
      <div class="row">
         <div class="col-md-7 texte_co">
-<<<<<<< HEAD
-            <h1 class="text-left">Bienvenu sur taxiMadagascar</h1>
-            <p class="text-left">Cliquer sur le Bouton créer un compte si vous en avez pas encore sinon entrer votre email et votre mot de passe pour faire la réservation</p>
-=======
             <h1 class="text-left">{% trans "Bienvenu chez Teams Express le taxi officiel de l'aéroport d'Ivato " %}</h1>
             <p class="text-left">{% trans "Cliquer sur le Bouton créer un compte si vous en avez pas encore sinon entrer votre email et votre mot de passe pour faire la réservation" %}</p>
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
         </div>
         <!-- formulaire -->
         <div class="col-md-5" id="form-connexion">
@@ -43,11 +38,8 @@
                 {% endif %}
                 <div class="row">
                 <div class="col-md-6">
-<<<<<<< HEAD
-                    <h3 class="text-left">Connexion</h3>
-=======
+
                     <h3 class="text-left">{% trans "Connexion" %}</h3>
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
                 </div>
                 <div class="col-md-6">
                     <span></span>
@@ -62,11 +54,9 @@
                 </div>
 
                 <div class="row">
-<<<<<<< HEAD
+
                     <label for="" class="label col-md-2 control-label">mot de passe : </label> 
-=======
-                    <label for="" class="label col-md-2 control-label">Code : </label> 
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
+
                     <div class="col-md-10 icone-mdp">
                         <input type="password" class="form-control input-conex" placeholder="mot de passe" id="katsaka" autocomplete="off" name="mot_de_passe">
                         <i class="far fa-eye-slash mdphide" onclick="affiche_mdp()" id="maso"></i>
@@ -74,19 +64,11 @@
                 </div>
 
                 <div class="col-md-2">
-<<<<<<< HEAD
-                    <button class="btn-primary" id="bouton-connexion" type="submit">Connexion</button>
-                </div>
-                <div class="création">
-                    <a href="{% url 'page_souscription' %}">Créer un Compte</a>
-                    <a href="{% url 'reset_password' %}">Mot de passe oublié</a>
-=======
                     <button class="btn-primary" id="bouton-connexion" type="submit">{% trans "Connexion" %}</button>
                 </div>
                 <div class="création">
                     <a href="{% url 'page_souscription' %}">{% trans "Créer un Compte" %}</a>
                     <a href="{% url 'reset_password' %}">{% trans "Mot de passe oublié" %}</a>
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
                 </div>
             </div>
             </form>

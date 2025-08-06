@@ -3,19 +3,18 @@
 {% load static %}
 
 {% block 'contenu' %}
-<section class="video_service container-fluid col-lg-12 col-sm-12  d-flex justify-content-center">
-    <video loop autoplay muted  plays-inline  class="video_one background-clip">
+<section class="video_service container-fluid col-lg-12 col-sm-12 d-flex justify-content-center">
+    <video loop autoplay muted plays-inline class="video_one background-clip">
         <source src="{% static 'image/video1.mp4' %}">
     </video>
     <div class="titre_service">
         <h1>{% trans "Taxi ville de Madagascar" %}</h1>
-            <h3>{% trans "Service express et fiable" %}</h3>
+        <h3>{% trans "Service express et fiable" %}</h3>
     </div>
 </section>
 <style>
     .video_service{
         position: relative;
-  
     }
     .titre_service{
         position: absolute;
@@ -38,114 +37,124 @@
         object-fit: cover;
         filter: blur(1.5px);
     }
-    
 </style>
-<!--  -->
-   <section id="services">
-        <div class="container">
-            <div class="row mb-5">
-                <div class="col-lg-6">
-                    <img src="{% static 'image/arriver.jpg' %}" alt="" height="400px" class=" rounded-3" width="500px" style="object-fit: cover; object-position: center;">
-                </div>
-                <div class="col-lg-6">
-                    <div class="col-md-8 mx-auto text-center" style="width: 100%;">
+
+<section id="services">
+    <div class="container">
+        <div class="row mb-5">
+            <div class="col-lg-6">
+                <img src="{% static 'image/arriver.jpg' %}" alt="" height="400px" class="rounded-3" width="500px" style="object-fit: cover; object-position: center;">
+            </div>
+            <div class="col-lg-6">
+                <div class="col-md-8 mx-auto text-center" style="width: 100%;">
                     <h6 class="text-primary mt-4">TEAM EXPRESS Madagascar</h6>
                     <h1>{% trans "NOS SERVICES DISPONIBLES 24h/7J" %}</h1>
-                    <h5 class="h5">{% trans "Nous mettons à votre disposition des services de TRANSFERT de l'aéroport en ville et aux alentours, de votre Hôtel à l'aéroport. Nous organisons <a href=''>des transferts et voyages dans tout Madagascar</a> et <a href=''>proposons des voitures de Location </a> répondant aux besoins de votre itinéraire. <br> <span>Nous veillons à vous offrir des services de qualité accompagné des Chauffeurs professionnels et des voitures en parfaites état.</span>  L'éfficacité , la ponctuaité sont nos maitre mots" %}</h5>
-                </div>
-                </div>
-            </div>
-            <div class="row g-4">
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect bounceInUp">
-                        <div class="iconbox">
-                            <img src="{% static 'image/model_ivato.jpg' %}" alt="" class="img-fluid">
-                        </div>
-                        <h5 class="mt-4 mb-3 h5 text-center">{% trans "Teams Express, les taxis de confiance à Madagascar !" %}</h5>
-                        <p>
-                            {% trans "Disponible 24h/24 et 7j/7, notre service de taxi vous accompagne à toute heure pour vos déplacements en ville ou vos transferts aéroport. Avec des véhicules confortables et bien entretenus, nous mettons un point d’honneur à vous offrir sécurité, ponctualité et qualité. Pour un accueil sans stress dès votre arrivée, créez dès maintenant votre compte et réservez en ligne votre trajet : une solution simple, rapide et fiable pour commencer votre séjour en toute sérénité." %}
-                        </p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect">
-                        <div class="iconbox">
-                            <img src="{% static 'image/guide_chauffeur.jpg' %}" alt="">
-                        </div>
-                        <h5 class="mt-4 mb-2 h5 text-center">{% trans "Service Chauffeur Privé" %}</h5>
-                        <p>{% trans "Chez Teams Express, votre chauffeur est bien plus qu’un simple conducteur : il sera aussi votre guide personnel tout au long de votre séjour. Grâce à sa parfaite connaissance de Madagascar, il saura vous faire découvrir l’histoire fascinante du pays, ses parcs nationaux, ses paysages uniques et ses lieux culturels incontournables. Chaque trajet devient une occasion d’exploration et d’échange. Avec Teams Express, voyagez en toute sérénité, accompagné d’un chauffeur-guide passionné et dévoué." %}</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect">
-                        <div class="iconbox">
-                            <img src="{% static 'image/tour_ville.jpg' %}" alt="">
-                        </div>
-                        <h5 class="mt-4 mb-2 h5 text-center">{% trans "TOUR DE VILLE Antananarivo" %}</h5>
-<<<<<<< HEAD
-                        {% trans"La ville de Madagascar offre une charme unique avec ses maisons en brique rouges et ses toits en tuiles. C'est la ville où l'histoire de Madagascar s'est acccumulée sous forme de stèles et de monuments
-                        historiques. Notre service de tour de ville vous permet de découvrir les sites emblématiques tels que le PALAIS DE LA REINE et de la CATHEDRALE CATHOLIQUE jusqu'aux ESCALIERS JUMELES opposé et l'AVENUE de L'INDEPENDANCE, le marché d'Analakely et bien plus encore." %}
-=======
-                        <p>{% trans "La ville de Madagascar offre une charme unique avec ses maisons en brique rouges et ses toits en tol .C'est la ville où l'histoire de Madagascar s'est acccumulée sous forme de stèles et de monuments historiques. Notre service de tour de ville vous permet de découvrir les sites emblématiques tels que le PALAIS DE LA REINE et de la CATHEDRALE CATHOLIQUE jusqu'aux ESCALIERS JUMELES opposé et l'AVENUE de L'INDEPENDANCE, le marché d'Analakely et bien plus encore." %}</p>
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect">
-                        <div class="iconbox">
-                            <img src="{% static 'image/IMG-20250616-WA0016.jpg' %}" alt="">
-                        </div>
-                        <h5 class="mt-4 mb-2">{% trans "VISITE DES PARCS" %}</h5>
-                        <p> {% trans "Explorer les parcs nationaux les plus emblématiques de l'île rouge, tels que le parc d'Andasibe, célèbre pour ses lémuriens et sa forêt luxuriante et tous les autres parcs de votre choix. <br> Que vous soyez amoreux de la nature, passionné de randonné ou en quête d'avanture, Nos circuits personnalisés s'adaptent à vos envies. Grâce à notre application web, contacter nous en WatsApp +261 38 67 873 20 ou faite vos réservation en ligne" %}</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect">
-                        <div class="iconbox">
-                             <img src="{% static 'image/IMG-20250616-WA0021.jpg' %}" alt="">
-                        </div>
-                        <h5 class="mt-4 mb-2">{% trans "Voyage organisé" %}</h5>
-                        <p>{% trans "Partez à l'avanture à travers une île d'exception grâce à nos voyages organisé tous compris. <br>Contacter nous en WatsApp +261 38 67 873 20  Des plages paradisiaques de Nosy be, haute terre d'Antsirabe, en passant par les allées de Baobabs et les villages authentiques, chaque iténeraire est pensé pour vous offrir une immersion totale dans la culture, la nature et la beauté unique de Madagascar. Transport sécurisé, accompagnement de votre chauffeur qui est votre guides passionné. Teams Express transforme votre voyages en inoubliables" %}</p>
-                    </div>
-                </div>
-                <div class="col-lg-4 col-sm-6">
-                    <div class="service card-effect">
-                        <div class="iconbox">
-                             <img src="{% static 'image/site_voyage/Nosy_be.jpg' %}" alt="">
-                        </div>
-                        <h5 class="mt-4 mb-2">{% trans "Séjours Familliale" %}</h5>
-                        <p>{% trans "Offrer à votre famille un séjour inoubliable au coeur de Madagascar avec Teams Express <br> Des vacances pensées pour petit et grands: plages tranquilles, visite ludiques de parcs animaliers, rencotres culturelles et activités adaptées à tous les âges. Nos séjours familliaux combinent détente , avanture et sécurié, avec des hébérgement fonfortables et des circuits sans stress. Profitez de moment de complicité en explorant la richesse naturelle et culturel de l'îles avec Teams Express. contacter nous en WatsApp +261 38 67 873 20" %}</p>
-                    </div>
+                    <h5 class="h5">
+                        {% trans "Nous mettons à votre disposition des services de TRANSFERT de l'aéroport en ville et aux alentours, de votre Hôtel à l'aéroport. Nous organisons <a href=''>des transferts et voyages dans tout Madagascar</a> et <a href=''>proposons des voitures de Location</a> répondant aux besoins de votre itinéraire. <br> <span>Nous veillons à vous offrir des services de qualité accompagné des Chauffeurs professionnels et des voitures en parfaites état.</span> L'efficacité, la ponctualité sont nos maîtres mots" %}
+                    </h5>
                 </div>
             </div>
         </div>
-    </section>
-    <!--  -->
 
-    <section>
-        <div class="container">
-            
-<div id="carouselExampleFade" class="carousel slide carousel-fade">
-  <div class="carousel-inner">
-    <div class="carousel-item active">
-      <img src="{% static 'image/tax1_ivato.jpg' %}" class="d-block img-fluid" alt="..." style="object-fit: cover; object-position: center;" width="100%" height="500px" >
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'image/IMG-20250616-WA0022.jpg' %}" class="d-block w-100" alt="...">
-    </div>
-    <div class="carousel-item">
-      <img src="{% static 'image/voiture_Ivato.jpg' %}" class="d-block w-100" alt="...">
-    </div>
-  </div>
-  <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
-    <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Previous</span>
-  </button>
-  <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
-    <span class="carousel-control-next-icon" aria-hidden="true"></span>
-    <span class="visually-hidden">Next</span>
-  </button>
-</div>
+        <div class="row g-4">
+            <div class="col-lg-4 col-sm-6">
+                <div class="service card-effect bounceInUp">
+                    <div class="iconbox">
+                        <img src="{% static 'image/model_ivato.jpg' %}" alt="" class="img-fluid">
+                    </div>
+                    <h5 class="mt-4 mb-3 h5 text-center">{% trans "Teams Express, les taxis de confiance à Madagascar !" %}</h5>
+                    <p>
+                        {% trans "Disponible 24h/24 et 7j/7, notre service de taxi vous accompagne à toute heure pour vos déplacements en ville ou vos transferts aéroport. Avec des véhicules confortables et bien entretenus, nous mettons un point d’honneur à vous offrir sécurité, ponctualité et qualité. Pour un accueil sans stress dès votre arrivée, créez dès maintenant votre compte et réservez en ligne votre trajet : une solution simple, rapide et fiable pour commencer votre séjour en toute sérénité." %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="service card-effect">
+                    <div class="iconbox">
+                        <img src="{% static 'image/guide_chauffeur.jpg' %}" alt="">
+                    </div>
+                    <h5 class="mt-4 mb-2 h5 text-center">{% trans "Service Chauffeur Privé" %}</h5>
+                    <p>
+                        {% trans "Chez Teams Express, votre chauffeur est bien plus qu’un simple conducteur : il sera aussi votre guide personnel tout au long de votre séjour. Grâce à sa parfaite connaissance de Madagascar, il saura vous faire découvrir l’histoire fascinante du pays, ses parcs nationaux, ses paysages uniques et ses lieux culturels incontournables. Chaque trajet devient une occasion d’exploration et d’échange. Avec Teams Express, voyagez en toute sérénité, accompagné d’un chauffeur-guide passionné et dévoué." %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="service card-effect">
+                    <div class="iconbox">
+                        <img src="{% static 'image/tour_ville.jpg' %}" alt="">
+                    </div>
+                    <h5 class="mt-4 mb-2 h5 text-center">{% trans "TOUR DE VILLE Antananarivo" %}</h5>
+                    <p>
+                        {% trans "La ville de Madagascar offre un charme unique avec ses maisons en brique rouges et ses toits en tuiles. C'est la ville où l'histoire de Madagascar s'est accumulée sous forme de stèles et de monuments historiques. Notre service de tour de ville vous permet de découvrir les sites emblématiques tels que le PALAIS DE LA REINE et de la CATHEDRALE CATHOLIQUE jusqu'aux ESCALIERS JUMELES opposés et l'AVENUE de L'INDEPENDANCE, le marché d'Analakely et bien plus encore." %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="service card-effect">
+                    <div class="iconbox">
+                        <img src="{% static 'image/IMG-20250616-WA0016.jpg' %}" alt="">
+                    </div>
+                    <h5 class="mt-4 mb-2">{% trans "VISITE DES PARCS" %}</h5>
+                    <p>
+                        {% trans "Explorer les parcs nationaux les plus emblématiques de l'île rouge, tels que le parc d'Andasibe, célèbre pour ses lémuriens et sa forêt luxuriante et tous les autres parcs de votre choix. <br> Que vous soyez amoureux de la nature, passionné de randonnée ou en quête d'aventure, nos circuits personnalisés s'adaptent à vos envies. Grâce à notre application web, contactez-nous sur WhatsApp +261 38 67 873 20 ou faites vos réservations en ligne." %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="service card-effect">
+                    <div class="iconbox">
+                        <img src="{% static 'image/IMG-20250616-WA0021.jpg' %}" alt="">
+                    </div>
+                    <h5 class="mt-4 mb-2">{% trans "Voyage organisé" %}</h5>
+                    <p>
+                        {% trans "Partez à l'aventure à travers une île d'exception grâce à nos voyages organisés tout compris. <br>Contactez-nous sur WhatsApp +261 38 67 873 20. Des plages paradisiaques de Nosy Be, haute terre d'Antsirabe, en passant par les allées de Baobabs et les villages authentiques, chaque itinéraire est pensé pour vous offrir une immersion totale dans la culture, la nature et la beauté unique de Madagascar. Transport sécurisé, accompagnement de votre chauffeur qui est votre guide passionné. Teams Express transforme vos voyages en souvenirs inoubliables." %}
+                    </p>
+                </div>
+            </div>
+
+            <div class="col-lg-4 col-sm-6">
+                <div class="service card-effect">
+                    <div class="iconbox">
+                        <img src="{% static 'image/site_voyage/Nosy_be.jpg' %}" alt="">
+                    </div>
+                    <h5 class="mt-4 mb-2">{% trans "Séjours Familiaux" %}</h5>
+                    <p>
+                        {% trans "Offrez à votre famille un séjour inoubliable au cœur de Madagascar avec Teams Express. <br> Des vacances pensées pour petits et grands : plages tranquilles, visites ludiques de parcs animaliers, rencontres culturelles et activités adaptées à tous les âges. Nos séjours familiaux combinent détente, aventure et sécurité, avec des hébergements confortables et des circuits sans stress. Profitez de moments de complicité en explorant la richesse naturelle et culturelle de l'île avec Teams Express. Contactez-nous sur WhatsApp +261 38 67 873 20." %}
+                    </p>
+                </div>
+            </div>
         </div>
-    </section>
+    </div>
+</section>
+
+<section>
+    <div class="container">
+        <div id="carouselExampleFade" class="carousel slide carousel-fade">
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img src="{% static 'image/tax1_ivato.jpg' %}" class="d-block img-fluid" alt="..." style="object-fit: cover; object-position: center;" width="100%" height="500px">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'image/IMG-20250616-WA0022.jpg' %}" class="d-block w-100" alt="...">
+                </div>
+                <div class="carousel-item">
+                    <img src="{% static 'image/voiture_Ivato.jpg' %}" class="d-block w-100" alt="...">
+                </div>
+            </div>
+            <button class="carousel-control-prev" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="prev">
+                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Previous</span>
+            </button>
+            <button class="carousel-control-next" type="button" data-bs-target="#carouselExampleFade" data-bs-slide="next">
+                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                <span class="visually-hidden">Next</span>
+            </button>
+        </div>
+    </div>
+</section>
 {% endblock 'contenu' %}
