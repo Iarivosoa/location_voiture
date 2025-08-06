@@ -50,13 +50,9 @@ msgstr "Transparent and competitive rates"
 msgid "Support client disponible 24h/24"
 msgstr "24/7 Customer Support"
 
-<<<<<<< HEAD
 #: .\template\appropos.html:27
 msgid "Réserver maintenant"
 msgstr "Book now"
-=======
-
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 
 #: .\template\appropos.html:37
 msgid "Pourquoi choisir TAXI EXPRESS ?"
@@ -131,13 +127,9 @@ msgstr "Our commitments"
 msgid "Pour votre satisfaction"
 msgstr "For your satisfaction"
 
-<<<<<<< HEAD
 #: .\template\appropos.html:110
 msgid "Réservation rapide"
 msgstr "Quick booking"
-=======
-
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 
 #: .\template\appropos.html:111
 msgid ""
@@ -251,12 +243,9 @@ msgid ""
 "ville avec nous"
 msgstr "Sign up and choose your option for your trips and city travel with us"
 
-<<<<<<< HEAD
 #: .\template\index.html:239
 msgid "Souscription"
 msgstr "Subscription"
-=======
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 
 #: .\template\index.html:240
 msgid ""
@@ -396,12 +385,10 @@ msgstr "TAXI EXPRESS of Madagascar"
 msgid "Voici les taxis disponibles"
 msgstr "Here are the available taxis"
 
-<<<<<<< HEAD
 #: .\template\index.html:368 .\template\index.html:370
 msgid "Réserver"
 msgstr "Book"
-=======
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
+
 
 #: .\template\index.html:392
 msgid "Transfert"
@@ -450,9 +437,6 @@ msgstr ""
 "safe and always available, our drivers welcome you with a smile. Book now "
 "with Teams Express"
 
-<<<<<<< HEAD
-
-=======
 #: .\template\layouts\footer.html:10
 msgid ""
 "Service de réservation de taxi fiable et rapide à Madagascar. Disponible 7j/"
@@ -460,7 +444,6 @@ msgid ""
 msgstr ""
 "Reliable and fast taxi booking service in Madagascar. Available 7 days a "
 "week."
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 
 #: .\template\layouts\footer.html:23
 msgid "Politique de confidentialité"
@@ -667,8 +650,6 @@ msgstr ""
 #~ "discover iconic sites such as the QUEEN'S PALACE and the CATHOLIC "
 #~ "CATHEDRAL, as well as the TWIN STAIRS opposite and INDEPENDENCE AVENUE, "
 #~ "the Analakely Market, and much more."
-
-<<<<<<< HEAD
 
 msgid "J’utilise cette application pour mes déplacements professionnels et personnels. Les véhicules sont propres, le système de réservation est simple et rapide, et je me sens toujours en sécurité. Merci à toute l’équipe TAXI EXPRESS !"
 
@@ -901,4 +882,3 @@ msgid "Souscrire"
 msgstr "Subscribe"
 msgid "mot de passe"
 msgstr "password"
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8

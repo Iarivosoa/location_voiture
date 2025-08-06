@@ -50,12 +50,9 @@ msgstr "Tarifs transparents et compétitifs"
 msgid "Support client disponible 24h/24"
 msgstr "Support client disponible 24h/24"
 
-<<<<<<< HEAD
 #: .\template\appropos.html:27
 msgid "Réserver maintenant"
 msgstr "Réserver maintenant"
-=======
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 
 #: .\template\appropos.html:37
 msgid "Pourquoi choisir TAXI EXPRESS ?"
@@ -131,13 +128,9 @@ msgstr "Nos engagements"
 msgid "Pour votre satisfaction"
 msgstr "Pour votre satisfaction"
 
-<<<<<<< HEAD
 #: .\template\appropos.html:110
 msgid "Réservation rapide"
 msgstr "Réservation rapide"
-=======
-
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 
 #: .\template\appropos.html:111
 msgid ""
@@ -203,11 +196,6 @@ msgstr ""
 "courtois. Je recommande à tous ceux qui cherchent un moyen de transport sûr "
 "à Antananarivo !"
 
-
-<<<<<<< HEAD
-
-=======
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 #: .\template\index.html:16
 msgid "Location"
 msgstr "Location"
@@ -263,13 +251,9 @@ msgid ""
 msgstr ""
 "Inscrivez-vous et choisissez votre option pour vos voyages et déplacements "
 "en ville avec nous"
-
-<<<<<<< HEAD
 #: .\template\index.html:239
 msgid "Souscription"
 msgstr "Souscription"
-=======
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 
 #: .\template\index.html:240
 msgid ""
@@ -418,12 +402,9 @@ msgstr "TAXI EXPRESS de Madagascar"
 msgid "Voici les taxis disponibles"
 msgstr "Voici les taxis disponibles"
 
-<<<<<<< HEAD
 #: .\template\index.html:368 .\template\index.html:370
 msgid "Réserver"
 msgstr "Réserver"
-=======
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 
 #: .\template\index.html:392
 msgid "Transfert"
@@ -473,9 +454,6 @@ msgstr ""
 "chauffeurs vous accueillent avec le sourire. Réservez dès maintenant avec "
 "Teams Express"
 
-<<<<<<< HEAD
-
-=======
 #: .\template\layouts\footer.html:10
 msgid ""
 "Service de réservation de taxi fiable et rapide à Madagascar. Disponible 7j/"
@@ -483,7 +461,6 @@ msgid ""
 msgstr ""
 "Service de réservation de taxi fiable et rapide à Madagascar. Disponible 7j/"
 "7."
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
 
 #: .\template\layouts\footer.html:23
 msgid "Politique de confidentialité"
@@ -708,7 +685,6 @@ msgstr ""
 #~ "d'Analakely et bien plus encore."
 
 
-<<<<<<< HEAD
 msgid "J’utilise cette application pour mes déplacements professionnels et personnels. Les véhicules sont propres, le système de réservation est simple et rapide, et je me sens toujours en sécurité. Merci à toute l’équipe TAXI EXPRESS !"
 
 msgstr "J’utilise cette application pour mes déplacements professionnels et personnels. Les véhicules sont propres, le système de réservation est simple et rapide, et je me sens toujours en sécurité. Merci à toute l’équipe TAXI EXPRESS !"
@@ -720,7 +696,6 @@ msgstr "Service de réservation de taxi fiable et rapide à Madagascar. Disponib
 msgid "Notre équipe"
 msgstr "Notre équipe"
 
-=======
 msgid " Bienvenue sur la page de contact de Taxi Express Madagascar !"
 msgstr " Bienvenue sur la page de contact de Taxi Express Madagascar !"
 msgid "Nous sommes ravis de vous offrir un service de transport fiable et professionnel à l'Aéroport International Ivato de Madagascar. Que vous arriviez à l'aéroport ou que vous ayez besoin d'un transport pour vos déplacements dans la capitale et au-delà. Nous mettons à votre disposition plusieurs moyens de communication pour rendre votre expérience avec nous aussi simple et agréable que possible."
