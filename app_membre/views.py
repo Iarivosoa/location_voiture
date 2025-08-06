@@ -188,7 +188,7 @@ def page_reset_password(request, token):
         else:
             return render(request, "page_reset.html", {"message": "Veuillez remplir tous les champs."})
 
-<<<<<<< HEAD
+
     return render(request, "page_reset.html")
 
 
@@ -224,6 +224,5 @@ def supprimer_profil(request):
     else:
         messages.info(request, "Suppression annulée.")
         return redirect("profil")    
-=======
+
     return render(request, "page_reset.html")
->>>>>>> 7e02915e25e3b5cd32e9302e0022bd14962040b8
