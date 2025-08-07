@@ -1,0 +1,147 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+{% load i18n %}
+
+
+{% block 'contenu' %}
+<div class="historique-bg min-vh-100 py-5">
+  <div class="container">
+    <div class="text-center mb-5">
+      <h1 class="display-5 fw-bold text-gradient"><i class="fas fa-history"></i> Mes réservations</h1>
+      <p class="lead text-light">{% trans "Retrouvez ici l’historique de toutes vos réservations. Vous pouvez télécharger chaque réservation en PDF ou la supprimer si besoin." %}<br>{% trans "Merci de faire confiance à " %}<span class="fw-bold text-warning">Teams Express </span>{% trans "pour vos déplacements!" %}</p>
+    </div>
+
+    {% if request.session.client %}
+      {% if reservations %}
+        <div class="row g-4 justify-content-center">
+          {% for r in reservations %}
+          <div class="col-12 col-md-6 col-lg-4">
+            <div class="card shadow-lg border-0 h-100 reservation-card">
+              <div class="card-body bg-dark text-light rounded-4">
+                <h5 class="card-title mb-2"><i class="fas fa-taxi text-warning"></i> {{ r.destination|default:'-' }}</h5>
+                <p class="mb-1"><span class="fw-bold">{% trans "Nom:" %}</span> {{ r.client }}</p>
+                <p class="mb-1"><span class="fw-bold">{% trans "Départ:" %}</span> {{ r.ville_depart }}</p>
+                <p class="mb-1"><span class="fw-bold">{% trans "Compagnie Vol:" %}</span> {{ r.compagnie_vol }}</p>
+                <p class="mb-1"><span class="fw-bold">Date:</span> {{ r.date_depart }}</p>
+                <p class="mb-1"><span class="fw-bold">{% trans "Personnes:" %}</span> {{ r.nombre_personnes }}</p>
+                <p class="mb-1"><span class="fw-bold">{% trans "Bagages:" %}</span> {% if r.bagages %}<i class="fas fa-check text-success"></i>{% else %}<i class="fas fa-times text-danger"></i>{% endif %}</p>
+                <p class="mb-1"><span class="fw-bold">{% trans "Numéro réservation:" %}</span> <span class="text-info">{{ r.numero_reservation }}</span></p>
+                <p class="mb-3"><span class="fw-bold">Téléphone:</span> {{ r.telephone }}</p>
+                <div class="d-flex gap-2 justify-content-center">
+                  <button class="btn btn-outline-danger btn-sm" onclick="telechargerPDF(this)" title="Télécharger PDF"><i class="fas fa-file-pdf"></i> PDF</button>
+                  <form method="post" action="{% url 'supprimer_reservation' r.id %}" style="display:inline;">
+                    {% csrf_token %}
+                    <button type="submit" class="btn btn-outline-warning btn-sm" title="Supprimer" onclick="return confirm('Voulez-vous vraiment supprimer cette réservation ?');">
+                      <i class="fas fa-trash"></i>
+                    </button>
+                  </form>
+                </div>
+              </div>
+            </div>
+          </div>
+          {% endfor %}
+        </div>
+        <div class="text-center mt-5">
+          <p class="text-light">{% trans "Besoin d’aide ou d’une nouvelle réservation ?" %}<a href="{% url 'service' %}" class="btn btn-outline-info btn-sm ms-2"><i class="fas fa-plus-circle"></i>{% trans "Faire une nouvelle réservation" %}</a></p>
+        </div>
+      {% else %}
+        <div class="alert alert-info text-center">{% trans "Aucune réservation trouvée. " %}<a href="{% url 'service' %}" class="btn btn-outline-primary btn-sm ms-2"><i class="fas fa-plus-circle"></i>{% trans "Réserver maintenant" %}</a></div>
+      {% endif %}
+    {% else %}
+      <div class="d-flex flex-column align-items-center justify-content-center py-5">
+        <img src="{% static 'image/logo.jpg' %}" alt="Connexion" class="mb-4 rounded-circle shadow" style="max-width:120px;">
+        <h2 class="mb-3 text-warning"><i class="fas fa-user-lock"></i> {% trans "Veuillez vous connecter pour voir vos réservations" %}</h2>
+        <a href="{% url 'page_connexion' %}" class="btn btn-primary btn-lg"><i class="fas fa-sign-in-alt"></i> {% trans "Se connecter" %}</a>
+        <p class="mt-4 text-light">{% trans "Vous n’avez pas encore de compte ?" %} <a href="{% url 'page_souscription' %}" class="text-info">{% trans "Créer un compte" %}</a></p>
+      </div>
+    {% endif %}
+  </div>
+</div>
+
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.5.1/jspdf.umd.min.js"></script>
+<script>
+  function telechargerPDF(btn) {
+    var card = btn.closest('.reservation-card');
+    if (!card) return alert('Erreur lors de la génération du PDF.');
+    var doc = new jspdf.jsPDF();
+    var logoUrl = "{{ request.scheme }}://{{ request.get_host }}{% static 'image/logo.jpg' %}";
+    // Charger le logo en base64
+    var img = new Image();
+    img.crossOrigin = "Anonymous";
+    img.onload = function() {
+      doc.addImage(img, 'JPEG', 80, 10, 50, 30);
+      doc.setFontSize(18);
+      doc.setTextColor(255, 165, 0);
+      doc.text('Teams Express - Confirmation de réservation', 105, 50, {align: 'center'});
+      doc.setDrawColor(255, 165, 0);
+      doc.line(20, 55, 190, 55);
+      doc.setFontSize(13);
+      doc.setTextColor(40,40,40);
+      var y = 65;
+      var destination = card.querySelector('.card-title').innerText;
+      doc.setFont(undefined, 'bold');
+      doc.text(destination, 105, y, {align: 'center'});
+      y += 10;
+      doc.setFont(undefined, 'normal');
+      var infos = card.querySelectorAll('p');
+      infos.forEach(function(p) {
+        doc.text(p.innerText, 25, y);
+        y += 9;
+      });
+      doc.setFontSize(11);
+      doc.setTextColor(120,120,120);
+      doc.text('Merci d\'avoir choisi Teams Express pour votre réservation !', 105, y+10, {align: 'center'});
+      // Utiliser le numéro de réservation comme nom de fichier si possible
+      var num = card.querySelector('.text-info');
+      var filename = 'reservation.pdf';
+      if(num) filename = 'reservation_' + num.innerText + '.pdf';
+      doc.save(filename);
+    };
+    img.onerror = function() {
+      alert('Erreur lors du chargement du logo.');
+    };
+    img.src = logoUrl;
+  }
+</script>
+<style>
+  .historique-bg {
+    background: linear-gradient(120deg, #232526 0%, #414345 100%);
+    min-height: 100vh;
+  }
+  .text-gradient {
+    background: linear-gradient(90deg, #ffb347, #ffcc33, #00c6ff, #0072ff);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    text-fill-color: transparent;
+  }
+  .reservation-card {
+    border-radius: 1.5rem;
+    transition: transform 0.2s, box-shadow 0.2s;
+    box-shadow: 0 4px 24px rgba(0,0,0,0.2);
+  }
+  .reservation-card:hover {
+    transform: translateY(-6px) scale(1.03);
+    box-shadow: 0 8px 32px rgba(0,0,0,0.3);
+  }
+  .card-body {
+    background: rgba(30, 30, 40, 0.95);
+    border-radius: 1.5rem;
+  }
+  .btn-outline-danger, .btn-outline-warning {
+    border-radius: 2rem;
+    min-width: 40px;
+  }
+  .btn-outline-danger:hover, .btn-outline-warning:hover {
+    filter: brightness(1.2);
+  }
+  .lead {
+    color: #e0e0e0;
+  }
+  @media (max-width: 768px) {
+    .reservation-card { font-size: 0.95rem; }
+    h1 { font-size: 1.3rem; }
+    .lead { font-size: 1rem; }
+  }
+</style>
+{% endblock 'contenu' %}

@@ -1,3 +1,43 @@
+from django.views.decorators.csrf import csrf_exempt
+from django.urls import reverse
+from django.http import HttpResponseRedirect
+from twilio.rest import Client as TwilioClient
+# --- Vue pour formulaire de contact conseiller ---
+def contact_admin(request):
+    if request.method == "POST":
+        name = request.POST.get("name")
+        email = request.POST.get("email")
+        whatsapp = request.POST.get("whatsapp")
+        message = request.POST.get("message")
+
+        # Envoi email à l'admin
+        subject = f"Nouveau message de contact de {name}"
+        body = f"Nom: {name}\nEmail: {email}\nWhatsApp: {whatsapp}\nMessage: {message}"
+        admin_email = getattr(settings, 'ADMIN_EMAIL', getattr(settings, 'EMAIL_HOST_USER', None))
+        try:
+            send_mail(subject, body, settings.EMAIL_HOST_USER, [admin_email], fail_silently=False)
+        except Exception as e:
+            messages.error(request, f"Erreur lors de l'envoi de l'email: {e}")
+
+        # Envoi WhatsApp via Twilio
+        sid = os.getenv('TWILIO_ACCOUNT_SID')
+        token = os.getenv('TWILIO_AUTH_TOKEN')
+        twilio_number = os.getenv('TWILIO_WHATSAPP_NUMBER', 'whatsapp:+14155238886')
+        admin_whatsapp = os.getenv('ADMIN_WHATSAPP', 'whatsapp:+261386787320')
+        if sid and token:
+            try:
+                client = TwilioClient(sid, token)
+                client.messages.create(
+                    body=f"[Contact Taxi Express]\nNom: {name}\nEmail: {email}\nWhatsApp: {whatsapp}\nMessage: {message}",
+                    from_=twilio_number,
+                    to=admin_whatsapp
+                )
+            except Exception as e:
+                messages.error(request, f"Erreur WhatsApp: {e}")
+
+        messages.success(request, "Votre message a bien été envoyé à l'équipe Taxi Express !")
+        return redirect(request.META.get('HTTP_REFERER', '/'))
+    return redirect('/')
 from django.shortcuts import render, redirect
 from .models import Reservation
 from app_membre.models import Insertion_membre
@@ -132,3 +172,32 @@ def envoyer_whatsapp(request):
             messages.error(request, f"Erreur lors de l'envoi : {str(e)}")
 
     return redirect("serviceRapide")
+
+# function pour afficher l'historique des réservations
+def historique(request):
+    reservations = []
+    if request.session.get('client'):
+        client_id = request.session['client']['id']
+        try:
+            client = Insertion_membre.objects.get(id=client_id)
+            reservations = Reservation.objects.filter(email_client=client.email).order_by('-id')
+        except Insertion_membre.DoesNotExist:
+            reservations = []
+    return render(request, 'historique.html', {'reservations': reservations})
+
+# Vue pour supprimer une réservation
+from django.views.decorators.http import require_POST
+@require_POST
+def supprimer_reservation(request, reservation_id):
+    if request.session.get('client'):
+        client_id = request.session['client']['id']
+        try:
+            client = Insertion_membre.objects.get(id=client_id)
+            reservation = Reservation.objects.get(id=reservation_id, email_client=client.email)
+            reservation.delete()
+            messages.success(request, "Réservation supprimée avec succès.")
+        except (Insertion_membre.DoesNotExist, Reservation.DoesNotExist):
+            messages.error(request, "Réservation introuvable ou non autorisée.")
+    else:
+        messages.error(request, "Vous devez être connecté.")
+    return redirect('historique')

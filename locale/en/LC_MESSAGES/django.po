@@ -50,10 +50,6 @@ msgstr "Transparent and competitive rates"
 msgid "Support client disponible 24h/24"
 msgstr "24/7 Customer Support"
 
-#: .\template\appropos.html:27
-msgid "Réserver maintenant"
-msgstr "Book now"
-
 #: .\template\appropos.html:37
 msgid "Pourquoi choisir TAXI EXPRESS ?"
 msgstr "Why choose TAXI EXPRESS?"
@@ -126,10 +122,6 @@ msgstr "Our commitments"
 #: .\template\appropos.html:100
 msgid "Pour votre satisfaction"
 msgstr "For your satisfaction"
-
-#: .\template\appropos.html:110
-msgid "Réservation rapide"
-msgstr "Quick booking"
 
 #: .\template\appropos.html:111
 msgid ""
@@ -243,10 +235,6 @@ msgid ""
 "ville avec nous"
 msgstr "Sign up and choose your option for your trips and city travel with us"
 
-#: .\template\index.html:239
-msgid "Souscription"
-msgstr "Subscription"
-
 #: .\template\index.html:240
 msgid ""
 "Inscrive-vous  ou connecté sur votre compte pour bien valider votre "
@@ -314,36 +302,6 @@ msgid "Service Taxi ville et location de voiture de Madagascar"
 msgstr "City taxi and car rental service in Madagascar"
 
 #: .\template\index.html:312
-#, fuzzy
-#| msgid ""
-#| "est la prémière plateforme complète à Madagascar  dédiée aux déplacements "
-#| "touristiques et urbains. Basée à Antananarivo dans l'Aéroport "
-#| "Intérnationale d'Ivato, elle propose une"
-msgid ""
-"est la prémière plateforme complète à Madagascar  dédiée aux déplacements "
-"touristiques et urbains. Basée à Antananarivo à l'Aéroport Intérnationale "
-"d'Ivato, elle propose une"
-msgstr ""
-"is the first complete platform in Madagascar dedicated to tourist and urban "
-"travel. Based in Antananarivo at Ivato International Airport, it offers"
-
-#: .\template\index.html:312
-msgid "service de taxi ville rapide et fiable"
-msgstr "fast and reliable city taxi service"
-
-#: .\template\index.html:312
-msgid "pour tous vos circulations, des"
-msgstr "for all your trips,"
-
-#: .\template\index.html:312
-msgid "locations et transfert de tous types de voitures"
-msgstr "rental and transfer of all types of cars"
-
-#: .\template\index.html:312
-msgid "au meilleur prix pour les visiteurs, Ainsi que l'organisation de"
-msgstr "at the best price for visitors, as well as the organization of"
-
-#: .\template\index.html:312
 msgid "voyage vers les plus beaux sites touristiques de l'îles"
 msgstr "trips to the most beautiful tourist sites of the island"
 
@@ -384,16 +342,9 @@ msgstr "TAXI EXPRESS of Madagascar"
 #: .\template\index.html:347
 msgid "Voici les taxis disponibles"
 msgstr "Here are the available taxis"
-
-#: .\template\index.html:368 .\template\index.html:370
-msgid "Réserver"
-msgstr "Book"
-
-
 #: .\template\index.html:392
 msgid "Transfert"
 msgstr "Transfer"
-
 #: .\template\index.html:393
 msgid "LOUER ET VOYAGER A TOUS MOMENT"
 msgstr "RENT AND TRAVEL AT ANY TIME"
@@ -436,15 +387,6 @@ msgstr ""
 "Enjoy the best value for your city trips to or from the airport. Punctual, "
 "safe and always available, our drivers welcome you with a smile. Book now "
 "with Teams Express"
-
-#: .\template\layouts\footer.html:10
-msgid ""
-"Service de réservation de taxi fiable et rapide à Madagascar. Disponible 7j/"
-"7."
-msgstr ""
-"Reliable and fast taxi booking service in Madagascar. Available 7 days a "
-"week."
-
 #: .\template\layouts\footer.html:23
 msgid "Politique de confidentialité"
 msgstr "Politique de confidentialité"
@@ -650,30 +592,11 @@ msgstr ""
 #~ "discover iconic sites such as the QUEEN'S PALACE and the CATHOLIC "
 #~ "CATHEDRAL, as well as the TWIN STAIRS opposite and INDEPENDENCE AVENUE, "
 #~ "the Analakely Market, and much more."
-
-msgid "J’utilise cette application pour mes déplacements professionnels et personnels. Les véhicules sont propres, le système de réservation est simple et rapide, et je me sens toujours en sécurité. Merci à toute l’équipe TAXI EXPRESS !"
-
-msgstr "I use this app for both my business and personal travel. The vehicles are clean, the booking system is simple and fast, and I always feel safe. Thank you to the entire TAXI EXPRESS team!"
-
 msgid "Service de réservation de taxi fiable et rapide à Madagascar. Disponible 7j/7."
 msgstr "Reliable and fast taxi booking service in Madagascar. Available 7 days a week."
-
-
-msgid "Notre équipe"
-msgstr "Our team"
-=======
-msgid " Bienvenue sur la page de contact de Taxi Express Madagascar !"
-msgstr "Welcome to the Taxi Express Madagascar contact page!"
-
 msgid "Nous sommes ravis de vous offrir un service de transport fiable et professionnel à l'Aéroport International Ivato de Madagascar. Que vous arriviez à l'aéroport ou que vous ayez besoin d'un transport pour vos déplacements dans la capitale et au-delà. Nous mettons à votre disposition plusieurs moyens de communication pour rendre votre expérience avec nous aussi simple et agréable que possible."
 
 msgstr "We are pleased to offer you reliable and professional transportation services at Madagascar's Ivato International Airport. Whether you are arriving at the airport or need transportation for your travels in the capital and beyond, we offer several means of communication to make your experience with us as simple and enjoyable as possible."
-
-msgid "Pour nous contacter rapidement, voici nos coordonnées :"
-msgstr "To contact us quickly, here are our contact details:"
-
-msgid "– Nous vous recommandons de nous contacter directement via WhatsApp pour une réponse instantanée et un service personnalisé. Notre équipe est disponible pour répondre à vos questions et confirmer votre réservation en quelques minutes. "
-msgstr "– We recommend contacting us directly via WhatsApp for an instant response and personalized service. Our team is available to answer your questions and confirm your booking within minutes."
 msgid " Si vous préférez un échange plus détaillé, vous pouvez nous envoyer un email et nous reviendrons vers vous dans les plus brefs délais. "
 msgstr "If you prefer a more detailed exchange, you can send us an email and we will get back to you as soon as possible."
 msgid " –Numéro à Madagascar; Vous pouvez également nous appeler pour toute demande urgente ou pour discuter de vos besoins de transport. "
@@ -742,8 +665,6 @@ msgid " Notre équipe vous accompagne dans la découverte des plus beaux sites d
 msgstr "Our team will guide you through the most beautiful sites in Madagascar, offering personalized service and expert advice for every step of your trip."
 msgid "Divertissement"
 msgstr "Entertainment"
-msgid "Animation & Loisirs"
-msgstr "Entertainment & Leisure"
 msgid "Nous proposons des activités variées : excursions, animations, soirées culturelles et découvertes locales pour rendre votre séjour inoubliable et riche en émotions."
 msgstr "We offer a variety of activities: excursions, entertainment, cultural evenings and local discoveries to make your stay unforgettable and full of emotions."
 msgid "Nous assurons une organisation sans faille, une assistance 24h/24 et une sécurité optimale pour que vous profitiez pleinement de votre expérience à Madagascar."
@@ -758,8 +679,6 @@ msgid "J’utilise cette application pour mes déplacements professionnels et pe
 msgstr "I use this app for my business and personal travel. The vehicles are clean, the booking system is quick and easy, and I always feel safe. Thanks to the entire TAXI EXPRESS team!"
 msgid "Service Rapide TEAMS EXPRESS"
 msgstr "TEAMS EXPRESS Fast Service"
-msgid "Besoin d’un taxi "
-msgstr "Need a taxi"
 msgid "immédiatement"
 msgstr "immediately"
 msgid " ? Profitez de notre service express : "
@@ -786,16 +705,12 @@ msgid "Nombre de personne"
 msgstr "Number of people"
 msgid "Commentaire"
 msgstr "Comment"
-msgid "Réserver maintenant"
-msgstr "Book now"
 msgid "Nom"
 msgstr "Name"
 msgid "Numéro WhatsApp"
 msgstr "WhatsApp number"
 msgid "Votre message"
 msgstr "Your message"
-msgid "Envoyer"
-msgstr "send"
 msgid "Réserver"
 msgstr "book"
 msgid "Nos Tarifs"
@@ -882,3 +797,43 @@ msgid "Souscrire"
 msgstr "Subscribe"
 msgid "mot de passe"
 msgstr "password"
+msgid "est la prémière plateforme complète à Madagascar  dédiée aux déplacements touristiques et urbains. Basée à Antananarivo à l'Aéroport Intérnationale d'Ivato, elle propose une"
+msgstr "is the first comprehensive platform in Madagascar dedicated to tourist and urban travel. Based in Antananarivo at Ivato International Airport, it offers a"
+msgid "Veuillez vous connecter pour voir vos réservations"
+msgstr "Please log in to view your reservations."
+msgid "Vous n’avez pas encore de compte ?"
+msgstr "Don't have an account yet?"
+msgid "Créer un compte"
+msgstr "Create an account"
+msgid " Réserver maintenant"
+msgstr "Book now"
+msgid "Aucune réservation trouvée. "
+msgstr "No reservations found."
+msgid "Faire une nouvelle réservation"
+msgstr "Make a new reservation"
+msgid "Besoin d’aide ou d’une nouvelle réservation ? "
+msgstr "Need help or a new reservation?"
+msgid "Numéro réservation:"
+msgstr "Reservation number:"
+msgid "Bagages:"
+msgstr "Luggage:"
+msgid "Personnes:"
+msgstr "People:"
+msgid "Compagnie Vol:"
+msgstr "Flight Company:"
+msgid "Départ:"
+msgstr "Departure:"
+msgid "Nom:"
+msgstr "Name:"
+msgid "Retrouvez ici l’historique de toutes vos réservations. Vous pouvez télécharger chaque réservation en PDF ou la supprimer si besoin."
+msgstr "Find the history of all your bookings here. You can download each booking as a PDF or delete it if necessary."
+msgid "Merci de faire confiance à "
+msgstr "Thank you for trusting"
+msgid "pour vos déplacements!"
+msgstr "for your travels!"
+msgid "Se connecter"
+msgstr "Log in"
+msgid "Bienvenue sur la page de contact de Taxi Express Madagascar !"
+msgstr "Welcome to the Taxi Express Madagascar contact page!"
+msgid "Pour nous contacter rapidement, voici nos coordonnées :"
+msgstr "To contact us quickly, here are our contact details:"

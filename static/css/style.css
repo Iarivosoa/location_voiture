@@ -1383,7 +1383,7 @@ body{
 }
 .icone_accueil{
       position:absolute;
-      right: 32px;
+      right: 38px;
       bottom: 24vh;
       z-index: 50;
       display: flex;
