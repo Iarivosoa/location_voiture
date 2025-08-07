@@ -70,3 +70,6 @@ def appropos(request):
 # PARTIE FONCTION DE CHANGEMENT DE LANGUE
 def changement_langue(request):
     pass
+# RETOUR LA PAGE DE POLITIQUE DE CONFIDENTIALITE
+def politque(request):
+    return render(request,"politique.html")

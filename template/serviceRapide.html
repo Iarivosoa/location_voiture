@@ -30,41 +30,82 @@
               <div class="alert alert-success mt-3">{{ message }}</div>
             {% endfor %}
           {% endif %}
-          <form method="post" action="">
+          <!-- form de reservation -->
+                     <form method="post" action="{% url 'reserver' %}">
             {% csrf_token %}
             <div class="row g-3">
               <div class="col-md-6">
-                <label for="nom" class="form-label fw-bold text-primary">{% trans "Nom" %} <span class="text-danger">*</span></label>
-                <input type="text" class="form-control rounded-pill" id="nom" name="nom" required placeholder="{% trans 'Votre nom' %}">
+                <label for="nom" class="form-label fw-bold text-primary">Nom <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-pill" id="nom" name="nom" required placeholder="Votre nom">
               </div>
               <div class="col-md-6">
-                <label for="telephone" class="form-label fw-bold text-primary">{% trans "Téléphone" %} <span class="text-danger">*</span></label>
+                <label for="prenom" class="form-label fw-bold text-primary">Prénom <span class="text-danger">*</span></label>
+                <input type="text" class="form-control rounded-pill" id="prenom" name="prenom" required placeholder="Votre prénom">
+              </div>
+              <div class="col-md-6">
+                <label for="telephone" class="form-label fw-bold text-primary">Téléphone <span class="text-danger">*</span></label>
                 <input type="tel" class="form-control rounded-pill" id="telephone" name="telephone" required placeholder="Ex: 0700000000">
               </div>
               <div class="col-md-6">
-                <label for="depart" class="form-label fw-bold text-primary">{% trans "Départ" %} <span class="text-danger">*</span></label>
-                <input type="text" class="form-control rounded-pill" id="depart" name="depart" required placeholder="{% trans 'Lieu de prise en charge' %}">
+                <label for="ville_depart" class="form-label fw-bold text-primary">Déstination <span class="text-danger">*</span></label>
+                <select class="form-select rounded-pill" id="ville_depart" name="destination" required>
+                  <option value="">Sélectionnez une ville</option>
+                  <option value="Analakely">Analakely</option>
+                  <option value="Ankazomanga">Ankazomanga</option>
+                  <option value="Faravohitra">Faravohitra</option>
+                   <option value="autre">autre</option>
+                </select>
+              </div>
+            <div class="col-md-6">
+                <label for="compagnie_vol" class="form-label fw-bold text-primary">Compagnie de vol <span class="text-danger">*</span></label>
+                <select class="form-select rounded-pill" id="compagnie_vol" name="compagnie_vol" required>
+                  <option value="">Compagnie de Vol</option>
+                  <option value="Air Madagascar">Air Madagascar</option>
+                  <option value="Tsaradia">Tsaradia</option>
+                  <option value="Ewa Air">Ewa Air</option>
+                  <option value="Air Austral">Air Austral</option>
+                  <option value="Air Mauritius">Air Mauritius</option>
+                  <option value="Ethiopian Airlines">Ethiopian Airlines</option>
+                  <option value="Turkish Airlines">Turkish Airlines</option>
+                  <option value="Kenya Airways">Kenya Airways</option>
+                  <option value="Air France">Air France</option>
+                  <option value="Corsair">Corsair</option>
+                  <option value="Airlink">Airlink</option>
+                  <option value="South African Airways">South African Airways</option>
+                  <option value="Neos">Neos</option>
+                  <option value="Air Seychelles">Air Seychelles</option>
+                  <option value="autre">Autre</option>
+                </select>
               </div>
               <div class="col-md-6">
-                <label for="destination" class="form-label fw-bold text-primary">{% trans "Destination" %} <span class="text-danger">*</span></label>
-                <input type="text" class="form-control rounded-pill" id="destination" name="destination" required placeholder="{% trans 'Votre destination' %}">
+                <label for="date_depart" class="form-label fw-bold text-primary">Date et heure de départ <span class="text-danger">*</span></label>
+                <input type="datetime-local" class="form-control rounded-pill" id="date_depart" name="date_depart" required>
               </div>
               <div class="col-md-6">
-                <label for="nombre_personnes" class="form-label fw-bold text-primary">{% trans "Nombre de personne" %}</label>
-                <input type="number" class="form-control rounded-pill" id="nombre_personnes" name="nombre_personnes" min="1" value="1">
+                <label for="nombre_personnes" class="form-label fw-bold text-primary">Nombre de personnes <span class="text-danger">*</span></label>
+                <input type="number" class="form-control rounded-pill" id="nombre_personnes" name="nombre_personnes" min="1" required placeholder="1">
               </div>
-              <div class="col-md-6">
-                <label for="heure" class="form-label fw-bold text-primary">{% trans "Heure souhaitée" %}</label>
-                <input type="time" class="form-control rounded-pill" id="heure" name="heure">
+              <div class="col-md-12">
+                <label class="form-label fw-bold text-primary">Bagages <span class="text-danger">*</span></label>
+                <div class="d-flex gap-4 align-items-center">
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="bagages" id="bagages_oui" value="True" checked>
+                    <label class="form-check-label" for="bagages_oui">Oui</label>
+                  </div>
+                  <div class="form-check">
+                    <input class="form-check-input" type="radio" name="bagages" id="bagages_non" value="False">
+                    <label class="form-check-label" for="bagages_non">Non</label>
+                  </div>
+                </div>
               </div>
-              <div class="col-12">
-                <label for="commentaire" class="form-label fw-bold text-primary">{% trans "Commentaire" %}</label>
-                <textarea class="form-control rounded-4" id="commentaire" name="commentaire" rows="2" placeholder="{% trans 'Infos complémentaires (optionnel)' %}"></textarea>
+              <div class="col-md-12">
+                <label for="commentaire" class="form-label fw-bold text-primary">Commentaire</label>
+                <textarea class="form-control rounded-4" id="commentaire" name="commentaire" rows="2" placeholder="Informations complémentaires..."></textarea>
               </div>
             </div>
             <div class="d-grid mt-4">
               <button type="submit" class="btn btn-primary btn-lg rounded-pill shadow-sm">
-                <i class="fa fa-bolt me-2"></i>{% trans "Réserver maintenant" %}
+                <i class="fa fa-paper-plane me-2"></i>Réserver
               </button>
             </div>
           </form>

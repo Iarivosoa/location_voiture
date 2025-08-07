@@ -54,7 +54,7 @@ def reservation(request):
         
         send_mail(
             'Confirmation de votre réservation de taxi auprès de TAXI EXPRESS avec le Teams Express',
-            f'Bonjour {client.prenom},\n\nVotre réservation a bien été enregistrée.\nNuméro de réservation : {numero_reservation}\nDépart : {ville_depart}\nCompagnie de vol : {compagnie_vol}\nDate et heure : {date_depart}\n\nMerci d\'avoir choisi notre service !',
+            f'Bonjour {client.prenom},\n\nVotre réservation a bien été enregistrée.\nNuméro de réservation : {numero_reservation}\nDépart : {ville_depart}\nCompagnie de vol : {compagnie_vol}\nDate et heure : {date_depart}\n Votre numéro WhatsApp : {client.watsapp} \n On viens vers vous sur WhatsApp \n\nMerci d\'avoir choisi notre service !',
             settings.EMAIL_HOST_USER ,
             [client.email,"fify.dev1706@gmail.com"],
             fail_silently=True,
@@ -124,7 +124,7 @@ def envoyer_whatsapp(request):
             client = Client(sid, token)
             client.messages.create(
                 body=message_text,
-                from_='whatsapp:+18575752654',  # Numéro WhatsApp Twilio
+                from_='whatsapp:+14155238886',  # Numéro WhatsApp Twilio
                 to=f'whatsapp:{whatsapp_client}'
             )
             messages.success(request, "Message envoyé avec succès !")

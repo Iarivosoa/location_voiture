@@ -1,0 +1,532 @@
+{% extends "layouts/master.html" %}
+{% load i18n %}
+{% load static %}
+{% block 'contenu' %}
+
+    <style>
+        * {
+            margin: 0;
+            padding: 0;
+            box-sizing: border-box;
+        }
+
+        body {
+            font-family: 'Arial', sans-serif;
+            line-height: 1.6;
+            color: #333;
+            background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+            min-height: 100vh;
+        }
+
+        .container {
+            max-width: 1200px;
+            margin: 0 auto;
+            padding: 0 20px;
+        }
+
+        /* Main Content */
+        .main-content {
+            padding: 2rem 0 4rem;
+        }
+
+        .page-tabs {
+            display: flex;
+            justify-content: center;
+            margin: 2rem 0;
+            gap: 1rem;
+            flex-wrap: wrap;
+        }
+
+        .tab-button {
+            padding: 12px 30px;
+            background: rgba(255, 255, 255, 0.9);
+            border: none;
+            border-radius: 50px;
+            font-size: 1rem;
+            font-weight: 600;
+            color: #555;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            backdrop-filter: blur(10px);
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+        }
+
+        .tab-button:hover {
+            background: rgba(44, 90, 160, 0.9);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(44, 90, 160, 0.3);
+        }
+
+        .tab-button.active {
+            background: linear-gradient(45deg, #2c5aa0, #667eea);
+            color: white;
+            transform: translateY(-2px);
+            box-shadow: 0 6px 20px rgba(44, 90, 160, 0.4);
+        }
+
+        .page-content {
+            background: white;
+            border-radius: 20px;
+            padding: 3rem;
+            margin: 2rem 20px;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.1);
+            backdrop-filter: blur(10px);
+            display: none;
+            animation: fadeIn 0.5s ease-in;
+        }
+
+        .page-content.active {
+            display: block;
+        }
+
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .page-content h1 {
+            color: #2c5aa0;
+            font-size: 2.5rem;
+            margin-bottom: 1rem;
+            text-align: center;
+            position: relative;
+        }
+
+        .page-content h1::after {
+            content: '';
+            position: absolute;
+            width: 100px;
+            height: 4px;
+            background: linear-gradient(90deg, #2c5aa0, #667eea);
+            bottom: -10px;
+            left: 50%;
+            transform: translateX(-50%);
+            border-radius: 2px;
+        }
+
+        .page-content h2 {
+            color: #2c5aa0;
+            font-size: 1.8rem;
+            margin: 2rem 0 1rem 0;
+            padding-bottom: 0.5rem;
+            border-bottom: 2px solid #e9ecef;
+        }
+
+        .page-content h3 {
+            color: #495057;
+            font-size: 1.3rem;
+            margin: 1.5rem 0 0.8rem 0;
+        }
+
+        .page-content p {
+            margin-bottom: 1rem;
+            text-align: justify;
+            color: #555;
+        }
+
+        .page-content ul {
+            margin: 1rem 0;
+            padding-left: 2rem;
+        }
+
+        .page-content li {
+            margin-bottom: 0.5rem;
+            color: #555;
+        }
+
+        .highlight-box {
+            background: linear-gradient(135deg, #f8f9fa, #e9ecef);
+            border-left: 5px solid #2c5aa0;
+            padding: 1.5rem;
+            margin: 2rem 0;
+            border-radius: 0 10px 10px 0;
+        }
+
+        .highlight-box h3 {
+            color: #2c5aa0;
+            margin-top: 0;
+        }
+
+        .contact-info {
+            background: linear-gradient(135deg, #2c5aa0, #667eea);
+            color: white;
+            padding: 2rem;
+            border-radius: 15px;
+            margin: 2rem 0;
+            text-align: center;
+        }
+
+        .contact-info h3 {
+            color: white;
+            margin-bottom: 1rem;
+        }
+
+        .back-to-top {
+            position: fixed;
+            bottom: 30px;
+            right: 30px;
+            background: linear-gradient(45deg, #030303, #667eea);
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 50px;
+            height: 50px;
+            font-size: 1.5rem;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            box-shadow: 0 4px 15px rgba(44, 90, 160, 0.3);
+            display: none;
+        }
+
+        .back-to-top:hover {
+            transform: translateY(-3px);
+            box-shadow: 0 6px 20px rgba(44, 90, 160, 0.4);
+        }
+
+        .back-to-top.show {
+            display: block;
+        }
+
+        /* Footer */
+
+        /* Responsive */
+        @media (max-width: 768px) {
+            .page-content {
+                padding: 2rem 1.5rem;
+                margin: 1rem 10px;
+            }
+            
+            .page-content h1 {
+                font-size: 2rem;
+            }
+            
+            .page-content h2 {
+                font-size: 1.5rem;
+            }
+            
+            .tab-button {
+                padding: 10px 20px;
+                font-size: 0.9rem;
+            }
+        }
+    </style>
+
+
+
+    <main class="main-content">
+        <div class="container">
+            <div class="page-tabs">
+                <button class="tab-button active" onclick="showPage('conditions')">
+                    Conditions Générales
+                </button>
+                <button class="tab-button" onclick="showPage('confidentialite')">
+                    Politique de Confidentialité
+                </button>
+            </div>
+
+            <!-- CONDITIONS GÉNÉRALES -->
+            <div id="conditions" class="page-content active">
+                <h1>Conditions Générales d'Utilisation</h1>
+                
+                <div class="highlight-box">
+                    <h3>Information importante</h3>
+                    <p>En utilisant nos services de taxi et location de véhicules, vous acceptez les présentes conditions générales. Veuillez les lire attentivement.</p>
+                </div>
+
+                <h2>1. Présentation de l'entreprise</h2>
+                <p><strong>Taxi Express Ivato</strong> est une société malgache spécialisée dans le transport de personnes et la location de véhicules, officiellement agréée pour opérer à l'Aéroport International Ivato d'Antananarivo.</p>
+                
+                <ul>
+                    <li><strong>Siège social :</strong> Aéroport International Ivato, Antananarivo, Madagascar</li>
+                    <li><strong>Licence de transport :</strong> À compléter</li>
+                    <li><strong>Contact :</strong> +261 38 67 873 20</li>
+                </ul>
+
+                <h2>2. Services proposés</h2>
+                <h3>2.1 Service de taxi</h3>
+                <p>Nous proposons un service de transport par taxi disponible 24h/24 et 7j/7, principalement pour les liaisons aéroport-ville et vice-versa. Nos véhicules sont régulièrement contrôlés et nos chauffeurs sont professionnels et expérimentés.</p>
+
+                <h3>2.2 Location de véhicules</h3>
+                <p>Notre service de location comprend une gamme variée de véhicules avec ou sans chauffeur. Tous nos véhicules sont assurés et en parfait état de fonctionnement.</p>
+
+                <h2>3. Conditions de réservation</h2>
+                <h3>3.1 Modalités de réservation</h3>
+                <p>Les réservations peuvent être effectuées :</p>
+                <ul>
+                    <li>Par téléphone au +261 38 67 873 20</li>
+                    <li>Par email à teams_express@gmail.com</li>
+                    <li>Directement au comptoir de l'aéroport</li>
+                    <li>Via notre site web</li>
+                </ul>
+
+                <h3>3.2 Confirmation de réservation</h3>
+                <p>Toute réservation doit être confirmée par nos services. Une confirmation écrite (SMS ou email) sera envoyée avec les détails du service réservé.</p>
+
+                <h2>4. Tarifs et paiement</h2>
+                <h3>4.1 Tarification</h3>
+                <p>Nos tarifs sont fixes et transparents. Ils comprennent :</p>
+                <ul>
+                    <li>Le transport ou la location du véhicule</li>
+                    <li>L'assurance responsabilité civile</li>
+                    <li>Les taxes applicables</li>
+                </ul>
+
+                <h3>4.2 Modes de paiement acceptés</h3>
+                <p><strong>Note importante :</strong> Le paiement en ligne n'est pas encore disponible, il est actuellement en cours de développement.</p>
+                <p>Les modes de paiement acceptés sont :</p>
+                <ul>
+                    <li><strong>Paiement direct en espèces</strong> (Ariary malgache ou Euros)</li>
+                    <li>Mobile Money  - paiement direct au chauffeur</li>
+                    <li>Virement bancaire (pour les réservations à l'avance)</li>
+                </ul>
+                <p>Tous les paiements s'effectuent directement avec le chauffeur ou à notre comptoir de l'aéroport.</p>
+
+                <h2>5. Annulation et remboursement</h2>
+                <h3>5.1 Annulation par le client</h3>
+                <ul>
+                    <li><strong>Plus de 24h à l'avance :</strong> Annulation gratuite</li>
+                    <li><strong>Entre 24h et 2h à l'avance :</strong> 50% du tarif</li>
+                    <li><strong>Moins de 2h à l'avance :</strong> 100% du tarif</li>
+                </ul>
+
+                <h3>5.2 Annulation par Taxi Express Ivato</h3>
+                <p>En cas d'annulation de notre part pour des raisons indépendantes de notre volonté (conditions météorologiques exceptionnelles, cas de force majeure), nous nous engageons à vous proposer une alternative ou un remboursement intégral.</p>
+
+                <h2>6. Responsabilités</h2>
+                <h3>6.1 Responsabilité de Taxi Express Ivato</h3>
+                <p>Nous nous engageons à fournir un service de qualité dans le respect des horaires convenus. Notre responsabilité est couverte par nos assurances professionnelles.</p>
+
+                <h3>6.2 Responsabilité du client</h3>
+                <p>Le client s'engage à :</p>
+                <ul>
+                    <li>Respecter le véhicule et le matériel mis à disposition</li>
+                    <li>Signaler tout dommage immédiatement</li>
+                    <li>Respecter le code de la route Malagasy</li>
+                    <li>Ne pas utiliser le véhicule à des fins illégales</li>
+                </ul>
+
+                <h2>7. Assurances</h2>
+                <p>Tous nos véhicules sont couverts par une assurance responsabilité civile et une assurance tous risques. En cas de location, nous recommandons fortement au client de vérifier sa couverture d'assurance personnelle.</p>
+
+                <h2>8. Réclamations</h2>
+                <p>Toute réclamation doit être adressée par écrit dans les 48h suivant la prestation à l'adresse email : teams_express@gmail.com ou WhatsApp : +261 38 67 873 20</p>
+
+                <h2>9. Droit applicable</h2>
+                <p>Les présentes conditions générales sont soumises au droit Malagasy. Tout litige sera de la compétence exclusive des tribunaux d'Antananarivo.</p>
+
+                <div class="contact-info">
+                    <h3>Besoin d'aide ?</h3>
+                    <p>Pour toute question concernant nos conditions générales, contactez-nous :</p>
+                    <p><strong>📞 +261 38 67 873 20</strong></p>
+                    <p><strong>📧 +261 38 67 873 20</strong></p>
+                </div>
+            </div>
+
+            <!-- POLITIQUE DE CONFIDENTIALITÉ -->
+            <div id="confidentialite" class="page-content">
+                <h1>Politique de Confidentialité</h1>
+                
+                <div class="highlight-box">
+                    <h3>Protection de vos données personnelles</h3>
+                    <p>Taxi Express Ivato s'engage à protéger et respecter votre vie privée. Cette politique explique comment nous collectons, utilisons et protégeons vos informations personnelles.</p>
+                </div>
+
+                <h2>1. Responsable du traitement</h2>
+                <p><strong>Taxi Express Ivato</strong> est le responsable du traitement de vos données personnelles.</p>
+                <ul>
+                    <li><strong>Adresse :</strong> Aéroport International Ivato, Antananarivo, Madagascar</li>
+                    <li><strong>Email :</strong>teams_express@gmail.com</li>
+                    <li><strong>Téléphone :</strong> +261 38 67 873 20</li>
+                </ul>
+
+                <h2>2. Données collectées</h2>
+                <h3>2.1 Données collectées directement</h3>
+                <p>Lors de votre réservation ou utilisation de nos services, nous collectons :</p>
+                <ul>
+                    <li>Nom et prénom</li>
+                    <li>Numéro de téléphone</li>
+                    <li>Adresse email</li>
+                    <li>Adresses de prise en charge et de destination</li>
+                    <li>Informations de vol (pour les transferts aéroport)</li>
+                    <li>Préférences de service</li>
+                </ul>
+
+                <h3>2.2 Données collectées automatiquement</h3>
+                <p>Via notre site web et nos applications :</p>
+                <ul>
+                    <li>Adresse IP</li>
+                    <li>Type de navigateur et version</li>
+                    <li>Pages visitées et durée de visite</li>
+                    <li>Données de géolocalisation (avec votre consentement)</li>
+                </ul>
+
+                <h2>3. Finalités du traitement</h2>
+                <p>Nous utilisons vos données personnelles pour :</p>
+                <ul>
+                    <li><strong>Exécution du service :</strong> Organiser votre transport ou location</li>
+                    <li><strong>Communication :</strong> Vous contacter concernant votre réservation</li>
+                    <li><strong>Facturation :</strong> Établir les factures et gérer les paiements</li>
+                    <li><strong>Amélioration du service :</strong> Analyser nos performances et améliorer nos services</li>
+                    <li><strong>Marketing :</strong> Vous informer de nos offres (avec votre consentement)</li>
+                    <li><strong>Obligations légales :</strong> Respecter nos obligations réglementaires</li>
+                </ul>
+
+                <h2>4. Base légale du traitement</h2>
+                <p>Nous traitons vos données personnelles sur la base de :</p>
+                <ul>
+                    <li><strong>Exécution du contrat :</strong> Pour la fourniture de nos services</li>
+                    <li><strong>Intérêt légitime :</strong> Pour l'amélioration de nos services</li>
+                    <li><strong>Consentement :</strong> Pour les communications marketing</li>
+                    <li><strong>Obligations légales :</strong> Pour le respect de la réglementation</li>
+                </ul>
+
+                <h2>5. Partage des données</h2>
+                <h3>5.1 Partenaires et prestataires</h3>
+                <p>Nous pouvons partager vos données avec :</p>
+                <ul>
+                    <li>Nos chauffeurs partenaires (informations nécessaires au service)</li>
+                    <li>Prestataires de services (paiement, maintenance)</li>
+                    <li>Autorités compétentes (si requis par la loi)</li>
+                </ul>
+
+                <h3>5.2 Transferts internationaux</h3>
+                <p>Vos données sont principalement traitées à Madagascar. En cas de transfert vers d'autres pays, nous nous assurons d'un niveau de protection adéquat.</p>
+
+                <h2>6. Durée de conservation</h2>
+                <p>Nous conservons vos données personnelles :</p>
+                <ul>
+                    <li><strong>Données de service :</strong> 3 ans après la fin du service</li>
+                    <li><strong>Données comptables :</strong> 10 ans conformément à la législation</li>
+                    <li><strong>Données marketing :</strong> Jusqu'à votre désinscription</li>
+                </ul>
+
+                <h2>7. Sécurité des données</h2>
+                <p>Nous mettons en œuvre des mesures techniques et organisationnelles appropriées :</p>
+                <ul>
+                    <li>Chiffrement des données sensibles</li>
+                    <li>Accès restreint aux données personnelles</li>
+                    <li>Formation du personnel à la protection des données</li>
+                    <li>Surveillance et audit réguliers de nos systèmes</li>
+                </ul>
+
+                <h2>8. Vos droits</h2>
+                <p>Conformément à la réglementation applicable, vous disposez des droits suivants :</p>
+
+                <h3>8.1 Droit d'accès</h3>
+                <p>Vous pouvez demander une copie de vos données personnelles que nous détenons.</p>
+
+                <h3>8.2 Droit de rectification</h3>
+                <p>Vous pouvez demander la correction de données inexactes ou incomplètes.</p>
+
+                <h3>8.3 Droit à l'effacement</h3>
+                <p>Vous pouvez demander la suppression de vos données dans certaines circonstances.</p>
+
+                <h3>8.4 Droit à la limitation</h3>
+                <p>Vous pouvez demander la limitation du traitement de vos données.</p>
+
+                <h3>8.5 Droit à la portabilité</h3>
+                <p>Vous pouvez demander le transfert de vos données vers un autre prestataire.</p>
+
+                <h3>8.6 Droit d'opposition</h3>
+                <p>Vous pouvez vous opposer au traitement de vos données pour des raisons légitimes.</p>
+
+                <h2>9. Cookies et technologies similaires</h2>
+                <p>Notre site web utilise des cookies pour :</p>
+                <ul>
+                    <li>Améliorer votre expérience de navigation</li>
+                    <li>Analyser le trafic de notre site</li>
+                    <li>Personnaliser le contenu affiché</li>
+                </ul>
+                <p>Vous pouvez configurer vos préférences de cookies dans les paramètres de votre navigateur.</p>
+
+
+                <h2>10. Modifications de cette politique</h2>
+                <p>Cette politique de confidentialité peut être mise à jour périodiquement. Nous vous informerons de tout changement significatif par email ou via notre site web.</p>
+
+                <p><strong>Dernière mise à jour :</strong> Janvier 2025</p>
+            </div>
+        </div>
+    </main>
+
+
+
+    <button class="back-to-top" onclick="scrollToTop()">↑</button>
+
+    <script>
+        // Fonction pour changer d'onglet
+        function showPage(pageId) {
+            // Masquer tous les contenus
+            document.querySelectorAll('.page-content').forEach(content => {
+                content.classList.remove('active');
+            });
+            
+            // Masquer tous les boutons actifs
+            document.querySelectorAll('.tab-button').forEach(button => {
+                button.classList.remove('active');
+            });
+            
+            // Afficher le contenu sélectionné
+            document.getElementById(pageId).classList.add('active');
+            
+            // Activer le bouton correspondant
+            event.target.classList.add('active');
+            
+            // Remonter en haut de la page
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Fonction pour remonter en haut
+        function scrollToTop() {
+            window.scrollTo({ top: 0, behavior: 'smooth' });
+        }
+
+        // Afficher/masquer le bouton de retour en haut
+        window.addEventListener('scroll', () => {
+            const backToTop = document.querySelector('.back-to-top');
+            if (window.pageYOffset > 300) {
+                backToTop.classList.add('show');
+            } else {
+                backToTop.classList.remove('show');
+            }
+        });
+
+        // Smooth scrolling pour les liens internes
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                const target = document.querySelector(this.getAttribute('href'));
+                if (target) {
+                    target.scrollIntoView({
+                        behavior: 'smooth',
+                        block: 'start'
+                    });
+                }
+            });
+        });
+
+        // Animation d'apparition au scroll
+        const observerOptions = {
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.style.opacity = '1';
+                    entry.target.style.transform = 'translateY(0)';
+                }
+            });
+        }, observerOptions);
+
+        // Observer les sections
+        document.querySelectorAll('.highlight-box, .contact-info').forEach(el => {
+            el.style.opacity = '0';
+            el.style.transform = 'translateY(30px)';
+            el.style.transition = 'all 0.6s ease';
+            observer.observe(el);
+        });
+    </script>
+  
+{% endblock 'contenu' %}

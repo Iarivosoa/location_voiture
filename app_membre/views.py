@@ -141,8 +141,8 @@ def reset_password(request):
     if request.method == "POST":
         email_reset = request.POST.get("email_reset")
 
-        recup_email = Insertion_membre.objects.get(email = email_reset)
         try:
+            recup_email = Insertion_membre.objects.get(email = email_reset)
             token = get_random_string(length=32)
             recup_email.reset_token = token
 
@@ -158,8 +158,10 @@ def reset_password(request):
                 [email_reset],
                 fail_silently=False
             )
-        except Insertion_membre.DoesNotExist:
-            return render(request,"reset_password.html",{"message":"Cet email n'existe pas"})
+            messages.success(request, "Un email de réinitialisation a été envoyé à votre adresse.")
+        except Exception as e:
+            return render(request,"reset_password.html",{"message":"Une erreur s'est produite lors de l'envoi de l'email."})
+        
     return render(request,"reset_password.html",{"message":"Consulter votre email pour avoir le lien"})
 # pager pour le nouveau mot de passe
 def page_reset_password(request, token):

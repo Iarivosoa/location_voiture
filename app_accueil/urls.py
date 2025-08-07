@@ -14,4 +14,7 @@ urlpatterns = [
     path('i18n/', include('django.conf.urls.i18n')),
 
     # URL CHANGEMENT DE LANGUE
+
+    # page de confidentialité
+    path("politique",politque,name="politique")
 ]

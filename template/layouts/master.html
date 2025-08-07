@@ -78,12 +78,12 @@
    </body>
 
   <style>
-    .dropdowns{
+    .dropdown{
       display: flex;
       flex-direction: column;
       padding: 10px;
     }
-    .dropdowns a{
+    .dropdown a{
       color: black;
       text-decoration: none;
       padding: 5px 0;
@@ -237,7 +237,7 @@
               <ul class="">
                   <li class=""> 
                       <span class="">{% trans "Location" %}</span>
-                      <div class="dropdowns">
+                      <div class="dropdown">
                           <a href="{% url 'tarif' %}">{% trans "tarif" %}</a>
                           <a href="{% url 'serviceRapide' %}">{% trans "réserver un véhicule" %}</a>
                       </div>
@@ -245,7 +245,7 @@
           
                   <li class=""> 
                       <span class="">{% trans "Taxi ville" %}</span>
-                      <div class="dropdowns">
+                      <div class="dropdown">
                           <a href="{% url 'serviceRapide' %}">{% trans "service rapide" %}</a>
                           <a href="{% url 'tousVoiture' %}">{% trans "TAXI DISPONIBLE" %}</a>
                       
@@ -254,7 +254,7 @@
           
                   <li class=""> 
                       <span class="">{% trans "Voyages" %}</span>
-                      <div class="dropdowns">
+                      <div class="dropdown">
                           <a href="{% url 'offre_site' %}">{% trans "Offres disponibles" %}</a>
                           <a href="{% url 'contacte_admin' %}">{% trans "conséils" %}</a>
                       </div>
