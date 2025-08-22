@@ -1,3 +1,8 @@
+{% extends "layouts/master.html" %}
+{% load static %}
+{% load i18n %}
+{% block 'contenu' %}
+<head>
     {% if messages %}
     <div class="container mt-3">
         {% for message in messages %}
@@ -8,18 +13,13 @@
         {% endfor %}
     </div>
     {% endif %}
-{% extends "layouts/master.html" %}
-{% load static %}
-{% load i18n %}
-{% block 'contenu' %}
-<head>
      <link rel="stylesheet" href="{% static 'aos/aos.css' %}">
      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 
 <br><br><br><br>
 <section class="container">
-    <h1 class="h2 text-center">Page de contacte</h1>
+    <h1 class="h2 text-center">Page de contact</h1>
     <div class="row">
         <div class="col-md-6" data-aos="fade-right" data-aos-delay="100">
             <img src="{% static 'image/conseillere.png' %}" alt="">
@@ -31,10 +31,10 @@
 
                 <h3>{% trans "Pour nous contacter rapidement, voici nos coordonnées :" %}</h3>
 
-                WhatsApp : <a href="">+261 38 67 873 20</a> {% trans "– Nous vous recommandons de nous contacter directement via WhatsApp pour une réponse instantanée et un service personnalisé. Notre équipe est disponible pour répondre à vos questions et confirmer votre réservation en quelques minutes." %} <br>
+                WhatsApp : <a href="https://wa.me/+261 38 83 618 36">+261 38 83 618 36</a> {% trans "– Nous vous recommandons de nous contacter directement via WhatsApp pour une réponse instantanée et un service personnalisé. Notre équipe est disponible pour répondre à vos questions et confirmer votre réservation en quelques minutes." %} <br>
 
-                Email : <a href="">taxiexpress@gmail.com</a> {% trans "Si vous préférez un échange plus détaillé, vous pouvez nous envoyer un email et nous reviendrons vers vous dans les plus brefs délais." %} <br>
-                Téléphone : <a href="">+261 38 67 873 20</a> {% trans "– Numéro à Madagascar; Vous pouvez également nous appeler pour toute demande urgente ou pour discuter de vos besoins de transport." %} <br>
+                Email : <a href="mailto:teams.expressmada@gmail.com"  target="_blank" rel="noopener noreferrer">teams.expressmada@gmail.com</a> {% trans "Si vous préférez un échange plus détaillé, vous pouvez nous envoyer un email et nous reviendrons vers vous dans les plus brefs délais." %} <br>
+                Téléphone : <a href="https://wa.me/+261 38 83 618 36">038 83 618 36</a> {% trans "– Numéro à Madagascar; Vous pouvez également nous appeler pour toute demande urgente ou pour discuter de vos besoins de transport." %} <br>
 
                 {% trans "Pourquoi privilégier WhatsApp ?" %}
 

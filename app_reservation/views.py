@@ -96,7 +96,7 @@ def reservation(request):
             'Confirmation de votre réservation de taxi auprès de TAXI EXPRESS avec le Teams Express',
             f'Bonjour {client.prenom},\n\nVotre réservation a bien été enregistrée.\nNuméro de réservation : {numero_reservation}\nDépart : {ville_depart}\nCompagnie de vol : {compagnie_vol}\nDate et heure : {date_depart}\n Votre numéro WhatsApp : {client.watsapp} \n On viens vers vous sur WhatsApp \n\nMerci d\'avoir choisi notre service !',
             settings.EMAIL_HOST_USER ,
-            [client.email,"fify.dev1706@gmail.com"],
+            [client.email,"teams.expressmada@gmail.com"],
             fail_silently=True,
         )
         messages.success(request, f"Votre réservation a bien été enregistrée ! Numéro : {numero_reservation}")
@@ -104,36 +104,6 @@ def reservation(request):
 
     return render(request, 'reservation.html')
 
-# utilisation de twilio pour envoyer un sms de confirmation
-# def envoyer_whatsapp(request):
-
-#     from twilio.rest import Client
-
-#     if request.method == "POST":
-
-
-
-#         nom = request.POST.get("contact_nom")
-#         whatsapp_client = request.POST.get("contact_whatsapp")
-#         message = request.POST.get("contact_message")
-
-#         sid = os.getenv('TWILIO_ACCOUNT_SID')
-#         token = os.getenv('TWILIO_AUTH_TOKEN')
-#         client = Client(sid,token)
-        
-#         message = client.messages.create(
-#                 body=message,
-#                 from_='whatsapp:+14155238886',  # Numéro WhatsApp de Twilio
-#                 to=f'whatsapp:+{whatsapp_client}'  # Numéro WhatsApp du client
-#             )
-#         messages.success(request, "Message envoyé avec succès !")
-
-#         messages.error(request, "Veuillez remplir tous les champs.")
-#         return redirect("serviceRapide")
-
-    # fonction pour la reservation rapide
-   
-# VERSION 2
 import os
 from django.contrib import messages
 from django.shortcuts import redirect

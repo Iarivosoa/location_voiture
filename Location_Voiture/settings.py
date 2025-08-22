@@ -28,19 +28,10 @@ SECRET_KEY = os.environ.get('DJANGO_SECRET_KEY', 'django-insecure-8*92tqstr^m!g$
 DEBUG = os.environ.get('DJANGO_DEBUG', '') != 'False'
 ALLOWED_HOSTS = [os.environ.get('RENDER_EXTERNAL_HOSTNAME', ''), '.onrender.com', 'localhost', '127.0.0.1']
 
-# config email
-
-
-# EMAIL_HOST = os.environ.get('EMAIL_HOST', 'smtp.gmail.com')
-# EMAIL_HOST_USER = os.environ.get('EMAIL_HOST_USER', '')
-# EMAIL_HOST_PASSWORD = os.environ.get('EMAIL_HOST_PASSWORD', '')
-# EMAIL_PORT = int(os.environ.get('EMAIL_PORT', 587))
-# EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
-# EMAIL_USE_TLS = True
 
 EMAIL_HOST = "smtp.gmail.com"
-EMAIL_HOST_USER = "fify.dev1706@gmail.com"
-EMAIL_HOST_PASSWORD = "qqug uoqd trbp dafd"
+EMAIL_HOST_USER = "teams.expressmada@gmail.com"
+EMAIL_HOST_PASSWORD = "kqpo yyhl pmpm aovc"
 EMAIL_PORT = 587
 EMAIL_BACKEND = "django.core.mail.backends.smtp.EmailBackend"
 EMAIL_USE_TLS = True
